@@ -58,3 +58,10 @@ Append subsequent iterations here; do not overwrite this first-delivery history.
 - Updated `.gitignore` to exclude local dependencies, temporary JSON staging, workbook inspection files and previews, large generated scenario ledgers, duplicate ZIP archives, and extracted source-document text. Retained the final workbook, implementation and validation code, documentation, and auditable baseline/validation outputs.
 - Updated `README.md` to describe the single-file Excel deliverable and clarify that it includes copied source-data sheets while the original input workbook and PDFs are not committed.
 - Staged 73 project files without creating a commit. Git's whitespace check passed, all eight strategy tests passed, and the staged set contains no dependency symlinks or inspection dumps. Baseline strategy files and results were not changed during this preparation.
+
+## 2026-09-22 — v0.5 commit and GitHub push
+
+- Prompt: commit and push; the user supplied `https://github.com/lysanderzhang/cbs-sys-invest-strats.git` after the repository was found to have no remote.
+- The 73-file project commit `ea1fe3c` already existed when this iteration began, so no duplicate initial commit was created. GitHub's newly created repository had its own README-only initial commit `941a4e1`, causing the first push to be rejected as non-fast-forward.
+- Fetched and merged the unrelated README-only history with the local detailed README retained. Merge commit `c84ee49` changed no project file contents relative to `ea1fe3c`. Pushed `main` and set it to track `origin/main`; local and tracking tips matched and the working tree was clean.
+- This changelog entry records the prompt, rejected push, resolution and final state. No strategy assumptions or results changed.
