@@ -1,0 +1,4 @@
+{"formulaChecks":2774,"failures":[]}
+{"kind":"notice","message":"Cell search matched 0 entries."}
+Inspect result written to file: /Users/lysanzh/Documents/ChatGPT/FINCB9339/outputs/validation/validation_tables.xlsx.inspect.ndjson
+Saved validation_tables.xlsx

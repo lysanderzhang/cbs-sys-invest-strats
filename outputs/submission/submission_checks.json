@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "sheet": "April Noise",
+      "cell": "E22",
+      "expected": 0.003189207828893267,
+      "actual": 0.003189207828893267,
+      "pass": true
+    },
+    {
+      "sheet": "April Noise",
+      "cell": "E25",
+      "expected": 559.5486438128803,
+      "actual": 559.5486438128803,
+      "pass": true
+    },
+    {
+      "sheet": "April Noise",
+      "cell": "E26",
+      "expected": 553.6124659559202,
+      "actual": 553.6124659559202,
+      "pass": true
+    },
+    {
+      "sheet": "April Noise",
+      "cell": "E28",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "sheet": "April Volatility",
+      "cell": "E23",
+      "expected": 0.01189108058,
+      "actual": 0.011891080579637447,
+      "pass": true
+    },
+    {
+      "sheet": "April Volatility",
+      "cell": "E26",
+      "expected": 1.6819329299852241,
+      "actual": 1.6819329299852235,
+      "pass": true
+    },
+    {
+      "sheet": "April Volatility",
+      "cell": "E29",
+      "expected": 302,
+      "actual": 302,
+      "pass": true
+    },
+    {
+      "sheet": "Trade Log",
+      "cell": "N7",
+      "expected": 216.72,
+      "actual": 216.72000000001424,
+      "pass": true
+    },
+    {
+      "sheet": "Daily Results",
+      "cell": "V7",
+      "expected": 216.72,
+      "actual": 216.72000000001424,
+      "pass": true
+    },
+    {
+      "sheet": "Daily Results",
+      "cell": "X7",
+      "expected": -1290.6272,
+      "actual": -1290.6271999999874,
+      "pass": true
+    }
+  ],
+  "failed": []
+}

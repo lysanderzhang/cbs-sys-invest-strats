@@ -1,0 +1,24 @@
+{
+  "config": {
+    "lookback": 14,
+    "initial_equity": 100000.0,
+    "target_vol": 0.02,
+    "leverage_cap": 4.0,
+    "commission": 0.0035,
+    "slippage": 0.001,
+    "timestamp_mode": "start",
+    "vwap_method": "endpoint",
+    "execution_delay": 0,
+    "entry_vwap_filter": false,
+    "annual_days": 252
+  },
+  "input_path": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/homework/hw1/hw1.spy.20250313-20251201.intra-30m.xlsx",
+  "input_sha256": "102acfdcca2c4c23e82c78fabbdf0f9703281009704e156b5f9f508dc424ba88",
+  "source_code_sha256": "820deadf8edfddce413d86dc7beceeba01fd161654b1030213ab7a50e8a44e76",
+  "first_scored_session": "2025-04-02",
+  "last_scored_session": "2025-12-01",
+  "author_code_consulted": false,
+  "external_market_data_used": false,
+  "pandas": "3.0.6",
+  "numpy": "2.5.3"
+}

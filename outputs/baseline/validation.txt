@@ -1,0 +1,13 @@
+test_full_ledgers_and_session_close (__main__.StrategyChecks.test_full_ledgers_and_session_close) ... ok
+test_future_mutation_preserves_earlier_features_and_trades (__main__.StrategyChecks.test_future_mutation_preserves_earlier_features_and_trades) ... ok
+test_hand_vwap (__main__.StrategyChecks.test_hand_vwap) ... ok
+test_known_reversal_pnl_and_costs (__main__.StrategyChecks.test_known_reversal_pnl_and_costs) ... ok
+test_lagged_volatility_manual (__main__.StrategyChecks.test_lagged_volatility_manual) ... ok
+test_noise_manual_and_half_day_window (__main__.StrategyChecks.test_noise_manual_and_half_day_window) ... ok
+test_state_rules (__main__.StrategyChecks.test_state_rules) ... ok
+test_volume_rejects_false_cumulative (__main__.StrategyChecks.test_volume_rejects_false_cumulative) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.672s
+
+OK

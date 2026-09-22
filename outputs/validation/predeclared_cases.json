@@ -1,0 +1,56 @@
+[
+  {
+    "name": "baseline_replay",
+    "midpoint": false,
+    "delayed": false,
+    "vwap_entry_gate": false,
+    "full_history_only": false,
+    "commission": 0.0035,
+    "slippage": 0.001
+  },
+  {
+    "name": "midpoint_vwap",
+    "midpoint": true,
+    "delayed": false,
+    "vwap_entry_gate": false,
+    "full_history_only": false,
+    "commission": 0.0035,
+    "slippage": 0.001
+  },
+  {
+    "name": "delay_30m",
+    "midpoint": false,
+    "delayed": true,
+    "vwap_entry_gate": false,
+    "full_history_only": false,
+    "commission": 0.0035,
+    "slippage": 0.001
+  },
+  {
+    "name": "vwap_entry_gate",
+    "midpoint": false,
+    "delayed": false,
+    "vwap_entry_gate": true,
+    "full_history_only": false,
+    "commission": 0.0035,
+    "slippage": 0.001
+  },
+  {
+    "name": "exclude_incomplete_slots",
+    "midpoint": false,
+    "delayed": false,
+    "vwap_entry_gate": false,
+    "full_history_only": true,
+    "commission": 0.0035,
+    "slippage": 0.001
+  },
+  {
+    "name": "higher_costs",
+    "midpoint": false,
+    "delayed": false,
+    "vwap_entry_gate": false,
+    "full_history_only": false,
+    "commission": 0.005,
+    "slippage": 0.002
+  }
+]

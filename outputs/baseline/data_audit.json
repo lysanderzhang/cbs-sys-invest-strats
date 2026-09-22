@@ -1,0 +1,13 @@
+{
+  "sessions": 182,
+  "cleaned_rows": 2544,
+  "raw_rows": 2542,
+  "daily_rows": 197,
+  "missing_cells": 0,
+  "duplicates": 0,
+  "negative_volume": 0,
+  "nonpositive_price": 0,
+  "volume_decreases": 1181,
+  "volume_mismatch_days": 7,
+  "missing_daily_sessions": []
+}

@@ -1,0 +1,118 @@
+{
+  "source_cell_comparisons": 1546,
+  "saved_workbook_formula_caches_checked": 2774,
+  "scenario_ledgers_checked": 18,
+  "scenario_checks": [
+    {
+      "case": "baseline_replay",
+      "model": "A",
+      "passed": true,
+      "trades": 95
+    },
+    {
+      "case": "baseline_replay",
+      "model": "B",
+      "passed": true,
+      "trades": 135
+    },
+    {
+      "case": "baseline_replay",
+      "model": "C",
+      "passed": true,
+      "trades": 135
+    },
+    {
+      "case": "midpoint_vwap",
+      "model": "A",
+      "passed": true,
+      "trades": 95
+    },
+    {
+      "case": "midpoint_vwap",
+      "model": "B",
+      "passed": true,
+      "trades": 135
+    },
+    {
+      "case": "midpoint_vwap",
+      "model": "C",
+      "passed": true,
+      "trades": 135
+    },
+    {
+      "case": "delay_30m",
+      "model": "A",
+      "passed": true,
+      "trades": 89
+    },
+    {
+      "case": "delay_30m",
+      "model": "B",
+      "passed": true,
+      "trades": 121
+    },
+    {
+      "case": "delay_30m",
+      "model": "C",
+      "passed": true,
+      "trades": 121
+    },
+    {
+      "case": "vwap_entry_gate",
+      "model": "A",
+      "passed": true,
+      "trades": 95
+    },
+    {
+      "case": "vwap_entry_gate",
+      "model": "B",
+      "passed": true,
+      "trades": 135
+    },
+    {
+      "case": "vwap_entry_gate",
+      "model": "C",
+      "passed": true,
+      "trades": 135
+    },
+    {
+      "case": "exclude_incomplete_slots",
+      "model": "A",
+      "passed": true,
+      "trades": 94
+    },
+    {
+      "case": "exclude_incomplete_slots",
+      "model": "B",
+      "passed": true,
+      "trades": 132
+    },
+    {
+      "case": "exclude_incomplete_slots",
+      "model": "C",
+      "passed": true,
+      "trades": 132
+    },
+    {
+      "case": "higher_costs",
+      "model": "A",
+      "passed": true,
+      "trades": 95
+    },
+    {
+      "case": "higher_costs",
+      "model": "B",
+      "passed": true,
+      "trades": 135
+    },
+    {
+      "case": "higher_costs",
+      "model": "C",
+      "passed": true,
+      "trades": 135
+    }
+  ],
+  "protected_files_unchanged": 30,
+  "native_excel_tested": false,
+  "all_passed": true
+}

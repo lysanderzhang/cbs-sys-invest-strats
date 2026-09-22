@@ -1,0 +1,8 @@
+{
+  "source_cell_comparisons": 1546,
+  "saved_workbook_formula_caches_checked": 2774,
+  "scenario_ledgers_checked": 18,
+  "protected_files_unchanged": 30,
+  "native_excel_tested": false,
+  "all_passed": true
+}

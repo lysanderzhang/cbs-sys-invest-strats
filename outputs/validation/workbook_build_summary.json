@@ -1,0 +1,62 @@
+{
+  "sheets": [
+    "Summary",
+    "Sensitivity",
+    "Concentration",
+    "Trades",
+    "Decisions",
+    "VWAP",
+    "Noise",
+    "Volatility",
+    "Daily Equity"
+  ],
+  "formula_comparisons": 2774,
+  "all_passed": true,
+  "rendered_ranges": [
+    [
+      "Summary",
+      "A1:J11"
+    ],
+    [
+      "Sensitivity",
+      "A5:L24"
+    ],
+    [
+      "Concentration",
+      "A5:H16"
+    ],
+    [
+      "Trades",
+      "A5:L12"
+    ],
+    [
+      "Decisions",
+      "A5:K19"
+    ],
+    [
+      "Decisions",
+      "L5:X19"
+    ],
+    [
+      "VWAP",
+      "A5:I19"
+    ],
+    [
+      "Noise",
+      "A5:H21"
+    ],
+    [
+      "Volatility",
+      "A5:J10"
+    ],
+    [
+      "Volatility",
+      "A15:I31"
+    ],
+    [
+      "Daily Equity",
+      "A5:K19"
+    ]
+  ],
+  "engine": "Artifact Tool; not tested in native Excel"
+}
