@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Cross-asset dual momentum",
+    "body": "Raising assets for a transparent monthly ETF portfolio\nResearch-stage B3: risk cap, explicit cash, no leverage\nCAGR 6.89% | daily max drawdown -17.91%\nIllustrative USD 10 million mandate; execution validation starts with a USD 1 million scenario",
+    "notes": "ETF capital: 2007-08-31 execution inception to 2026-08-31; modeled net 10 bps/traded dollar. Objective is raising assets, not working capital. Performance is historical and mixed; no live readiness. Hanyu Zhang, FINCB9339 Homework 2.",
+    "figure": null
+  },
+  {
+    "title": "Momentum strategy landscape",
+    "body": "Buy-and-hold: continuous market exposure\nRelative momentum: rank assets against peers\nAbsolute momentum: compare an asset with its cash hurdle\nOur dual design: three selected ETF slots, failed slots to cash\nFutures CTAs can short declining markets; this portfolio cannot",
+    "notes": "Lecture slides 4-7, 22-23, 42-44; Asness et al. 2014 pp 2-4. Stock momentum ETFs rank stocks within equities. Eight tickers do not equal eight independent exposures.",
+    "figure": null
+  },
+  {
+    "title": "Economic mechanism and contribution",
+    "body": "Published hypotheses: delayed information, feedback and risk premia\nEquity factor crashes: past losers rebound after panic states\nETF long/cash risks differ from short-loser equity momentum\nContribution: controlled comparisons with reproducible timing and accounting",
+    "notes": "Daniel & Moskowitz 2016 introduction pp 221-223; Asness et al. 2014 Myth 10; Kolanovic & Wei 2015 pp 19-20. Published findings are motivation, not our measured returns. No new anomaly, sector neutrality or conditional-mean replication claimed.",
+    "figure": null
+  },
+  {
+    "title": "Exact monthly holdings rule",
+    "body": "Universe: SPY EFA EEM IEF TLT GLD DBC VNQ\nRank 12-month total returns; choose top 3\nEach 1/3 slot invests only if its return exceeds matched cash\nExample signals 12%, 8%, 1%; cash 2% -> two 1/3 ETFs +1/3 cash\nVol 16% -> q 0.625 ->20.83%, 20.83%, 58.33% cash",
+    "notes": "Signals use comparable penultimate monthly snapshots, not 252 days. Alphabetical tie break. No refill or renormalization. Worked numbers here are illustrative arithmetic, not historical signals. Actual decisions and endpoints are in etf_signals.csv; see notebook 2.",
+    "figure": null
+  },
+  {
+    "title": "Risk cap and opportunity cost",
+    "body": "B3 estimates 126-day gross B2 excess volatility\nq=min(1, 10%/max(volatility, 5%)); remainder cash\nAverage cash 22.82% versus B2 5.22%\nProtection reduces upside and does not guarantee maximum loss",
+    "notes": "Forecast is trailing strategy volatility, not a current-holdings covariance forecast. Monthly decisions persist; weights drift. B3 never leverages to reach 10%. Baltas & Kosowski 2013 section 3 motivates volatility normalization, but futures positions and estimator differ.",
+    "figure": "B_allocations.png"
+  },
+  {
+    "title": "Data, timing and historical validation",
+    "body": "Real French, Cboe and Yahoo/yfinance snapshots\nSeptember cutoff; French RF/Mom available only through August\nSignal penultimate close -> execute final close -> next-session return\nAll 8 ETF history begins 2006; B3 warmup -> September 2007 returns\nDevelopment to 2013 | validation 2014-19 | historical holdout 2020-26",
+    "notes": "ETF first common execution 2007-08-31; first invested return 2007-09-04. Factor first execution 1990-01-31; first return 1990-02-01. RF cash endpoints bind August 31. Adj Close includes distributions; no double counting. Current vintages may revise history. Holdout is publicly known and inspected.",
+    "figure": null
+  },
+  {
+    "title": "Modeled net results versus benchmarks",
+    "body": "B0: CAGR 6.40% | Sharpe 0.487 | max DD -37.92%\nB1: CAGR 8.66% | Sharpe 0.607 | max DD -25.12%\nB2: CAGR 7.95% | Sharpe 0.570 | max DD -25.15%\nB3: CAGR 6.89% | Sharpe 0.614 | max DD -17.91%\n60_40: CAGR 8.16% | Sharpe 0.719 | max DD -32.62%\nSPY: CAGR 11.08% | Sharpe 0.662 | max DD -55.19%",
+    "notes": "ETF capital: 2007-08-31 execution inception to 2026-08-31; modeled net 10 bps/traded dollar. Sharpe is monthly cash-adjusted, ddof 1. Drawdown is daily;60/40 rebalances monthly. Initial order costs included. Benchmark 60/40 has higher full-history Sharpe than B3. See performance.csv for five-decimal output.",
+    "figure": null
+  },
+  {
+    "title": "Lower drawdown comes with lower return",
+    "body": "Relative selection improves historical return over equal weighting\nAbsolute filter scarcely improves worst drawdown here\nVolatility cap provides the strongest ETF drawdown reduction\nB3 trails SPY and 60/40 in full-history CAGR",
+    "notes": "ETF capital: 2007-08-31 execution inception to 2026-08-31; modeled net 10 bps/traded dollar. Comparing component risks and mean exposures prevents presenting lower cash-adjusted risk as costless alpha. B1 CAGR8.66%, B2 7.95%, B3 6.89%; values trace to performance.csv.",
+    "figure": "B_nav_drawdown.png"
+  },
+  {
+    "title": "Robustness and uncertainty",
+    "body": "Historical holdout B3: CAGR 10.46% | Sharpe 0.805\nB3-minus 60/40 Sharpe 95% CI: [-0.598, 0.279]\nSkip-month diagnostic worsens drawdown; gold exclusion hurts\nAll 84 ledger rows retained; stronger 9-month result is not adopted",
+    "notes": "1000 paired moving-block draws, 6-month blocks, seed 9339. No future out-of-sample claim; cross-strategy selection inspected holdout. Sensitivity common start 2007-10-31 accommodates skip-month warmup. CI includes zero; resampling historical returns does not remove selection bias.",
+    "figure": "B_robustness.png"
+  },
+  {
+    "title": "Costs, liquidity and mandate size",
+    "body": "B3 turnover 3.15x NAV/year; assumed 10 bps per dollar\n1m/10m/50m AUM scenarios evolve with net NAV\n10m B3 maximum DBC participation 19.17% of lagged ADV20\nAll-day vendor ADV does not certify closing-auction capacity\nValidate 1m scenario first;10m single-close fills are not established",
+    "notes": "Participation from raw Close*Volume through snapshot, abs delta weights, pretrade evolving NAV. Cost is an assumption, not measured spread.1%/5% ADV are illustrative constraints. Auction/impact/underlying liquidity and independent data checks needed. Taxes and investor fees excluded.",
+    "figure": null
+  },
+  {
+    "title": "Evidence-supported advantages and risks",
+    "body": "Advantages: explicit holdings, fixed rules, no leverage, cash audit\nB3 reduced losses in 2022; it missed upside in 2020\nRisks: whipsaw, reversals, gold dependence and duration overlap\nHigher full-sample Sharpe than 60/40 is not demonstrated",
+    "notes": "2020 B3 return 7.77% vs 60/40 15.99%;2022 B3 -5.03% vs 60/40 -16.67%. Daily exposure/cost files substantiate implementation transparency. This is a design advantage, not a claim of statistical alpha. Provider revisions and retrospective universe selection remain.",
+    "figure": null
+  },
+  {
+    "title": "Proposed research mandate and investor Q&A",
+    "body": "Proposal: B3 research-stage risk-limited ETF design\nWhy more cash? It buys lower exposure and sacrifices return\nWhy not B1? Keep it as the higher-return comparator\nNext milestone: independent data, auction costs, prospective paper signals\nFeed failure: preserve holdings, verify data, escalate and log",
+    "notes": "Raising assets remains the objective, with illustrative 10m contingent on evidence. No trades or assignment submission authorized. Suspend new decisions after material data/accounting defects, repeated operational failures or participation breaches; do not retrofit these rules into historical returns. Full investor Q&A is in report section 9.",
+    "figure": null
+  },
+  {
+    "title": "Appendix | Factor experiment",
+    "body": "A0 gross synthetic CAGR 7.94% | drawdown -63.29%\nA3 gross synthetic CAGR 11.99% | drawdown -18.89%\nBear 24 months + VIX>25 -> exposure 0 when both flags\nRF + a*Mom: funding/borrow/internal turnover not measured",
+    "notes": "A dates 1990-01-31 to 2026-08-31. French Mom six size/momentum portfolios, daily formed daily; monthly official series separate. Unit factor gross notional 2, cap 1.5 permits gross 3. A is not an executable stock strategy. Daniel-Moskowitz conditional mean/variance sizing is not replicated.",
+    "figure": "A_nav_drawdown.png"
+  },
+  {
+    "title": "Appendix | Factor exposures and panic states",
+    "body": "A0=1 | A1=vol scale | A2=state scale | A3=combined\na_vol=min(1.5, 10%/max(sigma 126, 5%))\nMarket total return compounds Mkt-RF + RF\nPublished loser-rebound mechanism motivates the fixed heuristic",
+    "notes": "Signals use past 24 comparable monthly snapshots and backward VIX. Exposure decisions held after execution; neither VIX nor market rebound from future periods enters signal. March-May 2009 static capital loses 45.64%; zero factor exposure avoids it in A2/A3. Internal Mom turnover, financing and borrow omitted.",
+    "figure": "A_exposure_regime.png"
+  },
+  {
+    "title": "Appendix | Accounting and statistical conventions",
+    "body": "Daily weights drift; rebalance only at execution close\nT=sum risky |target-pretrade|; full A-to-B switch T=2\nNAV_after=NAV_before*(1+gross)*(1-0.001*T)\nSharpe=sqrt(12)*mean(monthly excess)/sample_sd\nCAGR ACT/365.25 | HAC3 | downside RMS Sortino",
+    "notes": "Worked 50/50 drift example in report section 4 and tests. Targets are post-cost allocations using proportional NAV haircut. Initial execution charge combined into first holding month. Cash is compounded daily RF; empirical monthly VaR/ES loss-positive with tail count. Undefined Sharpe for deterministic excess cash.",
+    "figure": null
+  },
+  {
+    "title": "Appendix | Exact component evidence",
+    "body": "Decimals to five places; ETF modeled net, factor synthetic gross\nA0: CAGR 0.07938; Sharpe 0.39282; DD -0.63288\nA1: CAGR 0.11762; Sharpe 0.75071; DD -0.24129\nA2: CAGR 0.10500; Sharpe 0.70178; DD -0.26873\nA3: CAGR 0.11994; Sharpe 0.89354; DD -0.18893\nB0: CAGR 0.06405; Sharpe 0.48708; DD -0.37924\nB1: CAGR 0.08658; Sharpe 0.60665; DD -0.25123\nB2: CAGR 0.07953; Sharpe 0.57005; DD -0.25147\nB3: CAGR 0.06891; Sharpe 0.61357; DD -0.17911",
+    "notes": "Full numeric precision, dates, gross/net basis, costs and exposures are exported in performance.csv. Tables are reproducible, not hand-entered. Additional SPY/60-40 benchmarks are on slide 7 and in CSV.",
+    "figure": null
+  },
+  {
+    "title": "Appendix | Sources and reproduction",
+    "body": "Course lecture Momentum; Homework 2 handout\nDaniel-Moskowitz 2016; Asness et al. 2014\nKolanovic-Wei 2015; Baltas-Kosowski supplied 2013 version\nFrench official library | Cboe VIX | Yahoo via yfinance 1.7.0\nREADME: cached run, tests, reports and executed notebooks",
+    "notes": "Exact paths/pages/lines and URLs: research/source_map.md. Cached inputs/manifests record acquired UTC timestamps, SHA256 and options. Run python -m momentum_hw 2.cli validate-data --offline; pytest; run --offline; report --offline. No WRDS, new charges, publishing or submission.",
+    "figure": null
+  }
+]

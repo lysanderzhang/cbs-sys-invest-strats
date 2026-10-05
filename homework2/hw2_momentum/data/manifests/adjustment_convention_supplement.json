@@ -1,0 +1,9 @@
+{
+  "review_date": "2026-10-04",
+  "Close": "Yahoo historical split-adjusted; not dividend-adjusted",
+  "Adj Close": "Yahoo historical distribution and split-adjusted proxy",
+  "Volume": "vendor daily share volume; historical split normalization and consolidated/auction scope uncertified",
+  "primary_strategy_change": false,
+  "raw_input_change": false,
+  "capacity_status": "provisional vendor dollar-volume proxy"
+}

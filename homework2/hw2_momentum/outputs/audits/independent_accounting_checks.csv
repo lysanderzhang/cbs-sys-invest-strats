@@ -1,0 +1,26 @@
+check,status,observations
+B0 independent daily weights/returns/cost/NAV reconciliation,PASS,4779
+B0 independent period 2020 compounding vs NAV ratio,PASS,253
+B0 independent period 2022 compounding vs NAV ratio,PASS,251
+B1 independent daily weights/returns/cost/NAV reconciliation,PASS,4779
+B1 independent period 2020 compounding vs NAV ratio,PASS,253
+B1 independent period 2022 compounding vs NAV ratio,PASS,251
+B2 independent daily weights/returns/cost/NAV reconciliation,PASS,4779
+B2 independent period 2020 compounding vs NAV ratio,PASS,253
+B2 independent period 2022 compounding vs NAV ratio,PASS,251
+B3 independent daily weights/returns/cost/NAV reconciliation,PASS,4779
+B3 independent period 2020 compounding vs NAV ratio,PASS,253
+B3 independent period 2022 compounding vs NAV ratio,PASS,251
+SPY independent daily weights/returns/cost/NAV reconciliation,PASS,4779
+SPY independent period 2020 compounding vs NAV ratio,PASS,253
+SPY independent period 2022 compounding vs NAV ratio,PASS,251
+60_40 independent daily weights/returns/cost/NAV reconciliation,PASS,4779
+60_40 independent period 2020 compounding vs NAV ratio,PASS,253
+60_40 independent period 2022 compounding vs NAV ratio,PASS,251
+CASH independent daily weights/returns/cost/NAV reconciliation,PASS,4779
+CASH independent period 2020 compounding vs NAV ratio,PASS,253
+CASH independent period 2022 compounding vs NAV ratio,PASS,251
+A0 synthetic capital / NAV identity,PASS,9212
+A1 synthetic capital / NAV identity,PASS,9212
+A2 synthetic capital / NAV identity,PASS,9212
+A3 synthetic capital / NAV identity,PASS,9212

@@ -1,0 +1,11 @@
+# Treat generated deliverables as binary, including PDFs without NUL bytes.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.xlsx binary
+# Preserve original provider headers and supplied Markdown hard line breaks.
+homework2/hw2_momentum/data/manifests/*_header.txt -whitespace
+homework2/HW2_Momentum_Agent_Spec.md -whitespace
+homework2/hw2.md -whitespace
+homework2/hw2_momentum/outputs/audits/clean_reproduce_stdout.log -whitespace
+homework2/hw2_momentum/deliverables/*.md -whitespace

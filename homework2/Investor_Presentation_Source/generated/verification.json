@@ -1,0 +1,60 @@
+{
+  "source_tables": "../hw2_momentum/outputs/tables",
+  "headline_checks": {
+    "B1": {
+      "expected": [
+        8.66,
+        0.607,
+        -25.12
+      ],
+      "csv_rounded": [
+        8.66,
+        0.607,
+        -25.12
+      ],
+      "match": true
+    },
+    "B2": {
+      "expected": [
+        7.95,
+        0.57,
+        -25.15
+      ],
+      "csv_rounded": [
+        7.95,
+        0.57,
+        -25.15
+      ],
+      "match": true
+    },
+    "B3": {
+      "expected": [
+        6.89,
+        0.614,
+        -17.91
+      ],
+      "csv_rounded": [
+        6.89,
+        0.614,
+        -17.91
+      ],
+      "match": true
+    },
+    "60_40": {
+      "expected": [
+        8.16,
+        0.719,
+        -32.62
+      ],
+      "csv_rounded": [
+        8.16,
+        0.719,
+        -32.62
+      ],
+      "match": true
+    }
+  },
+  "B3_DBC_10m_max_participation": 0.191737464017407,
+  "B3_turnover_annual": 3.14944282731104,
+  "chart_drawdowns_match_performance_csv": true
+}

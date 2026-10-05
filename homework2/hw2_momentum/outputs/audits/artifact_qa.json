@@ -1,0 +1,272 @@
+[
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 1,
+    "render": "build/qa/report_01.png",
+    "text_outside_page": [],
+    "text_characters": 4119,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 2,
+    "render": "build/qa/report_02.png",
+    "text_outside_page": [],
+    "text_characters": 4366,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 3,
+    "render": "build/qa/report_03.png",
+    "text_outside_page": [],
+    "text_characters": 4645,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 4,
+    "render": "build/qa/report_04.png",
+    "text_outside_page": [],
+    "text_characters": 2796,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 5,
+    "render": "build/qa/report_05.png",
+    "text_outside_page": [],
+    "text_characters": 69,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 6,
+    "render": "build/qa/report_06.png",
+    "text_outside_page": [],
+    "text_characters": 2754,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 7,
+    "render": "build/qa/report_07.png",
+    "text_outside_page": [],
+    "text_characters": 855,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 8,
+    "render": "build/qa/report_08.png",
+    "text_outside_page": [],
+    "text_characters": 3580,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 9,
+    "render": "build/qa/report_09.png",
+    "text_outside_page": [],
+    "text_characters": 3742,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Momentum_Research_Report.pdf",
+    "page": 10,
+    "render": "build/qa/report_10.png",
+    "text_outside_page": [],
+    "text_characters": 1838,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 1,
+    "render": "build/qa/slides_01.png",
+    "text_outside_page": [],
+    "text_characters": 363,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 2,
+    "render": "build/qa/slides_02.png",
+    "text_outside_page": [],
+    "text_characters": 390,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 3,
+    "render": "build/qa/slides_03.png",
+    "text_outside_page": [],
+    "text_characters": 394,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 4,
+    "render": "build/qa/slides_04.png",
+    "text_outside_page": [],
+    "text_characters": 377,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 5,
+    "render": "build/qa/slides_05.png",
+    "text_outside_page": [],
+    "text_characters": 317,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 6,
+    "render": "build/qa/slides_06.png",
+    "text_outside_page": [],
+    "text_characters": 447,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 7,
+    "render": "build/qa/slides_07.png",
+    "text_outside_page": [],
+    "text_characters": 416,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 8,
+    "render": "build/qa/slides_08.png",
+    "text_outside_page": [],
+    "text_characters": 357,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 9,
+    "render": "build/qa/slides_09.png",
+    "text_outside_page": [],
+    "text_characters": 343,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 10,
+    "render": "build/qa/slides_10.png",
+    "text_outside_page": [],
+    "text_characters": 412,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 11,
+    "render": "build/qa/slides_11.png",
+    "text_outside_page": [],
+    "text_characters": 373,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 12,
+    "render": "build/qa/slides_12.png",
+    "text_outside_page": [],
+    "text_characters": 437,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 13,
+    "render": "build/qa/slides_13.png",
+    "text_outside_page": [],
+    "text_characters": 332,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 14,
+    "render": "build/qa/slides_14.png",
+    "text_outside_page": [],
+    "text_characters": 333,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 15,
+    "render": "build/qa/slides_15.png",
+    "text_outside_page": [],
+    "text_characters": 387,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 16,
+    "render": "build/qa/slides_16.png",
+    "text_outside_page": [],
+    "text_characters": 561,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  },
+  {
+    "artifact": "HW2_Investor_Presentation.pdf",
+    "page": 17,
+    "render": "build/qa/slides_17.png",
+    "text_outside_page": [],
+    "text_characters": 392,
+    "status": "PASS: rendered and visually reviewed",
+    "review": "All final pages inspected via full-page contact sheets; legible content, charts and tables; no clipping or overlap.",
+    "pdf_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47"
+  }
+]

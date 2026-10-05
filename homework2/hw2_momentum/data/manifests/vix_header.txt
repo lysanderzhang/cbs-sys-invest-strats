@@ -1,0 +1,1 @@
+Cboe VIX closing index points; official historical file

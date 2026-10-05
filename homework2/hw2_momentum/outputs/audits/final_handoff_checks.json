@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-04T15:33:44.478759+00:00",
+  "checks": [
+    {
+      "check": "research freeze config/base.yaml",
+      "status": "PASS"
+    },
+    {
+      "check": "research freeze research/research_plan.md",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash mom_daily",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash mom_monthly",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash ff_daily",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash ff_monthly",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash vix",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash SPY",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash EFA",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash EEM",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash IEF",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash TLT",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash GLD",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash DBC",
+      "status": "PASS"
+    },
+    {
+      "check": "input hash VNQ",
+      "status": "PASS"
+    },
+    {
+      "check": "executed notebook 01_factor_overlay.ipynb",
+      "status": "PASS",
+      "code_cells": 6
+    },
+    {
+      "check": "executed notebook 02_etf_dual_momentum.ipynb",
+      "status": "PASS",
+      "code_cells": 8
+    },
+    {
+      "check": "final PDF rendering and visual inspection",
+      "status": "PASS",
+      "pages": 27
+    },
+    {
+      "check": "offline numerical reproduction",
+      "status": "PASS",
+      "outputs": 137
+    }
+  ],
+  "pptx": "BLOCKED: missing artifact-tool runtime; native PowerPoint cannot create a presentation. Editable manuscript/JSON and PDF fallback delivered."
+}

@@ -1,0 +1,4 @@
+metric,value
+capped_vol_scale_frequency,0.225
+both_stress_frequency,0.06818181818181818
+any_stress_frequency,0.25

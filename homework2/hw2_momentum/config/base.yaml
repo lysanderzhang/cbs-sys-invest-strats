@@ -1,0 +1,55 @@
+project: fincb9339_hw2_momentum
+research_seed: 9339
+data_cutoff: '2026-09-30'
+pitch_objective: raise_assets
+data_sources:
+  factor: kenneth_french
+  vix: cboe
+  etf_primary: yahoo_finance
+  etf_adapter: yfinance
+  yahoo_auto_adjust: false
+  yahoo_actions: true
+  yahoo_repair: false
+  wrds_enabled: false
+  new_billable_data_usage_authorized: false
+timing:
+  signal: penultimate_trading_day_close
+  execution: final_trading_day_close
+  new_holdings_first_return: next_trading_day
+factor:
+  primary_frequency: daily
+  volatility_days: 126
+  target_annual_volatility: 0.10
+  annual_volatility_floor: 0.05
+  scale_cap: 1.5
+  bear_lookback_months: 24
+  vix_threshold_points: 25
+  stress_scales: [1.0, 0.5, 0.0]
+  cost_status: gross_plus_separately_labeled_sensitivities
+etf:
+  tickers: [SPY, EFA, EEM, IEF, TLT, GLD, DBC, VNQ]
+  universe_policy: fixed_universe_common_history
+  lookback_months: 12
+  skip_latest_month: false
+  top_k: 3
+  failed_slot_destination: cash
+  tie_break: ticker_alphabetical
+  weight_method: equal_slots
+  volatility_days: 126
+  risk_cap_annual_volatility: 0.10
+  annual_volatility_floor: 0.05
+  risk_scale_cap: 1.0
+  cost_bps_per_traded_dollar: 10
+  cost_sensitivity_bps: [0, 5, 25, 50]
+  fractional_shares: true
+  leverage_allowed: false
+validation:
+  development_end: '2013-12-31'
+  validation_end: '2019-12-31'
+  historical_holdout_start: '2020-01-01'
+  bootstrap_block_months: 6
+  bootstrap_replications: 1000
+capacity:
+  initial_aum_usd: [1000000, 10000000, 50000000]
+  adv_days: 20
+  illustrative_adv_participation_limits: [0.01, 0.05]

@@ -1,0 +1,40 @@
+{
+  "run_id": "2026-10-04T15:29:18.925631+00:00",
+  "config_sha256": "2a69b965e7aabca964fc8f88ec389def5a26a55d085f7736bddf8737f93bb64f",
+  "python": "3.12.7",
+  "dependencies": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "yfinance": "1.7.0",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0"
+  },
+  "input_hashes": {
+    "data/raw/mom_monthly.zip": "c06d1c2e9a5e4f6985879722f23c6bb585f46b34eaf3fcb681d4de887e353f3e",
+    "data/raw/mom_daily.zip": "ecf82b116e6ec56d2b79a2f27bd1d1598c217b5c6c25caa55b945bdd8a2c0b78",
+    "data/raw/yahoo_VNQ.csv": "5383529ffb88840f85a879004c3e148c2f14eee559bb417fc6993c9867930559",
+    "data/raw/yahoo_GLD.csv": "f2fabcaf181e7050554ff5eb796a3d497aeb1b427f5d39991622e2e062f001ca",
+    "data/raw/yahoo_EFA.csv": "32b83f6ec944974a75a6b13fedf8e3da164c9dba5649dffb6fdcb2177cb2d918",
+    "data/raw/yahoo_EEM.csv": "ec4cb74c4ceffc706ab1f4d12bceca5e2ba59ff0628be13ccbe02db8f5dca7a0",
+    "data/raw/yahoo_IEF.csv": "d2b4ba21f9fd156b833213452e43eebcfba5eecc4df61b001310b529ddb13c89",
+    "data/raw/yahoo_DBC.csv": "e91c0e6fa7669f6cd4d5d87060ab356a7420056efc13b0fce45ce58c21d398a6",
+    "data/raw/ff_monthly.zip": "593f4fbef03181bc0b22ff6292f217689dd1fb79355049ca905d95b262040a66",
+    "data/raw/yahoo_TLT.csv": "c5d111019ed043ce51f51e4818944bafcfadc6741e04e23a6dd780ff96bbc1ae",
+    "data/raw/ff_daily.zip": "2f29e22546069914890a712680a6f81f3680ebc3543b52864484d209ca13a7db",
+    "data/raw/vix.csv": "6edc3e3928c4b164b9e4ed1ec874e0ed53c7d52997557adebb7d6b7451db565a",
+    "data/raw/yahoo_SPY.csv": "28fd28863e435ddcb14837ccd95da34483447a687441b92fdc4d30af60ad8ca5"
+  },
+  "code_snapshot_hash": "cc2cd906e1da50e61d86c37db04bba2bafb6091345bdba6d3fe827f4358f5783",
+  "factor_execution_start": "1990-01-31",
+  "etf_execution_start": "2007-08-31",
+  "factor_first_return": "1990-02-01",
+  "etf_first_return": "2007-09-04",
+  "endpoint": "2026-08-31",
+  "warnings": [
+    "Historical holdout inspected; no future validation",
+    "September prices unused: daily RF ends August",
+    "Primary factor results gross, capital convention synthetic",
+    "ETF costs assumed; capacity provisional",
+    "First execution stub cost assigned to first holding month for monthly statistics"
+  ]
+}

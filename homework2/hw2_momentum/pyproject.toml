@@ -1,0 +1,20 @@
+[build-system]
+requires = ['setuptools>=68']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'momentum-hw2'
+version = '1.0.0'
+description = 'Controlled factor and ETF momentum experiments for FINCB9339'
+requires-python = '>=3.12'
+dependencies = ['pandas','numpy','matplotlib','scipy','statsmodels','PyYAML','requests','yfinance','nbformat','nbclient','ipykernel','pytest','reportlab','PyMuPDF','tabulate']
+
+[project.scripts]
+momentum-hw2 = 'momentum_hw2.cli:main'
+
+[tool.setuptools.packages.find]
+where = ['src']
+
+[tool.pytest.ini_options]
+pythonpath = ['src']
+testpaths = ['tests']

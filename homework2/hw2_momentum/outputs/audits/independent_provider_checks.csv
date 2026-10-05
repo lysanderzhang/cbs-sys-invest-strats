@@ -1,0 +1,5 @@
+ticker,check,date,Yahoo,issuer,difference,status,source
+EEM,issuer cash distribution,2023-12-20,0.748,0.748036,-3.6000000000036e-05,precision-level comparison; no repair,https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf
+EEM,issuer cash distribution,2021-12-30,0.026,0.026007,-7.000000000000062e-06,precision-level comparison; no repair,https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf
+EEM,issuer cash distribution,2026-06-15,0.351,0.350802,0.00019799999999997597,precision-level comparison; no repair,https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf
+EEM,June2026 month-end market total return,2026-06-30,0.0024137385558149482,0.0022,0.0002137385558149481,difference retained; provider price/reinvestment definitions need further review,https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf
