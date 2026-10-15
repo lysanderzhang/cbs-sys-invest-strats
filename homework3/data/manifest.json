@@ -1,0 +1,27 @@
+[
+  {
+    "original": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/homework/hw3/hw3.data.carry.FX.dly.csv",
+    "copy": "data/raw/hw3.data.carry.FX.dly.csv",
+    "sha256": "a00d36966536c2bc203ecebc3f08f7a62f1f894ca2988b374913ad8b96cacf50"
+  },
+  {
+    "original": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/homework/hw3/hw3.data.carry.FX.dly.xlsx",
+    "copy": "data/raw/hw3.data.carry.FX.dly.xlsx",
+    "sha256": "a31b7a6163e65ef12747a72be2138453d768d90b6ebc670b1d3ac470d32e32b3"
+  },
+  {
+    "original": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/homework/hw3/hw3.pdf",
+    "copy": "references/hw3.pdf",
+    "sha256": "a0489c6e6087c11cffbb8b6485a4ee4e41a996bf4160c74b91c2970cb0e9b054"
+  },
+  {
+    "original": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/readings/carry/Crash-neutralcurrencycarrytrades.pdf",
+    "copy": "references/Crash-neutralcurrencycarrytrades.pdf",
+    "sha256": "440797ae29e0b60fcb0e4056fa081511f44a30db38a0890e51ed68d02378d4fc"
+  },
+  {
+    "original": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/readings/carry/Sequencing the Strategy Genome.pdf",
+    "copy": "references/Sequencing the Strategy Genome.pdf",
+    "sha256": "498ea78d495b34673a4c5990814def1fdadc7b5a1bd4158ec20eaed24f9c7796"
+  }
+]

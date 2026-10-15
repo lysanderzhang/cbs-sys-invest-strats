@@ -1,0 +1,1001 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{listings}
+
+\geometry{margin=1.0in}
+
+% Compact, professional report formatting
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlist[itemize]{topsep=0.25em,itemsep=0.15em,parsep=0pt}
+\setlist[enumerate]{topsep=0.25em,itemsep=0.15em,parsep=0pt}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {\thesection.}
+  {0.55em}
+  {}
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {\thesubsection}
+  {0.55em}
+  {}
+\titleformat{\subsubsection}
+  {\normalsize\bfseries}
+  {\thesubsubsection}
+  {0.55em}
+  {}
+\titlespacing*{\section}{0pt}{1.25em}{0.55em}
+\titlespacing*{\subsection}{0pt}{0.95em}{0.35em}
+\titlespacing*{\subsubsection}{0pt}{0.75em}{0.25em}
+
+
+% Prompt appendix formatting
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  frame=single,
+  framerule=0.3pt,
+  xleftmargin=0.5em,
+  xrightmargin=0.5em,
+  aboveskip=0.6em,
+  belowskip=0.6em,
+  showstringspaces=false
+}
+
+% \pagestyle{fancy}
+% \fancyhf{}
+% \lhead{\small FINCB9339: Systematic Investment Strategies}
+% \rhead{\small Lysander Zhang}
+% \cfoot{\small \thepage}
+% \renewcommand{\headrulewidth}{0.4pt}
+
+% ============================================================
+% MAIN TEXT
+% ============================================================
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries FINCB9339 Systematic Investment Strategies Assignment 1}\\[0.25em]
+    {\large }
+\end{center}
+
+% \vspace{0.65em}
+
+% \noindent
+\begin{center}
+    \textbf{Student:} Hanyu Zhang (hz3069) \\
+    % \hfill
+    \textbf{Date:} September, 2026
+\end{center}
+
+
+\subsection*{Executive Summary}
+I used \textbf{Codex} to reconstruct and test the intraday momentum strategy in Zarattini, Aziz, and Barbon without consulting the authors' code during the initial implementation. I implemented three versions: the base Noise-Area strategy (\textbf{Model A}), the current-boundary/VWAP exit refinement (\textbf{Model B}), and the volatility-scaled version (\textbf{Model C}). The implementation was checked with deterministic unit tests, a second code path that did not import the original strategy module, and localized manual calculations.
+
+The supplied data yield 168 scored sessions from April 2 to December 1, 2025. \textbf{Model A, B, and C} produced cumulative returns of \(3.59421\%\), \(4.47404\%\), and \(11.13927\%\), respectively, compared with \(21.96250\%\) for SPY.\textbf{ Model C} achieved the highest strategy Sharpe ratio \(1.09689\), but its result was highly concentrated: October 10 alone accounted for approximately \(85.11\%\) of total net profit. Reasonable changes to the VWAP proxy and moderate transaction-cost assumptions did not materially alter the baseline trade sequence, whereas delaying discretionary execution by one 30-minute grid step reduced\textbf{ Model C}'s cumulative return to \(3.90194\%\). Overall, the exercise supports the internal consistency and economic intuition of the strategy, but the short sample, approximate market-open/VWAP inputs, execution-timing ambiguity, and return concentration limit the strength of any conclusion about long-run profitability.
+
+% \vspace{0.45em}
+% \hrule
+% \vspace{0.9em}
+
+\section{Strategy Replication}
+\label{sec:implementation}
+
+\subsection{Objective and AI Tool}
+
+The objective of the first stage of the assignment was to use an AI tool to construct an implementation of the intraday momentum strategy described in Zarattini, Aziz, and Barbon, \textit{Beat the Market: An Effective Intraday Momentum Strategy for S\&P500 ETF (SPY)}. The purpose was not simply to reproduce a set of published backtest results, but to use an AI system as a quantitative research assistant: the AI was required to infer the strategy rules from the paper, translate those rules into code, identify ambiguities in the implementation, and produce an auditable backtest that could subsequently be verified.
+
+I used \textbf{Codex} for the implementation. I selected this tool because it can process both the research paper and the supplied spreadsheet, generate and modify Python code, inspect intermediate calculations, and iteratively respond to debugging and validation requests. Python was chosen as the implementation language because the strategy can be expressed transparently using standard numerical and data-analysis libraries, while still allowing detailed trade-level diagnostics and independent verification.
+
+Importantly, I instructed the AI not to consult, copy, or adapt the Python or Matlab code published by the authors during the initial implementation stage. The paper itself was treated as the strategy specification. The authors' code was reserved as a possible later validation benchmark. This distinction was deliberate because the objective of the assignment is to evaluate the ability of an AI system to reconstruct a systematic strategy rather than simply reproduce an existing implementation.
+
+\subsection{Replication Scope and Strategy Specification}
+
+The paper contains several extensions and empirical investigations. Given the relatively short March--November 2025 dataset supplied for the homework, I focused on the core trading mechanism and the principal improvements proposed by the authors. Three models were implemented.
+
+\paragraph{Model A: Base Noise-Area Strategy.}
+For each trading day $t$ and intraday decision time $h$, the strategy computes the average absolute move from the daily open over the preceding 14 trading days:
+\begin{equation}
+    \sigma^{\text{noise}}_{t,h}
+    =
+    \frac{1}{14}
+    \sum_{i=1}^{14}
+    \left|
+    \frac{P_{t-i,h}}{O_{t-i}} - 1
+    \right|
+\end{equation}
+
+The upper and lower Noise-Area boundaries are then constructed as
+\begin{align}
+    U_{t,h}
+    &=
+    \max(O_t,C_{t-1})
+    \left(1+\sigma^{\text{noise}}_{t,h}\right)
+    \\
+    L_{t,h}
+    &=
+    \min(O_t,C_{t-1})
+    \left(1-\sigma^{\text{noise}}_{t,h}\right)
+\end{align}
+where $O_t$ denotes the current day's open and $C_{t-1}$ the previous session's close.
+
+A long position is initiated when the observed price exceeds the upper boundary, while a short position is initiated when price falls below the lower boundary. Trading decisions are evaluated only on the half-hour grid. A position is closed or reversed when price crosses the opposite Noise-Area boundary, and all positions are liquidated at the end of the session.
+
+\paragraph{Model B: Current-Boundary and VWAP Exit.}
+Model B keeps the same entry rule as\textbf{ Model A} but implements the tighter exit mechanism described in the paper. For a long position, the effective stop is
+\begin{equation}
+    S^{L}_{t,h}
+    =
+    \max\left(U_{t,h},VWAP_{t,h}\right)
+\end{equation}
+whereas for a short position,
+\begin{equation}
+    S^{S}_{t,h}
+    =
+    \min\left(L_{t,h},VWAP_{t,h}\right)
+\end{equation}
+This version is intended to reduce losses from intraday reversals by exiting more quickly when the prevailing trend weakens.
+
+\paragraph{Model C: Volatility-Scaled Position Sizing.}
+Model C adds the volatility-based leverage rule described in the paper. Using the previous 14 daily SPY returns, daily volatility is estimated as
+\begin{equation}
+    \sigma^{\text{SPY}}_t
+    =
+    \sqrt{
+    \frac{1}{13}
+    \sum_{i=1}^{14}
+    \left(r_{t-i}-\bar r_t\right)^2
+    }
+\end{equation}
+where
+\begin{equation}
+    \bar r_t
+    =
+    \frac{1}{14}
+    \sum_{i=1}^{14} r_{t-i}
+\end{equation}
+
+The exposure multiplier is
+\begin{equation}
+    \lambda_t
+    =
+    \min
+    \left(
+    4,
+    \frac{0.02}{\sigma^{\text{SPY}}_t}
+    \right)
+\end{equation}
+and the number of shares is
+\begin{equation}
+    N_t
+    =
+    \left\lfloor
+    \frac{AUM_{t-1}\lambda_t}{O_t}
+    \right\rfloor
+\end{equation}
+
+Thus, the strategy reduces exposure when recent SPY volatility is high and increases exposure when volatility is low, subject to a maximum leverage of four times capital.
+
+\subsection{Transaction Costs}
+
+All three implementations include the paper's baseline transaction-cost assumptions. Each one-way transaction incurs
+\begin{equation}
+    c_{\text{share}}
+    =
+    0.0035 + 0.001
+    =
+    \$0.0045
+\end{equation}
+per share, where \$0.0035 represents commission and \$0.001 represents assumed slippage.
+
+For a completed round trip of $N$ shares, total baseline costs are therefore
+\begin{equation}
+    \text{Cost}
+    =
+    2N(0.0035+0.001)
+\end{equation}
+
+Costs are charged separately on entry and exit, including both legs of a same-timestamp reversal.
+
+\subsection{Data and Implementation Constraints}
+\subsubsection{Missing True Market Open}
+
+The paper defines intraday price movements relative to the actual 9:30 a.m. market open. The supplied dataset does not provide an independently verified opening transaction. Under the inferred timestamp convention, the first available 30-minute observation was therefore used as an open proxy.
+
+This has two important consequences. First, the initial half-hour move cannot be reproduced directly. Second, the first feasible strategy decision in this implementation occurs later than in the paper. The paper can take a position beginning at 10:00 a.m., whereas the data-constrained implementation cannot form its first decision until approximately 10:30 a.m.
+
+This limitation affects both the calculation
+\begin{equation}
+    \left|
+    \frac{P_{t,h}}{O_t}-1
+    \right|
+\end{equation}
+and the overnight-gap adjustment through
+\begin{equation}
+    \max(O_t,C_{t-1})
+    \quad\text{and}\quad
+    \min(O_t,C_{t-1})
+\end{equation}
+
+\subsubsection{Approximation of VWAP}
+
+Exact VWAP cannot be recovered from the supplied 30-minute observations because the dataset does not contain all transaction prices or interval dollar turnover. I therefore constructed the following proxy:
+\begin{equation}
+    \widehat{VWAP}_{t,h}
+    =
+    \frac{
+    \sum_{j\leq h}P_{t,j}V_{t,j}
+    }{
+    \sum_{j\leq h}V_{t,j}
+    }
+\end{equation}
+where $P_{t,j}$ is the available interval-end price and $V_{t,j}$ is the associated observed interval volume.
+
+I refer to this quantity throughout as an \emph{approximate VWAP} or \emph{VWAP proxy}, rather than true market VWAP. The volume audit also showed that the retained intraday observations represent only part of total reported daily volume. Consequently, the available data cannot establish the exact market-hours VWAP used in the original paper.
+
+\subsubsection{Early-Close Sessions}
+
+The assignment identifies July 3 and November 28, 2025 as 1:00 p.m. market-close sessions. The spreadsheet contains additional stale observations after 1:00 p.m. on these dates. These observations were excluded from trading decisions, and any open position was forced to liquidate at 1:00 p.m.
+
+This treatment was important because otherwise stale afternoon prices could incorrectly create signals or exits on days when the market was already closed.
+
+\subsection{Implementation and Validation}
+
+The AI-generated backtester was constructed in modular form, with separate routines for:
+\begin{enumerate}
+    \item data cleaning and session construction,
+    \item previous-close and open-proxy calculation,
+    \item Noise-Area estimation,
+    \item volume processing and VWAP approximation,
+    \item entry and exit signal generation,
+    \item volatility-scaled position sizing,
+    \item transaction-cost accounting,
+    \item trade-level P\&L,
+    \item daily equity construction, and
+    \item performance statistics.
+\end{enumerate}
+
+A detailed event ledger was also retained. For every trade, the ledger records the date, decision time, position direction, entry or exit price, Noise-Area boundaries, approximate VWAP, share count, leverage, gross P\&L, commissions, slippage, and net P\&L.
+
+\subsubsection{Automated Unit Tests}
+
+The initial implementation was subjected to a series of deterministic checks. These tests included:
+\begin{enumerate}
+    \item manual VWAP arithmetic,
+    \item manual 14-day Noise-Area calculation,
+    \item manual volatility and leverage calculation,
+    \item state-transition and stop-loss logic,
+    \item reversal P\&L and transaction-cost accounting,
+    \item early-close handling,
+    \item complete session-close liquidation, and
+    \item a future-data mutation test designed to detect look-ahead bias.
+\end{enumerate}
+
+\underline{All eight tests passed}. These tests established internal consistency but were not, by themselves, sufficient independent validation because the same AI system generated both the implementation and the tests.
+
+\subsubsection{Second-Path Reconstruction}
+
+To obtain a stronger check, I asked the AI to construct a second implementation that did \emph{not} import or call the original strategy module. This second path used explicit historical sums instead of the original rolling calculations and reconstructed P\&L through inventory-times-price-change accounting rather than the first implementation's realized-trade ledger.
+
+A total of 34 reconciliation tests were performed. All\textbf{ Model A, B, and C} trade episodes matched the original implementation, and the largest numerical difference among the checked quantities was below $10^{-9}$.
+
+This provides strong evidence that the baseline code consistently implements the chosen conventions. It should not, however, be interpreted as fully independent third-party validation because both implementations were generated by the same AI system and both rely on the same assumptions regarding the supplied dataset.
+
+
+\subsection{Prompt and Iteration History}
+
+The implementation was developed iteratively rather than through a single request. The main stages are summarized in Table~\ref{tab:prompt_history}; the substantive prompts are reproduced in Appendix~\ref{app:prompts}.
+
+A key discipline throughout the process was to avoid improving the strategy merely because a modification increased historical return. Sensitivity cases were used to expose dependence on ambiguous assumptions; none was adopted as a new ``best'' specification based on in-sample performance.
+
+\begin{table}[H]
+\centering
+\caption{AI implementation and validation workflow}
+\label{tab:prompt_history}
+\begin{tabular}{p{0.14\textwidth}p{0.25\textwidth}p{0.27\textwidth}p{0.25\textwidth}}
+\toprule
+Stage & Objective & Main issue identified & Result / correction \\
+\midrule
+Initial build & Audit and prepare the supplied workbook, then reconstruct Models A--C directly from the paper & Missing true open, ambiguous bar timing, interval-versus-cumulative volume, incomplete VWAP inputs, and half-day observations & Created an auditable data-preparation pipeline, a data-constrained baseline, and an explicit assumption register before relying on performance results \\
+Implementation review & Audit data and state-transition logic & Need to distinguish paper formulas from conventions forced by the supplied workbook & Added session filters, early-close handling, lagged volatility, detailed trade/event ledgers, and no-look-ahead checks \\
+Validation & Verify the AI-produced code without using the authors' implementation & Unit tests were not fully independent because the same AI wrote them & Built a second code path using explicit sums and inventory P\&L; all 34 reconciliation checks matched the baseline \\
+Robustness & Test ambiguity rather than optimize parameters & Execution timing and data conventions could materially affect returns & Tested alternative VWAP construction, an entry gate, half-day treatment, higher costs, and one-grid-step delayed execution \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Manual Spot Check: April 2, 2025}
+
+As an additional validation exercise, I manually reconstructed selected calculations for April 2, 2025. For the 11:30 decision, the sum of the 14 preceding absolute time-of-day moves was \(0.044648909605\). Therefore,
+\[
+    \sigma^{\text{noise}}_{t,11:30}
+    =
+    \frac{0.044648909605}{14}
+    =
+    0.003189207829
+\]
+
+The current open proxy was \(O_t = 555.38370\), while the previous closing price was \(C_{t-1}=557.76980\). The corresponding Noise-Area boundaries were
+\[
+\begin{aligned}
+    U_{t,11:30}
+    &=
+    557.76980
+    \left(1+0.003189207829\right)
+    =
+    559.54864 \\
+    L_{t,11:30}
+    &=
+    555.38370
+    \left(1-0.003189207829\right)
+    =
+    553.61247
+\end{aligned}
+\]
+
+The observed price was \(P_{t,11:30}=560.08670\), so that \(P_{t,11:30} > U_{t,11:30}\). The long entry generated by the implementation is therefore consistent with the strategy rule. The prior 14 daily SPY returns produced the volatility estimate \(\sigma^{\text{SPY}}_t=0.011891080580\). The corresponding leverage was
+\[
+    \lambda_t
+    =
+    \min\left(
+    4,
+    \frac{0.02}{0.011891080580}
+    \right)
+    =
+    1.681932930
+\]
+
+With \$100,000 of beginning equity, the number of shares was
+\[
+    N_t
+    =
+    \left\lfloor
+    \frac{100000(1.681932930)}{555.38370}
+    \right\rfloor
+    =
+    302
+\]
+
+The first\textbf{ Model C} trade on that date was a purchase of 302 shares at 560.08670 and an exit at 559.13220. Gross P\&L was
+\[
+    302(559.13220-560.08670)
+    =
+    -288.25900
+\]
+
+Total round-trip transaction costs were
+\[
+    302 \times 2 \times (0.0035+0.001)
+    =
+    2.71800
+\]
+
+Thus, net P\&L was
+\[
+    -288.25900 - 2.71800
+    =
+    -290.97700
+\]
+
+This manual exercise confirmed the Noise-Area calculation, volatility scaling, position sizing, signal generation, and transaction-cost treatment used by the AI-generated implementation.
+
+% ============================================================
+% EMPIRICAL RESULTS
+% ============================================================
+
+\section{Empirical Results}
+\label{sec:results}
+
+\subsection{Evaluation Period}
+
+The supplied intraday dataset contains 182 SPY trading sessions. The first 14 sessions are required to initialize the Noise-Area lookback and are therefore excluded from the scored performance sample.
+
+All three models are consequently evaluated over a common period of \textbf{168 trading sessions, from April 2 to December 1, 2025.} The same evaluation dates are used for the SPY buy-and-hold benchmark.
+
+\subsection{Baseline Performance}
+
+% Table~\ref{tab:baseline_results} summarizes the principal performance statistics.
+
+\begin{table}[H]
+\centering
+\caption{Baseline performance, April 2--December 1, 2025}
+\label{tab:baseline_results}
+\begin{tabular}{lrrrr}
+\toprule
+ &\textbf{ Model A} &\textbf{ Model B} &\textbf{ Model C} & SPY \\
+\midrule
+Cumulative return (\%)       
+    & 3.59421 & 4.47404 & 11.13927 & 21.96250 \\
+Annualized geometric return (\%) 
+    & 5.43948 & 6.78557 & 17.16592 & 34.69128 \\
+Annualized volatility (\%)   
+    & 6.64939 & 7.24061 & 15.49954 & 21.44463 \\
+Sharpe ratio                 
+    & 0.82963 & 0.94237 & 1.09689 & 1.49467 \\
+Maximum drawdown (\%)        
+    & -5.05948 & -2.83612 & -4.81698 & -12.05273 \\
+Completed round trips        
+    & 95 & 135 & 135 & -- \\
+Total transaction costs (\$) 
+    & 138.33000 & 201.42000 & 534.91500 & -- \\
+Final equity (\$)            
+    & 103594.21280 & 104474.04100 & 111139.26700 & 121962.50138 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Effect of the Strategy Refinements}
+
+The successive modifications proposed in the paper improved performance within the supplied sample:
+\begin{enumerate}
+    \item \textbf{Model A} generated a cumulative return of \(3.59421\%\), with a Sharpe ratio of \(0.82963\).
+    
+    \item \textbf{Model B} \underline{replacing the opposite-boundary exit with the current-boundary/VWAP exit} increased cumulative return to \(4.47404\%\) and reduced maximum drawdown from approximately \(5.06\%\) to \(2.84\%\).
+    
+    \item \textbf{Model C} \underline{adding volatility-scaled position sizing} increased cumulative return substantially to \(11.13927\%\), while producing the highest strategy Sharpe ratio, \(1.09689\).
+\end{enumerate}
+
+This progression is directionally consistent with the economic motivation of the paper: tighter exits can limit reversal losses, while volatility scaling increases exposure during relatively calm periods and reduces it during more volatile periods.
+
+However,\textbf{ Model C}'s higher return comes with substantially greater realized volatility and larger transaction costs. Annualized volatility increases from approximately \(7.24\%\) in\textbf{ Model B} to \(15.50\%\) in\textbf{ Model C}, while total costs rise from approximately \$201 to \$535.
+
+\subsubsection{Comparison with SPY}
+
+Passive SPY generated a cumulative return of approximately \(21.96250\%\) over the same scored period, substantially exceeding the raw cumulative return of all three strategy variants. Therefore, the replicated strategy did not outperform passive SPY in absolute return during this particular 2025 sample.
+
+This should not be interpreted as a direct rejection of the paper's long-horizon results. The original study examines a much longer historical period, whereas the supplied homework sample covers only approximately eight months. Moreover, an intraday long/short strategy and passive SPY have materially different exposures: the former has no overnight exposure and is intended partly to produce returns with lower directional market dependence.
+
+Nevertheless, the SPY comparison is economically important and demonstrates why the short test period should not be used to infer long-run strategy superiority.
+
+\subsection{Return Concentration}
+
+A particularly important finding is that\textbf{ Model C}'s performance is highly concentrated in a small number of favorable sessions. The largest positive day occurred on October 10, 2025.\textbf{ Model C} entered a single short position and generated a net profit of \(\$9{,}480.38400\), corresponding to a daily return of \(9.32201\%\). Total\textbf{ Model C} profit over the full sample was approximately \(\$11{,}139.26700\). Thus, the single best day's  total realized net profit is approximately
+\[
+    \frac{9{,}480.38400}{11{,}139.26700}
+    =
+    85.10779\%
+\]
+
+% Table~\ref{tab:concentration} reports an ex-post concentration analysis.
+
+\begin{table}[H]
+\centering
+\caption{Model C return concentration}
+\label{tab:concentration}
+\begin{tabular}{lrr}
+\toprule
+Scenario & Cumulative Return (\%) & Change from Baseline (p.p.) \\
+\midrule
+Baseline                         & 11.13927 & -- \\
+Without best 1 day               & 1.66230  & -9.47697 \\
+Without best 3 days              & -4.18574 & -15.32501 \\
+Without best 5 days              & -7.95159 & -19.09086 \\
+Without worst 1 day              & 13.42072 & +2.28146 \\
+Without worst 3 days             & 17.42466 & +6.28539 \\
+Without worst 5 days             & 20.83376 & +9.69450 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The best three\textbf{ Model C} days were:
+\begin{enumerate}
+    \item October 10, 2025: $+9.32201\%$,
+    \item April 9, 2025: $+3.49744\%$,
+    \item November 20, 2025: $+2.51801\%$.
+\end{enumerate}
+
+The three worst days were:
+\begin{enumerate}
+    \item November 21, 2025: $-2.01150\%$,
+    \item September 17, 2025: $-1.78136\%$,
+    \item September 18, 2025: $-1.65797\%$.
+\end{enumerate}
+
+The concentration result should not automatically be interpreted as evidence that the strategy is invalid. Trend-following strategies often exhibit positively skewed payoff structures in which many small losses are offset by a small number of large gains. A strong dependence on a few large directional sessions is therefore economically plausible.
+
+However, it materially limits the statistical conclusions that can be drawn from the 168-day sample. In particular, removing only the three best days changes\textbf{ Model C}'s cumulative return from positive 11.14\% to negative 4.19\%. The observed profitability is therefore not distributed uniformly across the evaluation period.
+
+\subsection{Robustness Analysis}
+
+Because several aspects of the strategy cannot be identified exactly from the supplied data, I examined the sensitivity of the results to alternative but reasonable implementation assumptions. The purpose of these tests was not parameter optimization. Each alternative was specified in advance and was evaluated as an implementation-ambiguity stress test.
+
+\subsubsection{Alternative VWAP Approximation}
+
+The baseline approximate VWAP uses interval-end prices. As a robustness check, I replaced the interval-end price with an adjacent-endpoint midpoint price. Although the two VWAP proxies differ numerically on many observations, the alternative VWAP produced exactly the same realized trade episodes in Models B and C during this sample. Therefore, the inability to reconstruct exact VWAP does not appear to drive the baseline results in this particular period.
+
+This conclusion should be interpreted narrowly: identical trading outcomes under two approximate VWAP constructions do not imply that the exact tick-level market VWAP would necessarily produce the same trades.
+
+\subsubsection{VWAP Entry Filter}
+
+The paper is not fully explicit about whether VWAP should also restrict new entries. I therefore tested an alternative rule requiring
+\begin{align}
+    P_{t,h} &> U_{t,h}
+    \quad\text{and}\quad
+    P_{t,h} > VWAP_{t,h}
+    \qquad \text{for a long entry},\\
+    P_{t,h} &< L_{t,h}
+    \quad\text{and}\quad
+    P_{t,h} < VWAP_{t,h}
+    \qquad \text{for a short entry}.
+\end{align}
+
+No baseline\textbf{ Model B} or\textbf{ Model C} entry violated this additional condition. The alternative therefore produced no trade changes in the supplied sample. This is useful because it shows that this particular ambiguity in the paper has no economic effect on the reported 2025 results.
+
+\subsubsection{Higher Transaction Costs}
+
+I next increased the assumed one-way cost from \(\$0.0045\) per share to \(\$0.0070\) per share, corresponding to a commission of \(\$0.005\) and slippage of \(\$0.002\) per share. For\textbf{ Model C}, cumulative return declined from \(11.13927\%\) to \(10.80734\%\), while the Sharpe ratio declined from \(1.09689\) to \(1.06823\). Thus, the observed profitability is relatively robust to this moderate increase in per-share transaction costs.
+
+This test is limited, however, because it does not model financing costs, short-borrow costs, market impact, nonlinear slippage, exchange fees, or minimum commissions.
+
+\subsubsection{Incomplete Historical Half-Day Slots}
+
+The baseline calculation uses the available observations among the prior 14 sessions when an early-close day creates a missing afternoon time slot. An alternative implementation requires all 14 historical sessions to contain the relevant clock-time observation; otherwise, the discretionary decision at that time is skipped. Under this alternative treatment, only four of\textbf{ Model C}'s 135 baseline trade episodes change. Cumulative return increases from \(11.13927\%\) to \(12.21890\%\).
+
+Because only a small number of trade episodes change, the choice of half-day historical treatment is not a major determinant of the baseline result in this sample.
+
+The higher return under the alternative should not be interpreted as evidence that this specification is superior. The robustness exercise is intended to expose implementation dependence, not to select the historically best-performing rule.
+
+\subsubsection{Execution-Timing Sensitivity}
+
+The most important robustness result concerns execution timing. The baseline assumes that the price observed at a decision time can be used as the execution reference, with the paper's assumed slippage charged separately. As a coarse stress test, I delayed every discretionary execution by one 30-minute observation. The resulting performance is shown in Table~\ref{tab:delay}.
+
+\begin{table}[H]
+\centering
+\caption{Sensitivity to a one-grid-step execution delay}
+\label{tab:delay}
+\begin{tabular}{lrrr}
+\toprule
+ &\textbf{ Model A} &\textbf{ Model B} &\textbf{ Model C} \\
+\midrule
+Baseline cumulative return (\%) 
+    & 3.59421 & 4.47404 & 11.13927 \\
+Delayed cumulative return (\%)  
+    & -3.17503 & 1.21342 & 3.90194 \\
+Baseline Sharpe                  
+    & 0.82963 & 0.94237 & 1.09689 \\
+Delayed Sharpe                   
+    & -0.54498 & 0.30628 & 0.54639 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For\textbf{ Model C}, cumulative return falls from approximately \(11.14\%\) to \(3.90\%\), while the Sharpe ratio falls from \(1.10\) to approximately \(0.55\), and\textbf{ Model A} becomes unprofitable under the same stress.
+
+This should \emph{not} be interpreted as evidence that realistic execution latency would necessarily eliminate the strategy's profitability. A 30-minute delay is orders of magnitude longer than the latency of a real automated trading system.
+
+Instead, the result demonstrates something more relevant to the homework dataset: the backtest is materially dependent on which half-hour observation is considered both observable and executable. Since the workbook does not provide sufficiently detailed metadata to verify the exact timestamp semantics and executable prices, execution timing remains one of the largest unresolved implementation uncertainties.
+
+\subsection{Regression Against SPY}
+
+For completeness, I also estimated the regression
+\begin{equation}
+    r^{\text{strategy}}_t
+    =
+    \alpha
+    +
+    \beta r^{\text{SPY}}_t
+    +
+    \epsilon_t.
+\end{equation}
+
+The estimated annualized alpha and beta were:
+
+\begin{table}[H]
+\centering
+\caption{Daily-return regression against SPY}
+\label{tab:regression}
+\begin{tabular}{lrrr}
+\toprule
+ &\textbf{ Model A} &\textbf{ Model B} &\textbf{ Model C} \\
+\midrule
+Annualized alpha (\%) & 9.82855 & 5.22628 & 17.68759 \\
+Beta                  & -0.13453 & 0.04983 & -0.02141 \\
+HAC alpha $p$-value   & 0.20912 & 0.47744 & 0.35271 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+None of the estimated positive alphas is statistically significant at the conventional 5\% level using HAC standard errors. Given only 168 observations, the estimated alpha should therefore be viewed as descriptive rather than as strong statistical evidence of persistent abnormal returns.
+
+\subsection{Interpretation of the Results}
+\begin{enumerate}
+    \item Within the 2025 sample, the sequence of modifications proposed in the paper improves the performance of the basic strategy. The tighter current-boundary/VWAP exit improves\textbf{ Model B} relative to\textbf{ Model A}, while volatility scaling produces the largest increase in return in\textbf{ Model C}.
+
+    \item The strategy does not outperform passive SPY in absolute return over the test period.\textbf{ Model C} earns approximately 11.14\%, compared with approximately 21.96\% for SPY.
+
+    \item The\textbf{ Model C} result is highly concentrated. A single trading day accounts for approximately 85\% of total net profit, and removing the three strongest days makes cumulative performance negative. The observed profitability is therefore consistent with a highly positively skewed trend-following payoff, but the short sample provides limited evidence regarding the stability of the strategy's long-run expected return.
+
+    \item Some implementation uncertainties appear economically minor in this sample. Reasonable alternative VWAP constructions, the addition of a VWAP entry filter, and moderate increases in transaction costs do not materially change the main conclusion.
+
+    \item By contrast, execution-timing assumptions matter substantially. This is particularly relevant because the exact timestamp semantics and true executable prices cannot be established from the supplied spreadsheet alone.
+\end{enumerate}
+
+Overall, the replication was successful in demonstrating the mechanics of the strategy and the role of its principal refinements. At the same time, I do not interpret the 2025 results as an independent confirmation of the paper's long-run profitability claims. The combination of a short evaluation window, approximate market-open and VWAP inputs, ambiguous execution timing, and substantial return concentration makes the exercise more informative about \emph{implementation risk and model sensitivity} than about the unconditional profitability of the strategy.
+
+
+% ============================================================
+% FIGURES
+% These render automatically if the image files are uploaded to Overleaf.
+% ============================================================
+
+\IfFileExists{equity_drawdown.png}{
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.94\textwidth]{equity_drawdown.png}
+    \caption{Equity curves and drawdowns for Models A, B, C, and passive SPY over the common evaluation period.}
+    \label{fig:equity}
+\end{figure}
+}{}
+
+\IfFileExists{spot_check_days.png}{
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.98\textwidth]{spot_check_days.png}
+    \caption{Selected\textbf{ Model C} trading days showing the observed price, Noise-Area boundaries, approximate VWAP, and entry/exit events.}
+    \label{fig:spotcheck}
+\end{figure}
+}{}
+
+
+
+% ============================================================
+% STRATEGY ASSESSMENT
+% ============================================================
+\section{Assessment of the Strategy}
+\label{sec:assessment}
+
+\subsection{Main Idea and Economic Intuition}
+
+The central idea is economically intuitive: instead of treating every intraday price movement as informative, the strategy first constructs a time-of-day-dependent region in which price movements are considered normal. A position is taken only when price moves sufficiently far outside this Noise Area. This makes the signal a form of intraday time-series momentum conditioned on the size of the move relative to recent behavior at the same time of day.
+
+I find this aspect of the strategy attractive because the signal is interpretable. The model does not require a large number of latent parameters or a black-box forecasting algorithm; a trade can be traced to an observable breakout relative to a historically estimated range. The gap adjustment also has a sensible interpretation, because the previous close and current opening level jointly determine whether the session begins from an already-displaced price level.
+
+At the same time, the economic logic requires \emph{continuation} after the breakout. If the market repeatedly crosses the boundary and then mean-reverts, the signal will generate false entries. The strategy is therefore not simply a volatility strategy: it specifically needs volatility accompanied by persistent directional order imbalance.
+
+\subsection{Assessment of the Variants}
+
+The progression from Models A to C is conceptually coherent.\textbf{ Model A} provides the pure signal.\textbf{ Model B} changes risk management rather than the entry signal by using the current Noise-Area boundary and VWAP as a tighter exit. In the supplied sample, this increases cumulative return from \(3.59421\%\) to \(4.47404\%\) and lowers maximum drawdown from approximately \(5.06\%\) to \(2.84\%\). This supports the intuition that a trend-following strategy benefits from reacting quickly when the price action ceases to confirm the trend.
+
+\textbf{Model C} is economically different from\textbf{ Model B} because it changes the amount of capital at risk. Volatility scaling raises exposure when recent daily SPY volatility is low and reduces exposure when it is high, subject to the four-times cap. The higher return of\textbf{ Model C} should therefore not be interpreted as a pure improvement in forecasting accuracy. Part of the increase comes from leverage. For that reason, I would evaluate the signal quality of Models A and B separately from the capital-allocation rule in\textbf{ Model C}.
+
+\subsection{Target Investors and Practical Implementability}
+
+The strategy requires rolling historical calculations, a small state machine for positions, and simple position-sizing arithmetic. Computational capacity is therefore not the main obstacle.
+
+Live implementation is more demanding. A practitioner would need reliable real-time market data, an unambiguous definition of the opening price and VWAP, correct handling of shortened sessions, an order-management layer, and an execution\textbf{ Model C}onsistent with the signal timestamps. These requirements are particularly important here because the robustness analysis shows that results are sensitive to which half-hour observation is treated as executable. Therefore, this strategy is more suitable for a technically capable systematic trader or a small-to-medium quantitative trading entity.
+
+The strategy also requires comfort with short positions and, for Model C, potentially substantial leverage. An investor using it would need explicit limits on leverage, intraday losses, and operational failures rather than relying solely on the paper's position-sizing formula.
+
+\subsection{Market Conditions and Expected Profitability}
+
+I would expect the strategy to perform better when intraday moves are persistent: for example, when new information creates a sustained imbalance between buyers and sellers and price continues in the breakout direction. This is consistent with the paper's finding that the strategy tends to perform better in more volatile environments, although high volatility by itself is not sufficient if price action is highly mean-reverting.
+
+The strategy should be weaker in choppy markets characterized by repeated false breakouts, rapid reversals, or low directional follow-through. Such environments increase turnover while shortening holding periods and make transaction costs more important. The 2025 concentration analysis is consistent with this interpretation: a large share of\textbf{ Model C}'s profit comes from a few strong trend days rather than from a uniform daily edge.
+
+\subsection{Relation to Systematic Investment Concepts}
+
+The strategy connects naturally to several general concepts in systematic investing that are also explicit in the assignment and the paper. First, the Noise Area is a rule-based signal-construction mechanism that normalizes a current observation by recent historical behavior. Second,\textbf{ Model B} separates alpha generation from risk management by leaving the entry signal unchanged while changing the exit rule. Third,\textbf{ Model C} applies volatility targeting, illustrating that portfolio performance depends not only on the quality of the trading signal but also on the mapping from signals to exposure. Finally, the exercise highlights the practical importance of transaction costs, benchmark choice, robustness tests, and avoiding look-ahead bias.
+
+The SPY regression further separates raw performance from market exposure. In the short homework sample, the point estimates of alpha are positive but statistically insignificant, so the regression is more informative about exposure than about proof of abnormal return.
+
+\subsection{Risks and Limitations}
+
+I view the following risks as particularly important:
+\begin{enumerate}
+    \item \textbf{Execution and timestamp risk.} The largest sensitivity in my replication comes from execution timing. A model that looks attractive under one timestamp convention may be much weaker under another.
+    \item \textbf{Leverage risk.}\textbf{ Model C} can scale exposure up to four times capital. A large adverse move or execution failure can therefore produce losses much larger than those of the unlevered strategy.
+    \item \textbf{Return concentration.}\textbf{ Model C}'s best day contributes approximately \(85\%\) of total net profit in this sample. Missing a small number of major trend days could materially alter performance.
+    \item \textbf{Model and data risk.} The homework data do not provide an authenticated market open or exact market-wide VWAP. These approximations directly enter the signal and stop rules.
+    \item \textbf{Trading-cost and capacity risk.} The simple per-share cost model does not include financing, borrow costs, nonlinear market impact, minimum commissions, or all exchange-related costs.
+    \item \textbf{Regime risk.} The economic edge depends on directional continuation. Structural changes in intraday liquidity provision or hedging behavior could reduce that continuation without invalidating the historical backtest mechanically.
+\end{enumerate}
+
+\subsection{Potential Improvements and Application to Other Markets}
+
+The first improvement I would make is not to add a new signal, but to improve the data and execution model. Using authenticated opening prices, higher-frequency OHLCV or trade data, and a directly computed market-hours VWAP would eliminate several important approximations in this homework replication. A second improvement would be to model realistic execution at the signal timestamp, including spread and market impact as a function of order size and liquidity.
+
+From a portfolio perspective, I would also consider risk controls beyond the four-times leverage cap, such as limits on daily loss, gross notional, and exposure after unusually large overnight gaps. These controls should be specified before evaluating performance to avoid selecting them based on favorable historical outcomes.
+
+Applying the same framework to another major equity index could be informative, but I would not expect identical returns. Trading hours, intraday volatility patterns, liquidity, auction mechanics, derivative-market activity, and transaction costs differ across markets. The qualitative idea to dentify an unusually large time-of-day move and trade continuation may transfer, but the Noise-Area estimates, execution assumptions, and cost model should be reconstructed for each market rather than copied from SPY.
+
+% ============================================================
+% PAPER REVIEW
+% ============================================================
+\section{Critical Review of the Paper}
+\label{sec:review}
+
+\subsection{Strengths}
+
+I found the paper useful because it presents a strategy that is both transparent and operational. The main signal can be written in a small number of equations, and the authors show how performance changes as risk-management and sizing rules are added. This separation is valuable because it makes the source of changes in return and drawdown easier to interpret than in a black-box model.
+
+The paper also addresses practical issues that are sometimes omitted from academic trading studies, including commissions, slippage, alternative stop rules, volatility-dependent exposure, and parameter sensitivity. The long historical sample in the paper is much more informative than the short homework sample, and the FAQ-style extensions make many implementation questions explicit.
+
+\subsection{Methodological Concerns}
+
+My main concern is that apparently simple intraday strategies can still be difficult to reproduce exactly because implementation details matter. The definition of the market open, the construction of VWAP, the interpretation of timestamps, the order of entry and stop logic, and the executable price all affect a real backtest. My replication produced internally consistent code, but the supplied 30-minute data were insufficient to verify all of these choices. This suggests that a paper intended to be fully reproducible would benefit from explicit pseudocode and precise data-field definitions in addition to mathematical formulas.
+
+A second concern is that the headline performance of the final strategy combines the trading signal with volatility scaling and leverage. The strong return of the final portfolio is therefore not directly comparable with the return of the unlevered signal. I would present the incremental effect of signal, exit rule, and leverage even more prominently, including the distribution of daily leverage and the contribution of leverage to large winning and losing days.
+
+A third concern is the large number of conditional analyses in the paper---for example volatility regimes, technical patterns, day-of-week effects, parameter variations, and the RSI-based gamma proxy. These investigations are interesting, but the more conditioning variables that are examined, the greater the risk that some apparent relationships arise from multiple testing or sample-specific patterns. I would prefer to see a clearer distinction between hypotheses specified in advance and exploratory results, together with confidence intervals and out-of-sample confirmation where possible.
+
+\subsection{Interpretation of Return Patterns}
+
+The paper's return-pattern analysis is economically suggestive, especially the idea that stronger directional intraday moves should be more valuable in environments in which order imbalances persist. However, I would be cautious about treating every conditional relationship as structural. For example, an empirical association between a proxy such as short-horizon RSI and strategy profitability does not by itself establish dealer gamma as the causal mechanism.
+
+My 2025 replication also illustrates why distributional information matters.\textbf{ Model C} earns \(11.13927\%\) in the sample, but approximately \(85.11\%\) of total net profit comes from one day. This type of positive skew is plausible for trend following, yet it means that average return and Sharpe ratio alone do not fully describe the strategy. I would therefore supplement the paper's summary tables with contribution concentration, best/worst-day dependence, and the fraction of total P\&L generated by the largest trend events.
+
+\subsection{How I Would Present the Study Differently}
+
+If I were presenting the study, I would make four changes. First, I would include concise pseudocode defining the exact order of signal evaluation, execution, stop evaluation, reversal, and end-of-day liquidation. Second, I would separate unlevered signal performance from volatility-scaled portfolio performance throughout the main results. Third, I would report a more detailed execution-sensitivity analysis, because intraday strategies can be especially sensitive to bar construction and assumed fill timing. Fourth, I would distinguish confirmatory tests from exploratory pattern searches and emphasize genuinely out-of-sample evidence when discussing robustness.
+
+These changes would not alter the central idea of the paper. Rather, they would make it easier to determine which part of the reported performance comes from the economic signal, which part comes from risk scaling, and which part depends on implementation conventions.
+
+% ============================================================
+% CONCLUSION
+% ============================================================
+\section{Conclusion}
+
+Codex was able to translate the paper into a working Python backtest, identify nontrivial data issues, generate tests, and support a second-path reconstruction. The resulting implementation is internally consistent under the stated assumptions, and localized calculations reproduce the main signal, sizing, and P\&L logic.
+
+The empirical results are more nuanced than a simple success/failure judgment. The refinements from Models A to C improve the strategy within the 2025 sample, but the final\textbf{ Model C} return remains below passive SPY, is concentrated in a small number of sessions, and is materially sensitive to execution timing. I therefore view the exercise as stronger evidence for the strategy's interpretability and for the importance of disciplined implementation than as confirmation of a stable long-run alpha. The main lesson from the AI process is similar: an AI system can accelerate implementation and validation, but the researcher still has to define assumptions, distinguish robustness from optimization, and independently interrogate the outputs.
+
+% ============================================================
+% APPENDIX: PROMPTS
+% ============================================================
+\clearpage
+\appendix
+\section{AI Prompts and Iteration Record}
+\label{app:prompts}
+
+\subsection{Initial Implementation Prompt}
+
+The following is the consolidated implementation prompt used as the specification for the final repository. It combines the original strategy-replication request with the data-preparation requirements that were made explicit during the pre-implementation workbook audit. The chronological prompt record is preserved separately in the repository's \texttt{PROMPTS.md}; the purpose of the version below is to document the complete reproducible specification that led to the submitted implementation.
+
+\begin{lstlisting}
+I am completing Homework 1 for FINCB9339 Systematic Investment Strategies. I have uploaded three files:
+
+1. the homework instructions (hw1.pdf);
+2. the paper Beat the Market: An Effective Intraday Momentum Strategy for S&P500 ETF (SPY);
+3. the provided 30-minute SPY dataset (hw1.spy.20250313-20251201.intra-30m.xlsx).
+
+Act as a quantitative research and Python coding agent. The objective is to produce an AI-generated implementation of the strategy described in the paper, which I will subsequently validate and critique for the assignment.
+
+Important constraint: do NOT search for, copy, consult, or reproduce the Python/Matlab code published by the paper's authors. During this implementation stage, the paper itself must be treated as the strategy specification. Author-provided code may only be used later as an independent validation benchmark.
+
+Use Python with pandas/numpy/matplotlib and standard statistical libraries where appropriate. Keep the implementation transparent, modular, and auditable rather than creating a black-box backtester.
+
+Before writing any strategy code:
+
+1. Read the homework instructions and identify exactly what the assignment requires.
+2. Read the paper carefully and extract the mathematical trading rules needed to reproduce the strategy.
+3. Inspect the supplied workbook in full before choosing any data convention.
+4. Explicitly identify any places where the paper's methodology cannot be reproduced exactly using the supplied 30-minute data.
+5. List ambiguous strategy or data rules rather than silently making assumptions.
+6. Produce a short pre-implementation audit documenting the data preparation decisions before running the backtest.
+
+DATA PREPARATION AND AUDIT REQUIREMENTS
+
+The Excel workbook contains three relevant sheets. Treat them separately rather than collapsing them immediately:
+
+- BBRG.Intraday: raw 30-minute Bloomberg observations;
+- AV.Clean: the instructor-provided cleaned intraday observations and the primary source for the strategy backtest;
+- BBRG.Daily: daily closing prices and daily volume, used for lagged previous-close inputs, daily SPY returns, volatility estimation, and the buy-and-hold benchmark.
+
+A. Standardization and integrity checks
+
+- Standardize the relevant fields to timestamp/date, price/close, and volume, but preserve the original source timestamps and sheet provenance.
+- Sort observations chronologically within each day.
+- Check explicitly for missing cells, duplicate timestamps, non-positive prices, and negative volumes.
+- Do not interpolate, forward-fill, back-fill, or otherwise invent missing market observations. Any missing or structurally excluded row must remain identifiable.
+- Compare AV.Clean with BBRG.Intraday at matching timestamps and record every price or volume difference.
+- Reconcile the sum of the cleaned intraday volumes and the final observed price against BBRG.Daily's reported daily volume and close. Report mismatches rather than silently forcing reconciliation.
+- Save an auditable summary by day as well as a list of raw-versus-clean changes and excluded rows.
+
+B. Trading-session construction
+
+- Build an explicit regular-session grid at 30-minute frequency.
+- For normal days, treat the scheduled session as 09:30 through 16:00.
+- For the assignment-specified early-close dates 2025-07-03 and 2025-11-28, treat the scheduled close as 13:00.
+- Exclude stale or structural observations after the scheduled close from trading decisions.
+- Require exactly one scheduled closing print at 16:00 on normal days or 13:00 on early-close days.
+- Use the separate closing print only as the session-liquidation reference unless the data clearly justify another use. Do not automatically include the closing residual volume in intraday VWAP.
+- Do not create synthetic afternoon bars on early-close days.
+
+C. Timestamp and information-availability convention
+
+- Determine whether the 30-minute labels behave like interval-start labels or interval-end labels. Do not assume this without checking the workbook.
+- Preserve both the original source timestamp and the timestamp at which the information is assumed to become available.
+- For the baseline, if the data are best interpreted as start-labeled 30-minute intervals, treat a row labeled 09:30 as becoming available at 10:00, a 10:00 row at 10:30, etc.
+- Under that convention, keep the original interval price separately for VWAP calculation, while using the scheduled closing print as the liquidation price at the market close.
+- Make the timestamp convention explicit and configurable so it can later be tested as a sensitivity.
+- Never allow a signal to earn the return that created the signal.
+
+D. Open-price proxy
+
+- The paper requires the true 09:30 market open. If the supplied file does not contain an authenticated opening transaction, do not manufacture one.
+- Use the first available intraday interval price as an explicit open proxy only after documenting the limitation.
+- Record when that proxy becomes observable. Do not trade at the same instant used to establish the proxy.
+- Explain that this changes both the movement-from-open calculation and the overnight-gap-adjusted Noise Area relative to the paper.
+
+E. Volume convention and cumulative volume
+
+- The assignment describes accumulated volume, but verify the actual within-day behavior of the supplied volume field before using it.
+- Test whether the field is monotone within each session. If it decreases within the day, it cannot be treated as a valid cumulative counter.
+- If the supplied cleaned values behave as interval volumes, use them directly as incremental volume and construct cumulative observed volume by summation.
+- If a genuinely cumulative series is ever supplied, difference it within each session; reject negative differences rather than taking absolute values or clipping them.
+- Do not allocate unexplained daily-volume residuals backward into earlier intervals.
+
+F. Daily inputs and look-ahead protection
+
+- Use BBRG.Daily for the official daily close series.
+- Construct previous_close by lagging the daily close by one trading session.
+- Construct simple close-to-close SPY returns from the daily close series.
+- Compute the volatility input for Model C using exactly the previous 14 daily SPY returns with sample standard deviation (ddof = 1), shifted so the current day's return is never used in current-day sizing.
+- Require the full 14-session warm-up before a day becomes eligible for scoring.
+- Use only information available strictly before the current trading decision.
+
+G. Noise-Area history and half days
+
+- For each clock-time slot, calculate the historical absolute move using the prior trading sessions only.
+- Use the immediately preceding 14 trading sessions as the historical window; do not extend backward to a 15th session merely to replace a missing afternoon observation caused by an early close.
+- If an exact prior-14-session window contains only 13 observations for an afternoon clock time because one session was an early close, record the observation count explicitly and make the treatment visible for later sensitivity analysis.
+- Never carry stale early-close prices forward into nonexistent afternoon slots.
+
+H. VWAP proxy
+
+- Exact trade-level VWAP is not recoverable if the workbook contains only 30-minute prices and partial/interval volume.
+- Construct a clearly labeled approximate VWAP using observed interval volume and the available interval price:
+  cumulative sum(price_j * incremental_volume_j) / cumulative observed volume.
+- Keep the VWAP approximation isolated in its own function.
+- Do not call the result "true VWAP."
+- Do not allocate the closing-volume residual backward into the VWAP.
+- Make an alternative midpoint-weighted approximation available later as a robustness test, but do not choose between methods based on backtest performance.
+
+I. Audit outputs
+
+Before interpreting strategy returns, save enough diagnostics to reconstruct the data preparation. At minimum produce:
+- data_audit.json: workbook-level integrity summary;
+- data_audit_by_day.csv: daily row counts, volume reconciliation, closing-price reconciliation, and early-close flag;
+- cleaning_changes.csv: differences between raw and cleaned intraday sheets;
+- excluded_rows.csv: observations excluded from the regular-session decision grid;
+- daily_inputs.csv: open proxy, previous close, lagged volatility, scheduled close, and eligibility;
+- features.csv: source timestamps, availability timestamps, interval price, open proxy, Noise Area inputs/bounds, volume inputs, VWAP proxy, and warm-up status.
+
+Do not start evaluating profitability until these preparation steps are complete and the assumptions are written down.
+
+STRATEGY REPLICATION
+
+I want to replicate the following versions:
+
+Model A - Base strategy:
+- 14-day time-of-day Noise Area;
+- overnight-gap-adjusted upper/lower boundaries;
+- signals evaluated only at 30-minute trading intervals;
+- long when price is above the upper boundary and short when price is below the lower boundary;
+- opposite Noise Area boundary used as the exit/reversal rule;
+- positions closed by the scheduled end of each trading day.
+
+Model B - Improved trailing stop:
+- same signal construction;
+- trailing stop based on the current Noise Area boundary and VWAP as described in the paper.
+
+Model C - Final strategy:
+- Model B plus volatility-scaled position sizing;
+- 2% target daily SPY volatility;
+- leverage capped at 4x.
+
+Use the paper's baseline transaction-cost assumptions of $0.0035 commission per share and $0.001 slippage per share unless the supplied data force a different treatment.
+
+For VWAP, do not pretend that an exact VWAP can be calculated if the dataset does not contain enough information. Explain the limitation and use the data-preparation convention above to construct the most defensible proxy. Keep the approximation separately identifiable in the code so we can later test its sensitivity.
+
+Structure the Python implementation into clear functions for at least:
+- workbook loading and raw/clean/daily sheet standardization;
+- data audit and reconciliation;
+- session construction and timestamp availability;
+- daily/open-proxy/previous-close construction;
+- incremental and cumulative observed volume;
+- Noise Area calculation;
+- VWAP approximation;
+- signal generation;
+- trade execution;
+- transaction costs;
+- dynamic position sizing;
+- daily P&L/equity;
+- SPY buy-and-hold benchmark;
+- performance statistics.
+
+Avoid look-ahead bias. Every quantity used at time t must be based only on information available at or before that time. The 14-day Noise Area and volatility estimates must use prior trading days only.
+
+Produce diagnostics that make the implementation auditable, including a trade log with date, timestamp, action, direction, price, signal boundaries, VWAP, shares/leverage, gross P&L, costs, and net P&L where applicable.
+
+Calculate at least cumulative return, annualized return, annualized volatility, Sharpe ratio, maximum drawdown, hit ratio, number of trades, average trade return/P&L, best/worst day, and strategy beta/alpha versus SPY where statistically meaningful for this short sample.
+
+Also create a SPY buy-and-hold benchmark over the same scored period.
+
+Do not begin by optimizing parameters. First implement the paper's stated parameters exactly or as closely as the supplied data permit.
+
+After producing the first implementation, stop and give me:
+1. a concise specification of what you implemented;
+2. a complete description of the data-preparation pipeline;
+3. every assumption you had to make;
+4. every anomaly, ambiguity, or data limitation you found;
+5. a description of how you would independently verify the implementation;
+6. a list of specific spot checks I should perform before trusting the backtest.
+
+Keep a changelog throughout subsequent iterations because I need to document the prompts, data decisions, errors, corrections, and improvements in my homework write-up.
+\end{lstlisting}
+
+\subsection{Validation and Sensitivity Prompt}
+
+After the first implementation was frozen, I used the following prompt to shift the objective from building the strategy to validating it. The instruction explicitly prohibited optimization and required the baseline to remain unchanged.
+
+\begin{lstlisting}
+The first implementation is complete. Do not optimize the strategy and do not change baseline assumptions yet.
+
+We now need to perform an independent validation phase suitable for the homework write-up.
+
+First, produce a clean table containing all raw inputs and intermediate calculations necessary for me to manually reproduce the following:
+
+1. Model C on April 2, 2025, including all 14 historical observations used to calculate the 11:30 Noise Area;
+2. the 14 lagged daily SPY returns used for the April 2 volatility estimate;
+3. the resulting leverage and share count;
+4. every Model C trade on April 2, including signal values, VWAP proxy, entry/exit prices, gross P&L, commission, slippage, and net P&L;
+5. the July 3 early-close trade and liquidation;
+6. the October 10 trades responsible for the +9.32201% Model C return;
+7. the November 21 trades responsible for the -2.01150% Model C return.
+
+Do not merely call the existing backtest functions to summarize these values. Expose the underlying source rows and arithmetic so that I can reproduce the calculations independently in Excel or by hand.
+
+Then conduct robustness checks that address implementation ambiguity, not return optimization:
+- endpoint VWAP proxy versus midpoint VWAP proxy;
+- current immediate-execution convention versus one-30-minute-delay execution;
+- baseline Model B/C entry rule versus requiring price to satisfy both Noise Area and VWAP conditions;
+- current half-day treatment versus excluding affected historical time slots entirely;
+- baseline transaction costs versus moderately higher costs.
+
+For each sensitivity test, report cumulative return, annualized volatility, Sharpe ratio, maximum drawdown, number of trades, total costs, and the number of baseline trades whose entry or exit changes.
+
+Also perform a concentration analysis for Model C showing:
+- contribution of the best day;
+- contribution of the best 3 days;
+- contribution of the best 5 days;
+- cumulative return with the best 1, 3, and 5 days removed;
+- analogous analysis for the worst days.
+
+Do not select a best specification. The purpose is to assess whether the results are robust to reasonable interpretations of ambiguous implementation choices.
+
+Preserve all baseline results unchanged and add these as separate validation/sensitivity outputs.
+\end{lstlisting}
+
+\subsection{Key Corrective Instructions During Iteration}
+
+The following shorter instructions were used as the implementation was reviewed. They summarize the main corrections rather than introducing new trading ideas:
+
+\begin{lstlisting}
+- Treat the supplied data as a constraint. If the true 9:30 open or exact VWAP is unavailable, label the replacement as a proxy rather than silently treating it as exact.
+- Do not use today's return in today's volatility estimate. Check the lag explicitly for look-ahead bias.
+- Charge transaction costs on both entry and exit, and on both legs of a reversal.
+- Treat July 3 and November 28 as 1:00 p.m. closes; stale afternoon observations must never become trading decisions.
+- Keep the baseline specification frozen during robustness tests. A sensitivity case is not a new preferred model merely because it has a higher historical return.
+- Build the independent validation path without importing or calling strategy.py; compare underlying features and trade episodes, not only final cumulative returns.
+\end{lstlisting}
+
+
+\end{document}

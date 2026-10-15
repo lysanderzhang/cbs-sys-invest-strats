@@ -1,0 +1,56 @@
+{
+  "independent_engine": "standard-library CSV parsing and NumPy; no production financial functions imported",
+  "input_rows": 2981,
+  "baseline_rows": 2980,
+  "d_rows": 2727,
+  "e_rows": 2707,
+  "checks": 144,
+  "values_checked": 958020,
+  "all_checks_passed": true,
+  "selected_baseline": "3M_3_equal",
+  "selected_filter": "AY3M",
+  "extra_lag_start": "1999-12-24",
+  "extra_lag_n": 2726,
+  "bootstrap": {
+    "block": 20,
+    "replications": 2000,
+    "seed": 9339,
+    "scope": "paired fixed-series pointwise 95% intervals; not selection-adjusted"
+  }
+}
+           active_fraction  filtered_sharpe  constant_drawdown  filtered_drawdown  volmatched_drawdown
+indicator                                                                                             
+AY1wk             0.747708         0.995406           0.227175           0.090837             0.212911
+AY3M              0.745141         1.199128           0.226456           0.084063             0.204011
+AY6M              0.755409         1.082719           0.229328           0.104103             0.205066
+JPY3M             0.784745         1.004022           0.237496           0.138088             0.215780
+AUD3M             0.682435         1.131156           0.208767           0.090826             0.199618
+VIX               0.743308         0.888159           0.225942           0.101934             0.208638
+            delta_sharpe    ci_low   ci_high  replications  block  seed
+comparison                                                             
+AY1wk           0.415594 -0.036951  0.842434          2000     20  9339
+AY3M            0.619316  0.182046  1.070158          2000     20  9339
+AY6M            0.502908  0.081404  0.971929          2000     20  9339
+JPY3M           0.424210 -0.011003  0.881834          2000     20  9339
+AUD3M           0.551345  0.081523  0.998375          2000     20  9339
+VIX             0.308348 -0.152508  0.739038          2000     20  9339
+                           delta_sharpe    ci_low   ci_high  replications  block  seed
+comparison                                                                            
+AY3M minus baseline            0.610689  0.168772  1.078676          2000     20  9339
+historical minus baseline      0.398493 -0.012786  0.803892          2000     20  9339
+AY3M minus historical          0.212196 -0.079085  0.586204          2000     20  9339
+                    sharpe  max_drawdown
+baseline_primary  0.579537      0.295710
+baseline_lagged   0.580957      0.309653
+AY1wk_primary     0.995042      0.090837
+AY1wk_lagged      0.965105      0.111370
+AY3M_primary      1.198775      0.084063
+AY3M_lagged       1.133402      0.100769
+AY6M_primary      1.082348      0.104103
+AY6M_lagged       1.164466      0.106098
+JPY3M_primary     1.003667      0.138088
+JPY3M_lagged      1.033329      0.115927
+AUD3M_primary     1.130778      0.090826
+AUD3M_lagged      1.111822      0.080089
+VIX_primary       0.887763      0.101934
+VIX_lagged        0.777076      0.145682

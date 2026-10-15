@@ -1,0 +1,11 @@
+{
+  "figure": "review_baseline_paths",
+  "series": [
+    "3M_3_equal",
+    "1M_3_equal",
+    "1M_2_spread",
+    "3M_2_rank"
+  ],
+  "observations": 2980,
+  "line_data_reconciled": true
+}

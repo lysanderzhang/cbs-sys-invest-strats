@@ -1,0 +1,14 @@
+usage: cli.py [-h] [--config CONFIG] [--offline] [--ticker TICKER]
+              [--input INPUT] [--provider PROVIDER]
+              {fetch,validate-data,run,report,import-csv}
+
+positional arguments:
+  {fetch,validate-data,run,report,import-csv}
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG
+  --offline             run/validate/report never access network
+  --ticker TICKER
+  --input INPUT
+  --provider PROVIDER

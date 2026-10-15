@@ -1,0 +1,170 @@
+[
+  {
+    "path": "results/figures/baseline_2008.pdf",
+    "prior_sha256": "2a8f78be5e181d6025cbdb54e6473fa819f510c53b55860edea102853cc3d41b",
+    "current_sha256": "0cf8224be0da4af963ff7351ea14ddba26d381e7a07dd0662f9a92071e3d9a96",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/baseline_2008.png",
+    "prior_sha256": "4cf7e7f95aeb4a0dc8380eff257e98863704496427bd47fffa83b42ec78f05f3",
+    "current_sha256": "4cf7e7f95aeb4a0dc8380eff257e98863704496427bd47fffa83b42ec78f05f3",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/baseline_distributions.pdf",
+    "prior_sha256": "1128ea371971cff8559c653a10d389f344c275772895f7378dbc0cba612383cd",
+    "current_sha256": "19c32116d1079dd2f50c31ce50b6bf45dbd80f7803b1781a3be49abc342c2cd3",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/baseline_distributions.png",
+    "prior_sha256": "0e8ff3e79cf17c3fbb4882dce1a296c18576a3c247195ac668e6a91f2c533806",
+    "current_sha256": "0e8ff3e79cf17c3fbb4882dce1a296c18576a3c247195ac668e6a91f2c533806",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/baseline_drawdowns.pdf",
+    "prior_sha256": "4b4d2efa32282f32efaf07ad547b4311a9e3742972f39ffcdf82cce78baee4c8",
+    "current_sha256": "f0876609dcfa8223dfba00e1fdd525b7916f537416f14e5cd91191a123570e25",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/baseline_drawdowns.png",
+    "prior_sha256": "3893e269ac7b0452a44fad789c7e2f9ad9de5455efa206b89275d725b00023de",
+    "current_sha256": "3893e269ac7b0452a44fad789c7e2f9ad9de5455efa206b89275d725b00023de",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/baseline_wealth.pdf",
+    "prior_sha256": "4c43a5346424757ce82126d5b6f3401ba35fad4f3424ac3454860c53a9404162",
+    "current_sha256": "f977ce3d5f3e7e6f5035c7844464dfea9661d966c63366d346ba01e7ff7fe913",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/baseline_wealth.png",
+    "prior_sha256": "32751174d27cc834743996c320d25021abd4af83504197aa2c4743458f0b146d",
+    "current_sha256": "32751174d27cc834743996c320d25021abd4af83504197aa2c4743458f0b146d",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/conditioned_drawdowns.pdf",
+    "prior_sha256": "6c5560f285f3ffb84e6ddabda7f0c717adf9f1554bbf7fe8d2640bcef538238d",
+    "current_sha256": "67ba7e18c09ee4a74b394aa6681aaa678c6db212be39fe8dccd6ce360f50b937",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/conditioned_drawdowns.png",
+    "prior_sha256": "82caa8a4ef234c8d3ce482a5c470e2c209ed6105be90593e6d8b680fe604811e",
+    "current_sha256": "82caa8a4ef234c8d3ce482a5c470e2c209ed6105be90593e6d8b680fe604811e",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/conditioned_wealth.pdf",
+    "prior_sha256": "d08b4f77e520bc2a59175c471c8c77ba545e8743b785209102d6e1872268e417",
+    "current_sha256": "955fe14464727ab526b8ab88398ff5308f9fbe7d3d4e5f7436fd095dc7611677",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/conditioned_wealth.png",
+    "prior_sha256": "ac04e341c6c7c2e68994f986834532ed11db0efb5091bf2a648bee5a22f5f296",
+    "current_sha256": "ac04e341c6c7c2e68994f986834532ed11db0efb5091bf2a648bee5a22f5f296",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/historical_distributions.pdf",
+    "prior_sha256": "a0f16d2f709ad3516a0d9a3bfc4905b4053cd50e0a543f1a7847330cfdccb17d",
+    "current_sha256": "9d5417c1d9650c46fb01f7bc05d7eb6bbda88f083d0219b15f280b6cb23d2df7",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/historical_distributions.png",
+    "prior_sha256": "5df1664e468d24753ca47b366719fb6c5b8d9401938cd238980dd281308170f0",
+    "current_sha256": "5df1664e468d24753ca47b366719fb6c5b8d9401938cd238980dd281308170f0",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/historical_drawdowns.pdf",
+    "prior_sha256": "b0d16a9e4b8cdd273d371b6288de4bf64127a23b13da5b7b4bf690dd45d27f10",
+    "current_sha256": "dd7d8b11867e6c49dff1fd3bb1669e9ea036f500eaa201b78e6b451c2842aaff",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/historical_drawdowns.png",
+    "prior_sha256": "0fa3477538a34815c82908dc4247cd14564e681a46dc33436f1b00d0df5971e1",
+    "current_sha256": "0fa3477538a34815c82908dc4247cd14564e681a46dc33436f1b00d0df5971e1",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/historical_wealth.pdf",
+    "prior_sha256": "f7853c0501cd9d7cd6ce91b8c8a654ff672929df853e8620a9ab110441dbc65b",
+    "current_sha256": "9e2d599ce6425d4716f495706144ea6bd59f60999004d4d262c7a91b69ee7475",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/historical_wealth.png",
+    "prior_sha256": "62d660141e545b21a7c37822f3662d92f5eeff19406d6b37a3127d232f968ad9",
+    "current_sha256": "62d660141e545b21a7c37822f3662d92f5eeff19406d6b37a3127d232f968ad9",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/predictive_regime_distributions.pdf",
+    "prior_sha256": "6979717be38e82bc1608e3a8ad7c461dbbecd77abceab0f3131800debf6fd721",
+    "current_sha256": "196a3bfc8a0241e5e3159cf92e71526cb4b46c06c40a75b6f35ef6cbf7eb2579",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/predictive_regime_distributions.png",
+    "prior_sha256": "aaeca8fe071bf864bb2c782219e78a7d7ebf41355276b2741b38f94bfed5c083",
+    "current_sha256": "aaeca8fe071bf864bb2c782219e78a7d7ebf41355276b2741b38f94bfed5c083",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/stress_2008.pdf",
+    "prior_sha256": "75fbbdf3117f42430a510226c48b1efb8d572d8ffbcd8bd07cfa315e37a50588",
+    "current_sha256": "b88de934a91102808149f6060fb1b044a185f470bd8458809b6a5bccfa5f5184",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/stress_2008.png",
+    "prior_sha256": "cc5809d8fdd9e872130fe8957a15a86aa8669ccccabcb0059e8c0ee2394c625a",
+    "current_sha256": "cc5809d8fdd9e872130fe8957a15a86aa8669ccccabcb0059e8c0ee2394c625a",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  },
+  {
+    "path": "results/figures/volatility_scatter.pdf",
+    "prior_sha256": "425528eaf4a8c9218c2fa87fb37c425cf7ffa3f0d008968f8568b2b30d73593c",
+    "current_sha256": "6c60b55fc7db8ca6faf560c0ba6811869f260e2f8d0cb6f34482454a63862b41",
+    "plot_content_unchanged": true,
+    "byte_identical": false
+  },
+  {
+    "path": "results/figures/volatility_scatter.png",
+    "prior_sha256": "cfe43647879a2abc47066f266399567d63c779a2f84ab780321f49296e41acb0",
+    "current_sha256": "cfe43647879a2abc47066f266399567d63c779a2f84ab780321f49296e41acb0",
+    "plot_content_unchanged": true,
+    "byte_identical": true
+  }
+]

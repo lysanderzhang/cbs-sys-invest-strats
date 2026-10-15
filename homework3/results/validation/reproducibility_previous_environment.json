@@ -1,0 +1,6 @@
+{
+  "environment": "fresh venv without system-site-packages",
+  "numerical_csv_files_compared": 42,
+  "different_files": [],
+  "tests": ".....................                                                    [100%]\n21 passed in 1.96s"
+}

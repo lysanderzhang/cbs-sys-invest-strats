@@ -1,0 +1,117 @@
+{
+  "original_files_accounted_for": 72,
+  "unchanged_protected_files": 56,
+  "changed_source_or_document_files": 10,
+  "active_readme_links_valid": true,
+  "python_sources_parse": true,
+  "shared_interpreter": "/Users/lysanzh/.venvs/sys-inv/bin/python",
+  "pytest": "........                                                                 [100%]\n8 passed in 1.59s",
+  "baseline_reproduction": "passed using the unchanged local input workbook",
+  "compared_baseline_csv_files": 20,
+  "comparison_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-08
+  },
+  "baseline_comparisons": [
+    {
+      "file": "A_daily.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "A_executions.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "A_positions.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "A_trades.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "B_daily.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "B_executions.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "B_positions.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "B_trades.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "C_daily.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "C_executions.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "C_positions.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "C_trades.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "SPY_gross_daily.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "SPY_net_daily.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "cleaning_changes.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "daily_inputs.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "data_audit_by_day.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "excluded_rows.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "features.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "performance.csv",
+      "max_absolute_numeric_difference": 0.0,
+      "byte_identical": true
+    }
+  ]
+}

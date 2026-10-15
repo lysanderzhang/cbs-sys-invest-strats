@@ -1,0 +1,145 @@
+check,values,max_absolute_difference,passed
+normalized USD-per-FCY spots,26829,4.98689978201128e-12,True
+supplied ROR quotation reconciliation,26829,4.99999999999771e-05,True
+1M individual spot,26820,4.99982000246035e-14,True
+1M individual carry,26820,4.9997983184169e-16,True
+1M individual interaction,26820,4.83740516176931e-17,True
+1M individual total,26820,5.00901403688303e-14,True
+rank 1M,26829,0,True
+3M individual spot,26820,4.99982000246035e-14,True
+3M individual carry,26820,4.99898516678754e-16,True
+3M individual interaction,26820,5.10523697969112e-17,True
+3M individual total,26820,5.01543251374414e-14,True
+rank 3M,26829,0,True
+all 12 baseline returns,35760,5.00571806227867e-14,True
+all weights 1M_2_equal,26820,0,True
+all weights 1M_2_rank,26820,3.33399974294935e-13,True
+all weights 1M_2_spread,26820,5.00155472593633e-13,True
+all weights 1M_3_equal,26820,3.33288951992472e-13,True
+all weights 1M_3_rank,26820,3.33344463143703e-13,True
+all weights 1M_3_spread,26820,4.99988939139939e-13,True
+all weights 3M_2_equal,26820,0,True
+all weights 3M_2_rank,26820,3.33399974294935e-13,True
+all weights 3M_2_spread,26820,4.99378316476395e-13,True
+all weights 3M_3_equal,26820,3.33288951992472e-13,True
+all weights 3M_3_rank,26820,3.33344463143703e-13,True
+all weights 3M_3_spread,26820,4.99877916837477e-13,True
+portfolio spot,35760,4.99947305776516e-14,True
+portfolio carry,35760,4.9997983184169e-16,True
+portfolio interaction,35760,4.9836030484654e-17,True
+baseline_performance.csv: 1M_2_equal,12,3.79474229816879e-13,True
+baseline_performance.csv: 1M_2_rank,12,3.78541642476193e-12,True
+baseline_performance.csv: 1M_2_spread,12,1.05959685470225e-12,True
+baseline_performance.csv: 1M_3_equal,12,3.99662525296662e-11,True
+baseline_performance.csv: 1M_3_rank,12,8.55315818171221e-12,True
+baseline_performance.csv: 1M_3_spread,12,4.66471306026506e-12,True
+baseline_performance.csv: 3M_2_equal,12,3.67457175798336e-11,True
+baseline_performance.csv: 3M_2_rank,12,3.78310716087071e-11,True
+baseline_performance.csv: 3M_2_spread,12,4.79083439586248e-11,True
+baseline_performance.csv: 3M_3_equal,12,4.02717859060431e-11,True
+baseline_performance.csv: 3M_3_rank,12,3.2340352618121e-11,True
+baseline_performance.csv: 3M_3_spread,12,4.60040894267877e-11,True
+baseline_2008.csv: 1M_2_equal,12,2.46558329308755e-12,True
+baseline_2008.csv: 1M_2_rank,12,3.539391002505e-12,True
+baseline_2008.csv: 1M_2_spread,12,4.56235049739462e-12,True
+baseline_2008.csv: 1M_3_equal,12,4.7901682620477e-12,True
+baseline_2008.csv: 1M_3_rank,12,2.08721928629529e-12,True
+baseline_2008.csv: 1M_3_spread,12,3.89754895024907e-12,True
+baseline_2008.csv: 3M_2_equal,12,3.17079695832945e-12,True
+baseline_2008.csv: 3M_2_rank,12,3.66284780284332e-12,True
+baseline_2008.csv: 3M_2_spread,12,4.9862336481965e-12,True
+baseline_2008.csv: 3M_3_equal,12,3.67439412229942e-12,True
+baseline_2008.csv: 3M_3_rank,12,4.53859172466764e-12,True
+baseline_2008.csv: 3M_3_spread,12,4.89808194004127e-12,True
+as-of volatility,17886,0,True
+all six thresholds,17886,7.105427357601e-15,True
+all six full filtered series,17880,4.97050317571635e-14,True
+raw volatility missing flags,17886,0,True
+as-of signal ages,17886,0,True
+all six conditioned returns,19089,4.97050317571635e-14,True
+all six held exposure paths,16362,0,True
+conditioned_performance.csv: baseline,12,7.0947692165646e-12,True
+conditioned_performance.csv: AY1wk,12,3.79785092263774e-12,True
+conditioned_performance.csv: AY3M,12,4.9880100050359e-12,True
+conditioned_performance.csv: AY6M,12,3.30491189970417e-12,True
+conditioned_performance.csv: JPY3M,12,4.59365878668905e-12,True
+conditioned_performance.csv: AUD3M,12,4.90185669832499e-12,True
+conditioned_performance.csv: VIX,12,2.05968575528459e-12,True
+conditioned_2008.csv: baseline,12,3.67439412229942e-12,True
+conditioned_2008.csv: AY1wk,12,3.71702668644502e-12,True
+conditioned_2008.csv: AY3M,12,3.69437813674267e-12,True
+conditioned_2008.csv: AY6M,12,4.6278536558475e-12,True
+conditioned_2008.csv: JPY3M,12,4.88817875066161e-11,True
+conditioned_2008.csv: AUD3M,12,4.00235400377369e-13,True
+conditioned_2008.csv: VIX,12,2.36344277482203e-12,True
+AY1wk active percentage,1,2.52353693497298e-13,True
+AY3M active percentage,1,2.54907206453936e-13,True
+AY6M active percentage,1,2.44582132324922e-13,True
+JPY3M active percentage,1,2.15272244474818e-13,True
+AUD3M active percentage,1,3.17523785042795e-13,True
+VIX active percentage,1,2.56683563293336e-13,True
+daily predictive regime labels,16362,0,True
+regime AY1wk predictive low,12,2.78443934575989e-13,True
+regime AY1wk predictive medium,12,1.69331215715829e-12,True
+regime AY1wk predictive high,12,1.62536650805123e-12,True
+regime AY3M predictive low,12,4.04165589884542e-12,True
+regime AY3M predictive medium,12,2.65920618858217e-12,True
+regime AY3M predictive high,12,2.75335310107039e-12,True
+regime AY6M predictive low,12,4.29678514990428e-12,True
+regime AY6M predictive medium,12,3.88133969408955e-12,True
+regime AY6M predictive high,12,3.27204929817526e-12,True
+regime JPY3M predictive low,12,2.54507526165071e-12,True
+regime JPY3M predictive medium,12,3.99369426418161e-12,True
+regime JPY3M predictive high,12,4.9453774408903e-12,True
+regime AUD3M predictive low,12,4.81459316858945e-12,True
+regime AUD3M predictive medium,12,1.5949463971765e-12,True
+regime AUD3M predictive high,12,3.73745479009813e-12,True
+regime VIX predictive low,12,3.87689880199105e-13,True
+regime VIX predictive medium,12,3.58801877098358e-12,True
+regime VIX predictive high,12,2.50821585723315e-12,True
+regime AY1wk contemporaneous low,12,2.16515694262398e-12,True
+regime AY1wk contemporaneous medium,12,4.88475926374576e-12,True
+regime AY1wk contemporaneous high,12,3.72857300590113e-12,True
+regime AY3M contemporaneous low,12,1.21502807814977e-12,True
+regime AY3M contemporaneous medium,12,3.35687033725662e-12,True
+regime AY3M contemporaneous high,12,4.964029187704e-12,True
+regime AY6M contemporaneous low,12,3.52473605857995e-12,True
+regime AY6M contemporaneous medium,12,1.12976294985856e-12,True
+regime AY6M contemporaneous high,12,4.17088585891179e-12,True
+regime JPY3M contemporaneous low,12,2.57593946173529e-12,True
+regime JPY3M contemporaneous medium,12,4.13713507896318e-12,True
+regime JPY3M contemporaneous high,12,6.21724893790088e-13,True
+regime AUD3M contemporaneous low,12,3.71969122170412e-12,True
+regime AUD3M contemporaneous medium,12,1.70619074424394e-12,True
+regime AUD3M contemporaneous high,12,4.70401495533679e-13,True
+regime VIX contemporaneous low,12,4.42845760062482e-12,True
+regime VIX contemporaneous medium,12,3.69215769069342e-12,True
+regime VIX contemporaneous high,12,1.90425453183707e-12,True
+correlation AY1wk all,3,3.74478226206065e-13,True
+correlation AY3M all,3,4.25659507641285e-13,True
+correlation AY6M all,3,6.10622663543836e-14,True
+correlation JPY3M all,3,4.62574423210071e-13,True
+correlation AUD3M all,3,4.6537773634725e-13,True
+correlation VIX all,3,3.24351656644239e-13,True
+correlation AY1wk 2008,3,3.36175531856497e-13,True
+correlation AY3M 2008,3,3.29181126801359e-13,True
+correlation AY6M 2008,3,2.59403609703668e-13,True
+correlation JPY3M 2008,3,2.87991852587766e-13,True
+correlation AUD3M 2008,3,4.2366110619696e-13,True
+correlation VIX 2008,3,4.11892742135933e-13,True
+AUDJPY cross,2981,1.4210854715202e-14,True
+21-day realized volatility,2981,4.99766894535014e-13,True
+historical threshold,2981,4.99530972142281e-13,True
+historical held exposure,2981,0,True
+historical common sample returns,8121,4.97050317571635e-14,True
+full historical filtered series,2980,4.97050317571635e-14,True
+historical_comparison.csv: baseline,12,4.82671680401836e-11,True
+historical_comparison.csv: FX_AY3M,12,3.65041330496751e-12,True
+historical_comparison.csv: historical,12,3.13349346470204e-12,True
+historical_2008.csv: baseline,12,3.67439412229942e-12,True
+historical_2008.csv: FX_AY3M,12,3.69437813674267e-12,True
+historical_2008.csv: historical,12,5.79092329644482e-13,True
+future-suffix invariance,1500,0,True
+future-suffix invariance,1500,0,True
+future-suffix invariance,1500,0,True
+future-suffix invariance,1500,0,True

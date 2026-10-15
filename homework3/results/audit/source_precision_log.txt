@@ -1,0 +1,14 @@
+   strategy  csv_sharpe  xlsx_sharpe  csv_geometric  xlsx_geometric  changed_selected_currency_dates  changed_weight_dates
+ 1M_2_equal    0.534059     0.534062       0.059587        0.059587                                0                     0
+  1M_2_rank    0.488482     0.488486       0.056158        0.056159                                0                     0
+1M_2_spread    0.529258     0.529275       0.061132        0.061135                                0                  2785
+ 1M_3_equal    0.625269     0.625270       0.055674        0.055674                                0                     0
+  1M_3_rank    0.559979     0.559982       0.056404        0.056404                                0                     0
+1M_3_spread    0.573450     0.573478       0.058090        0.058094                                0                  2915
+ 3M_2_equal    0.500895     0.500898       0.056637        0.056637                                0                     0
+  3M_2_rank    0.481297     0.481299       0.057023        0.057024                                0                     0
+3M_2_spread    0.507140     0.507184       0.059648        0.059654                                0                  1701
+ 3M_3_equal    0.629421     0.629423       0.056431        0.056431                                0                     0
+  3M_3_rank    0.555849     0.555852       0.057264        0.057265                                0                     0
+3M_3_spread    0.578858     0.578898       0.059364        0.059368                                0                  2398
+{'baseline_winners': {'CSV': '3M_3_equal', 'XLSX': '3M_3_equal'}, 'fixed_baseline': '3M_3_equal', 'filter_winners': {'CSV': 'AY3M', 'XLSX': 'AY3M'}, 'common_filter_dates': 2727}

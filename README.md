@@ -2,15 +2,18 @@
 
 Hanyu Zhang · Fall 2026
 
-This repository contains two separate homework projects. Each project keeps its own methods, dependencies, results, and reproduction instructions. The existing HW1 project was moved into `homework1/` without rewriting its Git history; HW2 was added from the local `homework/hw2/` materials.
+This repository collects the course homework in numbered `homeworkN/` folders. Each homework keeps its own methods, dependencies, results, and reproduction instructions.
 
 | Project | Subject | Start here |
 |---|---|---|
-| [Homework 1](homework1/) | SPY intraday strategy replication, Models A/B/C | [README](homework1/README.md) · [Results and validation](homework1/RESULTS_AND_VALIDATION.md) · [Submission workbook](homework1/outputs/submission/FINCB9339_HW1_Submission.xlsx) |
-| [Homework 2](homework2/) | Crash-aware equity momentum and cross-asset ETF dual momentum | [README](homework2/README.md) · [Investor presentation](homework2/Investor_Presentation.pdf) · [Research report](homework2/hw2_momentum/deliverables/HW2_Momentum_Research_Report.pdf) |
+| [Homework 1](homework1/) | SPY intraday strategy replication, Models A/B/C | [README](homework1/README.md) · [Submitted report](homework1/submission/HW1_Hanyu_Zhang_FINCB9339.pdf) · [Results and validation](homework1/report/RESULTS_AND_VALIDATION.md) · [Submitted workbook](homework1/submission/original_submitted/FINCB9339_HW1_Submission.xlsx) |
+| [Homework 2](homework2/) | Crash-aware equity momentum and cross-asset ETF dual momentum | [README](homework2/README.md) · [Investor presentation](homework2/submission/Investor_Presentation.pdf) · [Complete project report](homework2/submission/HW2_Hanyu_Zhang_FINCB9339.pdf) |
+| [Homework 3](homework3/) | Daily G10 FX carry and volatility conditioning | [README](homework3/README.md) · [Complete report with figure appendix](homework3/submission/final_report.pdf) |
 
 ## Working with the projects
 
-Run each project's commands from its own directory. HW1 uses `homework1/requirements.txt`; HW2 uses `homework2/hw2_momentum/requirements.lock.txt`. Python environments, transient build files and local market-data caches are excluded from Git.
+Run each project's commands from its own directory. HW1 uses `homework1/requirements.txt`; HW2 uses `homework2/requirements.lock.txt`; HW3 uses `homework3/pyproject.toml` and `requirements-lock.txt`. All Python execution uses the existing shared `$HOME/.venvs/sys-inv/bin/python`. Do not create homework-local environments or run `uv sync`; install only missing packages with `uv pip install --python "$HOME/.venvs/sys-inv/bin/python" <packages>`. Dependency files document requirements and historical versions, not targets for replacing shared dependencies. See [AGENTS.md](AGENTS.md). Transient build files, generated ZIP packages and local market-data caches are excluded from Git. Final PDFs and canonical report sources are tracked. HW3 also creates Git-ignored LaTeX/bibliography copies in `submission/` for convenience.
+
+For future assignments, add `homework4/`, `homework5/`, and so on, with a project README and an entry in the table above. Keep assignment-specific code, data, and outputs inside the corresponding folder. The existing course environment stays outside OneDrive; root and homework dependency files are specifications only.
 
 The repository includes historical research outputs and verification records, not a live trading system. Costs and capacity estimates have stated limitations. No trades or assignment submissions are performed by this repository.

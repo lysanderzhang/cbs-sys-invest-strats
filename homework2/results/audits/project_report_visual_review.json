@@ -1,0 +1,27 @@
+{
+  "pdf_sha256": "f771babf23fc0cd407ef90c597b483be7b075a6e086a2c3d2af294fbf1c7f5e8",
+  "source_sha256": "c151d018d98bb4c174c7f97f5532b38bb3d3354d3bc42558e95dddf764ffe376",
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "visual_review": "passed",
+  "unit_tests_passed": 11,
+  "independent_metric_reconciliations": 65,
+  "checks": [
+    "all latest rendered pages inspected",
+    "no overflow, overlap or clipped content",
+    "tables generated from reconciled saved outputs",
+    "source/compiled/submission files agree"
+  ],
+  "limitation": "Original vendor caches absent; no fresh end-to-end backtest."
+}

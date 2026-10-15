@@ -1,0 +1,27 @@
+{
+  "baseline": "3M_3_equal",
+  "candidate_c": "AY3M",
+  "winner_d": "AY3M",
+  "best_fx_implied_d": "AY3M",
+  "influential_dimension": "k",
+  "d_start": "1999-12-23",
+  "d_end": "2010-06-04",
+  "d_n": 2727,
+  "e_start": "2000-01-20",
+  "e_end": "2010-06-04",
+  "e_n": 2707,
+  "correlation_start": "1999-01-05",
+  "correlation_n": 2769,
+  "candidate_rule": "Largest predictive high-minus-low 5% expected shortfall; prior rolling terciles",
+  "selection_rule": "Sharpe descending; geometric descending; ES ascending; drawdown ascending; stable name order",
+  "assumptions": {
+    "day_count": "ACT/365",
+    "yield_compounding": "continuous",
+    "annual_trading_days": 252,
+    "decision": "close t using same-date observations; hold t to next row",
+    "threshold": "previous 252 as-of observations; linear 75th percentile",
+    "missing_vol": "forward fill only, no initial backfill",
+    "transaction_costs": 0
+  },
+  "python": "3.12.14"
+}

@@ -1,0 +1,18 @@
+{
+  "independent_checks": 144,
+  "independent_values": 958020,
+  "tests_passed": 30,
+  "primary_numerical_files_compared": 42,
+  "primary_numerical_files_changed": [],
+  "input_hashes_verified": [
+    "data/raw/hw3.data.carry.FX.dly.csv",
+    "data/raw/hw3.data.carry.FX.dly.xlsx",
+    "references/hw3.pdf",
+    "references/Crash-neutralcurrencycarrytrades.pdf",
+    "references/Sequencing the Strategy Genome.pdf"
+  ],
+  "report_pages": 20,
+  "no_computational_lookahead_found": true,
+  "actual_fixing_availability_verified": false,
+  "uncertainty_selection_adjusted": false
+}

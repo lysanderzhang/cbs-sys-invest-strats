@@ -1,0 +1,235 @@
+{
+  "environment": "existing shared FINCB9339 environment",
+  "interpreter": "/Users/lysanzh/.venvs/sys-inv/bin/python",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1",
+    "openpyxl": "3.1.5",
+    "pypdf": "6.20.1"
+  },
+  "numerical_csv_files_compared": 42,
+  "byte_identical_files": 42,
+  "all_numeric_values_match_at_five_decimals": true,
+  "comparison_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-12
+  },
+  "max_absolute_numeric_difference": 0.0,
+  "tests": ".....................                                                    [100%]\n21 passed in 1.73s",
+  "files": [
+    {
+      "file": "timeseries/asof_volatility.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/baseline_returns.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/conditioned_held_exposure.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/conditioned_returns_common.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/conditioned_returns_full.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/currency_1M_carry.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/currency_1M_interaction.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/currency_1M_spot.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/currency_1M_total.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/currency_3M_carry.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/currency_3M_interaction.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/currency_3M_spot.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/currency_3M_total.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/daily_weights.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/historical_comparison_returns.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/historical_conditioned_returns_full.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/historical_volatility.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/normalized_spots.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/portfolio_carry_contributions.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/portfolio_interaction_contributions.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/portfolio_spot_contributions.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/predictive_regimes.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/rankings_1M.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/rankings_3M.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/raw_volatility_missing.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/volatility_signal_age.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "timeseries/volatility_thresholds.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/baseline_2008.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/baseline_decomposition.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/baseline_performance.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/conditioned_2008.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/conditioned_performance.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/design_dimensions.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/historical_2008.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/historical_comparison.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/implementation_robustness.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/paired_comparisons.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/predictive_es_contrast.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/representative_holdings.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/risk_off_opportunity_cost.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/volatility_correlations.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    },
+    {
+      "file": "tables/volatility_regimes.csv",
+      "byte_identical": true,
+      "max_absolute_numeric_difference": 0.0
+    }
+  ]
+}

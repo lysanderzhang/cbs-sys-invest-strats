@@ -1,0 +1,5 @@
+usage: build_assets.py [-h] [--tables TABLES]
+
+options:
+  -h, --help       show this help message and exit
+  --tables TABLES

@@ -1,0 +1,4 @@
+dimension,mean_absolute_sharpe_difference,mean_absolute_geometric_difference,n_pairs
+k,0.080282426111,0.00132193237521,6
+method,0.0350467016013,0.00222245210073,12
+tenor,0.0126930014588,0.00136510685261,6

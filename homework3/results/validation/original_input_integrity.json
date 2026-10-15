@@ -1,0 +1,22 @@
+[
+  {
+    "source": "data/raw/hw3.data.carry.FX.dly.csv",
+    "original_unchanged": true
+  },
+  {
+    "source": "data/raw/hw3.data.carry.FX.dly.xlsx",
+    "original_unchanged": true
+  },
+  {
+    "source": "references/hw3.pdf",
+    "original_unchanged": true
+  },
+  {
+    "source": "references/Crash-neutralcurrencycarrytrades.pdf",
+    "original_unchanged": true
+  },
+  {
+    "source": "references/Sequencing the Strategy Genome.pdf",
+    "original_unchanged": true
+  }
+]

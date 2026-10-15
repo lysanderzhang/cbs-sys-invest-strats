@@ -1,0 +1,7 @@
+{
+  "interpreter": "/Users/lysanzh/.venvs/sys-inv/bin/python",
+  "prefix": "/Users/lysanzh/.venvs/sys-inv",
+  "removed_redundant_environment": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/cbs-sys-invest-strats/homework3/.venv",
+  "location_and_configuration_verified_before_removal": true,
+  "policy": "One shared FINCB9339 environment; no project environments or uv sync"
+}

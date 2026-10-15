@@ -1,0 +1,17 @@
+{
+  "original_files_accounted_for": 237,
+  "unchanged_protected_files": 182,
+  "changed_source_or_document_files": 19,
+  "active_readme_links_valid": true,
+  "python_sources_parse": true,
+  "shared_interpreter": "/Users/lysanzh/.venvs/sys-inv/bin/python",
+  "pytest": "...........                                                              [100%]\n11 passed in 8.55s",
+  "research_freeze_hashes_match": true,
+  "offline_backtest_rerun": false,
+  "reason": "Original vendor caches absent; no data fetched",
+  "python_project_root_resolves_correctly": true,
+  "cli_help": "passed",
+  "presentation_asset_cli_help": "passed",
+  "javascript_and_shell_syntax_checks": "passed",
+  "notebook_outputs": "preserved; source paths and kernel metadata updated without re-execution"
+}

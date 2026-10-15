@@ -1,0 +1,44 @@
+[
+  {
+    "figure": "baseline_wealth",
+    "series": 12,
+    "observations_per_series": 2980,
+    "artist_data_reconciled": true
+  },
+  {
+    "figure": "baseline_drawdowns",
+    "series": 12,
+    "observations_per_series": 2980,
+    "artist_data_reconciled": true
+  },
+  {
+    "figure": "baseline_2008",
+    "series": 12,
+    "observations_per_series": 262,
+    "artist_data_reconciled": true
+  },
+  {
+    "figure": "conditioned_wealth",
+    "series": 7,
+    "observations_per_series": 2727,
+    "artist_data_reconciled": true
+  },
+  {
+    "figure": "conditioned_drawdowns",
+    "series": 7,
+    "observations_per_series": 2727,
+    "artist_data_reconciled": true
+  },
+  {
+    "figure": "historical_wealth",
+    "series": 3,
+    "observations_per_series": 2707,
+    "artist_data_reconciled": true
+  },
+  {
+    "figure": "historical_drawdowns",
+    "series": 3,
+    "observations_per_series": 2707,
+    "artist_data_reconciled": true
+  }
+]

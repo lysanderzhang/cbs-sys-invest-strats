@@ -1,0 +1,12 @@
+{
+  "baseline_winners": {
+    "CSV": "3M_3_equal",
+    "XLSX": "3M_3_equal"
+  },
+  "fixed_baseline": "3M_3_equal",
+  "filter_winners": {
+    "CSV": "AY3M",
+    "XLSX": "AY3M"
+  },
+  "common_filter_dates": 2727
+}

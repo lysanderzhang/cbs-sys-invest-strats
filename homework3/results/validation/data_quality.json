@@ -1,0 +1,12 @@
+{
+  "rows": 2981,
+  "start": "1999-01-01",
+  "end": "2010-06-04",
+  "duplicate_dates": 0,
+  "spot_missing": 0,
+  "yield_missing": 0,
+  "vix_missing": 108,
+  "max_ror_error": 4.9999999999977146e-05,
+  "largest_spot_move": 0.08628731343283591,
+  "csv_xlsx_spot_max_difference": 1.7763568394002505e-15
+}

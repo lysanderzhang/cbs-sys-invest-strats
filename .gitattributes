@@ -4,8 +4,14 @@
 *.jpg binary
 *.xlsx binary
 # Preserve original provider headers and supplied Markdown hard line breaks.
-homework2/hw2_momentum/data/manifests/*_header.txt -whitespace
-homework2/HW2_Momentum_Agent_Spec.md -whitespace
-homework2/hw2.md -whitespace
-homework2/hw2_momentum/outputs/audits/clean_reproduce_stdout.log -whitespace
-homework2/hw2_momentum/deliverables/*.md -whitespace
+homework2/data/manifests/*_header.txt -whitespace
+homework2/docs/HW2_Momentum_Agent_Spec.md -whitespace
+homework2/references/hw2.md -whitespace
+homework2/results/audits/clean_reproduce_stdout.log -whitespace
+homework2/report/*.md -whitespace
+
+# Preserve immutable input bytes and original submitted source formatting.
+homework3/data/raw/* -text -whitespace
+homework1/report/submitted/*.tex -text -whitespace
+# Pretty-printed research records intentionally contain column padding.
+homework3/results/audit/review_log.txt -whitespace

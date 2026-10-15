@@ -1,0 +1,1687 @@
+{
+  "interpreter": "/Users/lysanzh/.venvs/sys-inv/bin/python",
+  "files": [
+    {
+      "before": ".DS_Store",
+      "after": ".DS_Store",
+      "original_sha256": "fd2d09f35b904a73bf2d1160fc73f0450fa727699210ae145adc867fac89c071",
+      "current_sha256": "fd2d09f35b904a73bf2d1160fc73f0450fa727699210ae145adc867fac89c071",
+      "content_changed": false
+    },
+    {
+      "before": "HW2_Momentum_Agent_Spec.md",
+      "after": "docs/HW2_Momentum_Agent_Spec.md",
+      "original_sha256": "a0f983d40eb6589a6f64b3ba9d8aa89ea27bc5151ae825c01a2e0ca6b408256b",
+      "current_sha256": "a0f983d40eb6589a6f64b3ba9d8aa89ea27bc5151ae825c01a2e0ca6b408256b",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation.pdf",
+      "after": "submission/Investor_Presentation.pdf",
+      "original_sha256": "b2acdc752123d99b021e0fa3f62be9af9dce98a42a30bcd500f8b0c3a4c7776f",
+      "current_sha256": "b2acdc752123d99b021e0fa3f62be9af9dce98a42a30bcd500f8b0c3a4c7776f",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/CHANGELOG.md",
+      "after": "report/presentation/CHANGELOG.md",
+      "original_sha256": "5563fc736417bc0a3cc047fb7c1164b5d35339060cce3681e411832b4f14e021",
+      "current_sha256": "5563fc736417bc0a3cc047fb7c1164b5d35339060cce3681e411832b4f14e021",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/Investor_Presentation.tex",
+      "after": "report/presentation/Investor_Presentation.tex",
+      "original_sha256": "d75de671e8fd05490e2ba5e7631f8b0f234c1ca9cc0d0782e0de301d0d7281d7",
+      "current_sha256": "a16e4d84d4251f71326724a561d27135ab11ccb77180bf37706515429416e0d2",
+      "content_changed": true
+    },
+    {
+      "before": "Investor_Presentation_Source/Presenter_Notes.md",
+      "after": "report/presentation/Presenter_Notes.md",
+      "original_sha256": "721214b04d92f2d052a1c50d0a364ff808d78ae7f5059b023c16f88cf756d642",
+      "current_sha256": "721214b04d92f2d052a1c50d0a364ff808d78ae7f5059b023c16f88cf756d642",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/README.md",
+      "after": "report/presentation/README.md",
+      "original_sha256": "56d85b8bd29b654487ae66f22e95cd48a6aaeb6c082d76bc6aa0074961760919",
+      "current_sha256": "28d4f2fe384f33d4793f703c48267b78adeff9c3cf683bbc22ae09ee7ee1a7b9",
+      "content_changed": true
+    },
+    {
+      "before": "Investor_Presentation_Source/figures/fig_A_wealth_drawdown.pdf",
+      "after": "report/presentation/figures/fig_A_wealth_drawdown.pdf",
+      "original_sha256": "2b97124f489887301ba4203b830b8338a5ef37c9cc88e99999ea5ad5709d4f4d",
+      "current_sha256": "2b97124f489887301ba4203b830b8338a5ef37c9cc88e99999ea5ad5709d4f4d",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/figures/fig_B3_exposure.pdf",
+      "after": "report/presentation/figures/fig_B3_exposure.pdf",
+      "original_sha256": "de1ccb7899fa457a348434c1c745408e9c2c27ef4774cdb4c748918603e24465",
+      "current_sha256": "de1ccb7899fa457a348434c1c745408e9c2c27ef4774cdb4c748918603e24465",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/figures/fig_B_wealth_drawdown.pdf",
+      "after": "report/presentation/figures/fig_B_wealth_drawdown.pdf",
+      "original_sha256": "c592bbfd142c301da29b6f25d77e424d7b3605de4ea1e5c80baef8527d145b3e",
+      "current_sha256": "c592bbfd142c301da29b6f25d77e424d7b3605de4ea1e5c80baef8527d145b3e",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/macros.tex",
+      "after": "report/presentation/generated/macros.tex",
+      "original_sha256": "3e59fa11d833e314dff60182c41fb815138ef3f259e14487aa22a81c1e73f6b3",
+      "current_sha256": "3e59fa11d833e314dff60182c41fb815138ef3f259e14487aa22a81c1e73f6b3",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_A.tex",
+      "after": "report/presentation/generated/tab_A.tex",
+      "original_sha256": "9bac9fbd0ea6eb234fc2613509fa3ed06f94f397ca0ee1130232d743e07a03e0",
+      "current_sha256": "9bac9fbd0ea6eb234fc2613509fa3ed06f94f397ca0ee1130232d743e07a03e0",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_A_sub.tex",
+      "after": "report/presentation/generated/tab_A_sub.tex",
+      "original_sha256": "eceba4f71668220fbea978185af7910cdbe9d013a0cbc28cd1aae4b379710649",
+      "current_sha256": "eceba4f71668220fbea978185af7910cdbe9d013a0cbc28cd1aae4b379710649",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_boot.tex",
+      "after": "report/presentation/generated/tab_boot.tex",
+      "original_sha256": "24f144ae491c8278f7436f8b07b5693a1ba0ba55700d839da4be08e222c7e420",
+      "current_sha256": "24f144ae491c8278f7436f8b07b5693a1ba0ba55700d839da4be08e222c7e420",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_cap.tex",
+      "after": "report/presentation/generated/tab_cap.tex",
+      "original_sha256": "8316cd448cda21542f921b8be8bb9ac968ae12c2f5950a354eb93308a9e99ec0",
+      "current_sha256": "8316cd448cda21542f921b8be8bb9ac968ae12c2f5950a354eb93308a9e99ec0",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_main.tex",
+      "after": "report/presentation/generated/tab_main.tex",
+      "original_sha256": "b19cc58bc9e422459659e30d6753894463a74f184f4057aad117123ef67c4681",
+      "current_sha256": "b19cc58bc9e422459659e30d6753894463a74f184f4057aad117123ef67c4681",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_precise.tex",
+      "after": "report/presentation/generated/tab_precise.tex",
+      "original_sha256": "90c138c43fa7bf0c811b656a0ae4cdbbac0998aaced633b6ceaf15ece5d9af64",
+      "current_sha256": "90c138c43fa7bf0c811b656a0ae4cdbbac0998aaced633b6ceaf15ece5d9af64",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_sens.tex",
+      "after": "report/presentation/generated/tab_sens.tex",
+      "original_sha256": "6d93928ad4f67aeac5be3b5b6c2f6d41054678fe95951b403d8b539003fe0706",
+      "current_sha256": "6d93928ad4f67aeac5be3b5b6c2f6d41054678fe95951b403d8b539003fe0706",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_stress.tex",
+      "after": "report/presentation/generated/tab_stress.tex",
+      "original_sha256": "7e16e04d9995a1ee95603f9c1bd9f288403e51186c4d5264ee1251992b93f9b1",
+      "current_sha256": "7e16e04d9995a1ee95603f9c1bd9f288403e51186c4d5264ee1251992b93f9b1",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/tab_sub.tex",
+      "after": "report/presentation/generated/tab_sub.tex",
+      "original_sha256": "1e8fbc2d2b5938e479942ff361cf618ca59c27a583cf5582e80b90c0adb0568f",
+      "current_sha256": "1e8fbc2d2b5938e479942ff361cf618ca59c27a583cf5582e80b90c0adb0568f",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/generated/verification.json",
+      "after": "report/presentation/generated/verification.json",
+      "original_sha256": "a241449f04f56afc187551d64daceb6a43b91578fd0595d25e21cc2e7a039fef",
+      "current_sha256": "a241449f04f56afc187551d64daceb6a43b91578fd0595d25e21cc2e7a039fef",
+      "content_changed": false
+    },
+    {
+      "before": "Investor_Presentation_Source/scripts/build_assets.py",
+      "after": "report/presentation/scripts/build_assets.py",
+      "original_sha256": "e5ade41412811ccdb2eef40254a5eb9ff0a433e75fa0827a94da0fc362241f7f",
+      "current_sha256": "06623cb8d30ac83001328c35559f2099f024ca1332a7f44a9203935cf3a8bd19",
+      "content_changed": true
+    },
+    {
+      "before": "Investor_Presentation_Source/scripts/render_pages.sh",
+      "after": "report/presentation/scripts/render_pages.sh",
+      "original_sha256": "e4e1be29566713d23adbf2430aad411aaede13e2aac7244e7ba986b3baa263e2",
+      "current_sha256": "b450b37ac712a76976cd59b759c90b0339df71004f21f7941cef5ab76fecf898",
+      "content_changed": true
+    },
+    {
+      "before": "README.md",
+      "after": "README.md",
+      "original_sha256": "9260342737e933ec74eeeb49e2e252d594f7531f6a4d39ea173e0a7384af93f0",
+      "current_sha256": "cddbeaeb4085a356eb6bf04e6ddfd687fcc2289076fcabe962ea4e422ac2818f",
+      "content_changed": true
+    },
+    {
+      "before": "hw2.md",
+      "after": "references/hw2.md",
+      "original_sha256": "0371ce4c3d2e6f0fc5dc2f2cad692967536598478cf14026aa35cddc1472009b",
+      "current_sha256": "0371ce4c3d2e6f0fc5dc2f2cad692967536598478cf14026aa35cddc1472009b",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/PACKAGE_SHA256.json",
+      "after": "docs/provenance/PACKAGE_SHA256.json",
+      "original_sha256": "8b8dd12e74579017d2d099930b64cfa8f1941b839acd25fca5b64534b9d7a733",
+      "current_sha256": "8b8dd12e74579017d2d099930b64cfa8f1941b839acd25fca5b64534b9d7a733",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/README.md",
+      "after": "docs/RESEARCH_GUIDE.md",
+      "original_sha256": "c0fa3e9f769a7f93688b2984e35e44d4e38c80dcc6606075818c58b72ccde1d1",
+      "current_sha256": "679b366e6e4cf9b42af4063943a6a3a6fe8d8d58968d986f335ebdd2bda53167",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/config/base.yaml",
+      "after": "config/base.yaml",
+      "original_sha256": "2a69b965e7aabca964fc8f88ec389def5a26a55d085f7736bddf8737f93bb64f",
+      "current_sha256": "2a69b965e7aabca964fc8f88ec389def5a26a55d085f7736bddf8737f93bb64f",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/data/manifests/adjustment_convention_supplement.json",
+      "after": "data/manifests/adjustment_convention_supplement.json",
+      "original_sha256": "5f591d8858d66b80717939f3a31afe3a5769cbdef0ed8b6f5ff63ede25240013",
+      "current_sha256": "5f591d8858d66b80717939f3a31afe3a5769cbdef0ed8b6f5ff63ede25240013",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/data/manifests/ff_daily_header.txt",
+      "after": "data/manifests/ff_daily_header.txt",
+      "original_sha256": "47778c868090b2d9ea6bcae7657cc72c18f7b4fa62c9292c68f087cef1e0798a",
+      "current_sha256": "47778c868090b2d9ea6bcae7657cc72c18f7b4fa62c9292c68f087cef1e0798a",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/data/manifests/ff_monthly_header.txt",
+      "after": "data/manifests/ff_monthly_header.txt",
+      "original_sha256": "2190ee58dd915a295aff189c0f5a41a089e281b315d9e0eadbfc59083c4cf98b",
+      "current_sha256": "2190ee58dd915a295aff189c0f5a41a089e281b315d9e0eadbfc59083c4cf98b",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/data/manifests/inputs.json",
+      "after": "data/manifests/inputs.json",
+      "original_sha256": "2bb6f8336ea6152d8e5fee776f3dc99725fb5f410ac4878f344f8a73e5623adf",
+      "current_sha256": "2bb6f8336ea6152d8e5fee776f3dc99725fb5f410ac4878f344f8a73e5623adf",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/data/manifests/mom_daily_header.txt",
+      "after": "data/manifests/mom_daily_header.txt",
+      "original_sha256": "8cd717564445dc698876c84f985f55368a382192ece80d2e4a045d2b0f1d6920",
+      "current_sha256": "8cd717564445dc698876c84f985f55368a382192ece80d2e4a045d2b0f1d6920",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/data/manifests/mom_monthly_header.txt",
+      "after": "data/manifests/mom_monthly_header.txt",
+      "original_sha256": "22de57a5c7ece86e4bae31b53d3ec5f51b8a0b8d00ec80f20f3225b623e2eb01",
+      "current_sha256": "22de57a5c7ece86e4bae31b53d3ec5f51b8a0b8d00ec80f20f3225b623e2eb01",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/data/manifests/vix_header.txt",
+      "after": "data/manifests/vix_header.txt",
+      "original_sha256": "df7111c1b313cfd35957cdc97f5b11c2d2fe5b71bb08718d6e0eb3427eb1a20d",
+      "current_sha256": "df7111c1b313cfd35957cdc97f5b11c2d2fe5b71bb08718d6e0eb3427eb1a20d",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/data/manifests/yfinance_api.txt",
+      "after": "data/manifests/yfinance_api.txt",
+      "original_sha256": "0d5e7d45f55bda94a4d56c9343b377bbce4d8a2fdf783d7320dd6ed59f854a5c",
+      "current_sha256": "0d5e7d45f55bda94a4d56c9343b377bbce4d8a2fdf783d7320dd6ed59f854a5c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/deliverables/HW2_Investor_Presentation.pdf",
+      "after": "submission/archive/HW2_Investor_Presentation.pdf",
+      "original_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47",
+      "current_sha256": "c9783fba4796da3e6dfe313ed92f5a8781dbbbe43e03e7181050ec8643a09d47",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/deliverables/HW2_Investor_Presentation_Manuscript.md",
+      "after": "report/original_presentation/HW2_Investor_Presentation_Manuscript.md",
+      "original_sha256": "820ecb322d59870290fef5bde67e2d2fbb2bb4f9e372a1b02f7d4b0bbedaa7de",
+      "current_sha256": "c085f77f85f788216fb4d1e737a3d15b41659641b2b3fe46ba9a2a3e46ae46a5",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/deliverables/HW2_Momentum_Research_Report.md",
+      "after": "report/HW2_Momentum_Research_Report.md",
+      "original_sha256": "79a7fde1470c6972ec2b1f4751a103dba57914f1845aaf1188310412441277bb",
+      "current_sha256": "79a7fde1470c6972ec2b1f4751a103dba57914f1845aaf1188310412441277bb",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/deliverables/HW2_Momentum_Research_Report.pdf",
+      "after": "submission/HW2_Momentum_Research_Report.pdf",
+      "original_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d",
+      "current_sha256": "571d923f3ea29cf16115c60268c475f50635e861fb2dc3c0a35a774b5feb2a3d",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/deliverables/slides.json",
+      "after": "report/original_presentation/slides.json",
+      "original_sha256": "4edfa6ccc258859faecb6dd4a3059bad53912f803058d63e7b7ed65f33cb44f4",
+      "current_sha256": "4edfa6ccc258859faecb6dd4a3059bad53912f803058d63e7b7ed65f33cb44f4",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/notebooks/01_factor_overlay.ipynb",
+      "after": "notebooks/01_factor_overlay.ipynb",
+      "original_sha256": "6b27baffa19d508f9659985d1a2927d72b38aa7fe3322c5c2ac38509ca561093",
+      "current_sha256": "c29cbd737cca7c61006a9cfc469b639ef3d527b7e724727855bb9bc08f5863f9",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/notebooks/02_etf_dual_momentum.ipynb",
+      "after": "notebooks/02_etf_dual_momentum.ipynb",
+      "original_sha256": "469469bee1b5896eaa8ab7114ff90631f51dff97046fe70af6874a952e01f3b7",
+      "current_sha256": "d9c426efbf6feb186be63ddfccb83fc9affb9f35a37c580dd009063cd07107fe",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/60_40_balances_per_initial_dollar.csv",
+      "after": "results/audits/60_40_balances_per_initial_dollar.csv",
+      "original_sha256": "f4449f1a94fba631c8a0d5dab90aa32ba252915e4135aaa85c85f587bae3a8f9",
+      "current_sha256": "f4449f1a94fba631c8a0d5dab90aa32ba252915e4135aaa85c85f587bae3a8f9",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/60_40_holdings_daily.csv",
+      "after": "results/audits/60_40_holdings_daily.csv",
+      "original_sha256": "e66c2c1d62ca721121489a87a46324dbf08df4d4b16711454e5e307a6d31f175",
+      "current_sha256": "e66c2c1d62ca721121489a87a46324dbf08df4d4b16711454e5e307a6d31f175",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/60_40_targets.csv",
+      "after": "results/audits/60_40_targets.csv",
+      "original_sha256": "5dc2d181c30e112ec10e1592ad32841a5dbd34da9eeb8d7a0c6928554dd29b59",
+      "current_sha256": "5dc2d181c30e112ec10e1592ad32841a5dbd34da9eeb8d7a0c6928554dd29b59",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/60_40_trades.csv",
+      "after": "results/audits/60_40_trades.csv",
+      "original_sha256": "accc0e0beba968152e4dcbf12da3bcc234041681cb8dd01b60f5eb44c6f52101",
+      "current_sha256": "accc0e0beba968152e4dcbf12da3bcc234041681cb8dd01b60f5eb44c6f52101",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B0_balances_per_initial_dollar.csv",
+      "after": "results/audits/B0_balances_per_initial_dollar.csv",
+      "original_sha256": "075f9d66f486099836d96866c52b610982b5b8660b8b4e5cbe18e6fd32edd41f",
+      "current_sha256": "075f9d66f486099836d96866c52b610982b5b8660b8b4e5cbe18e6fd32edd41f",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B0_holdings_daily.csv",
+      "after": "results/audits/B0_holdings_daily.csv",
+      "original_sha256": "b4e2cc6c80bc208a700d3b2717f45139ac8d1ba39c28eb456ab2b0df30e80a87",
+      "current_sha256": "b4e2cc6c80bc208a700d3b2717f45139ac8d1ba39c28eb456ab2b0df30e80a87",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B0_targets.csv",
+      "after": "results/audits/B0_targets.csv",
+      "original_sha256": "cad9efd255ab5423cc0f7730b326b30fe58f80dc77fc2fbdc0ed83477bd2b2c6",
+      "current_sha256": "cad9efd255ab5423cc0f7730b326b30fe58f80dc77fc2fbdc0ed83477bd2b2c6",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B0_trades.csv",
+      "after": "results/audits/B0_trades.csv",
+      "original_sha256": "7b6410108eb3d97099cd3e47b8c41c1eee5ed133de4a81c6ea7abe4a978d941f",
+      "current_sha256": "7b6410108eb3d97099cd3e47b8c41c1eee5ed133de4a81c6ea7abe4a978d941f",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B1_balances_per_initial_dollar.csv",
+      "after": "results/audits/B1_balances_per_initial_dollar.csv",
+      "original_sha256": "4ab9cd17d5f4e24d96e9eb84edb04e253e270294088ec4c2049881f859fc95f2",
+      "current_sha256": "4ab9cd17d5f4e24d96e9eb84edb04e253e270294088ec4c2049881f859fc95f2",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B1_holdings_daily.csv",
+      "after": "results/audits/B1_holdings_daily.csv",
+      "original_sha256": "8895713db80ab94b46c79e3b24337d61b8e0484c59ee773ce67434a0e7f8d615",
+      "current_sha256": "8895713db80ab94b46c79e3b24337d61b8e0484c59ee773ce67434a0e7f8d615",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B1_targets.csv",
+      "after": "results/audits/B1_targets.csv",
+      "original_sha256": "db0d1e65e2582a71cf7f0954ddd9632ff0945cbf4d6d192ab425fe6c675198bb",
+      "current_sha256": "db0d1e65e2582a71cf7f0954ddd9632ff0945cbf4d6d192ab425fe6c675198bb",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B1_trades.csv",
+      "after": "results/audits/B1_trades.csv",
+      "original_sha256": "3252d956dbc673beaa155522e191f79d39019ad19dd3c7231a312825bda5a80e",
+      "current_sha256": "3252d956dbc673beaa155522e191f79d39019ad19dd3c7231a312825bda5a80e",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B2_balances_per_initial_dollar.csv",
+      "after": "results/audits/B2_balances_per_initial_dollar.csv",
+      "original_sha256": "ca71f7afe49f4616a4e6eb003a7f1afddc61138c22a640e39f2fc08d985f5a79",
+      "current_sha256": "ca71f7afe49f4616a4e6eb003a7f1afddc61138c22a640e39f2fc08d985f5a79",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B2_holdings_daily.csv",
+      "after": "results/audits/B2_holdings_daily.csv",
+      "original_sha256": "374450d2a128ab8bc17d6a648f418bb73fce98d8eaa83039a3ac5b0974a73eea",
+      "current_sha256": "374450d2a128ab8bc17d6a648f418bb73fce98d8eaa83039a3ac5b0974a73eea",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B2_targets.csv",
+      "after": "results/audits/B2_targets.csv",
+      "original_sha256": "092c6d06f96eb4b1ac6f70cf843aceb8f598aeb1ac0d27f00b3f5206d3e7ffd6",
+      "current_sha256": "092c6d06f96eb4b1ac6f70cf843aceb8f598aeb1ac0d27f00b3f5206d3e7ffd6",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B2_trades.csv",
+      "after": "results/audits/B2_trades.csv",
+      "original_sha256": "ea2eef6ae4afcb37b0296daf51fa38c9ec992c3003dad62a397edc0feb49a339",
+      "current_sha256": "ea2eef6ae4afcb37b0296daf51fa38c9ec992c3003dad62a397edc0feb49a339",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B3_balances_per_initial_dollar.csv",
+      "after": "results/audits/B3_balances_per_initial_dollar.csv",
+      "original_sha256": "aa9acf287363d1481175f1db08f2b1f9fa8658111496b06265a22b9cbcfaec90",
+      "current_sha256": "aa9acf287363d1481175f1db08f2b1f9fa8658111496b06265a22b9cbcfaec90",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B3_holdings_daily.csv",
+      "after": "results/audits/B3_holdings_daily.csv",
+      "original_sha256": "ecef310cac0d7a4da211fc7347146b87ca54b77a9daaa285d5f61ea7d61b8c85",
+      "current_sha256": "ecef310cac0d7a4da211fc7347146b87ca54b77a9daaa285d5f61ea7d61b8c85",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B3_targets.csv",
+      "after": "results/audits/B3_targets.csv",
+      "original_sha256": "c7c821f373555227aa598bc50cf437bdc232e1394f41ef161c2ad1d488e83bcf",
+      "current_sha256": "c7c821f373555227aa598bc50cf437bdc232e1394f41ef161c2ad1d488e83bcf",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/B3_trades.csv",
+      "after": "results/audits/B3_trades.csv",
+      "original_sha256": "bbd5b8377ddd761d18ae84270e90e77b447f1465f4d4486f60092e4459e26fb2",
+      "current_sha256": "bbd5b8377ddd761d18ae84270e90e77b447f1465f4d4486f60092e4459e26fb2",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/CASH_balances_per_initial_dollar.csv",
+      "after": "results/audits/CASH_balances_per_initial_dollar.csv",
+      "original_sha256": "aab62986200dce59fab341403323d3a60d2b05383a845d5dcbdfbc2a8ae9318b",
+      "current_sha256": "aab62986200dce59fab341403323d3a60d2b05383a845d5dcbdfbc2a8ae9318b",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/CASH_holdings_daily.csv",
+      "after": "results/audits/CASH_holdings_daily.csv",
+      "original_sha256": "08d28f0af351ff74eb3eb151549af3a1f62191895e29f9ef983502d4c1492fce",
+      "current_sha256": "08d28f0af351ff74eb3eb151549af3a1f62191895e29f9ef983502d4c1492fce",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/CASH_targets.csv",
+      "after": "results/audits/CASH_targets.csv",
+      "original_sha256": "7a26664c02f93de1b4fab0f5e2dddeab4c843378cd1d06e8850a5a3e294bb320",
+      "current_sha256": "7a26664c02f93de1b4fab0f5e2dddeab4c843378cd1d06e8850a5a3e294bb320",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/CASH_trades.csv",
+      "after": "results/audits/CASH_trades.csv",
+      "original_sha256": "157b2ef780721e0aca5cc41f8f701eace952bda0a18535f029b36f37029c5eda",
+      "current_sha256": "157b2ef780721e0aca5cc41f8f701eace952bda0a18535f029b36f37029c5eda",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/SPY_balances_per_initial_dollar.csv",
+      "after": "results/audits/SPY_balances_per_initial_dollar.csv",
+      "original_sha256": "83428e492486ebb9a3ecf2029af527dab85d11472279edb87a3067932ec97f9f",
+      "current_sha256": "83428e492486ebb9a3ecf2029af527dab85d11472279edb87a3067932ec97f9f",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/SPY_holdings_daily.csv",
+      "after": "results/audits/SPY_holdings_daily.csv",
+      "original_sha256": "64fee4d334cbbd7f21f822f13e1c0024cc9cbc08646703ca75860f6e553cca8a",
+      "current_sha256": "64fee4d334cbbd7f21f822f13e1c0024cc9cbc08646703ca75860f6e553cca8a",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/SPY_targets.csv",
+      "after": "results/audits/SPY_targets.csv",
+      "original_sha256": "0c360ad07831d4b311e7fcc251c7bbbddd4b1c2b857dc431311f6d097934e545",
+      "current_sha256": "0c360ad07831d4b311e7fcc251c7bbbddd4b1c2b857dc431311f6d097934e545",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/SPY_trades.csv",
+      "after": "results/audits/SPY_trades.csv",
+      "original_sha256": "0a258835b9ecd0bf784bf0e06f542ef5a60bf8857511a5edcfde7f83431eed55",
+      "current_sha256": "0a258835b9ecd0bf784bf0e06f542ef5a60bf8857511a5edcfde7f83431eed55",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/artifact_qa.json",
+      "after": "results/audits/artifact_qa.json",
+      "original_sha256": "eab48059af7d2ab0c3e503734f1159c67a374e50f78ad5d2cb799dda1298a4aa",
+      "current_sha256": "eab48059af7d2ab0c3e503734f1159c67a374e50f78ad5d2cb799dda1298a4aa",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/clean_reproduce_stdout.log",
+      "after": "results/audits/clean_reproduce_stdout.log",
+      "original_sha256": "de59a5b59b32674ebdb17ab9348365ba73829bfa7ce6be19d11af4c49e2662d0",
+      "current_sha256": "de59a5b59b32674ebdb17ab9348365ba73829bfa7ce6be19d11af4c49e2662d0",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/clean_run.log",
+      "after": "results/audits/clean_run.log",
+      "original_sha256": "70e5997bdbedb8dfa62f2d93c693ce599c16b423a89d5cb0c2beaabad33f7a69",
+      "current_sha256": "70e5997bdbedb8dfa62f2d93c693ce599c16b423a89d5cb0c2beaabad33f7a69",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/corporate_action_reconciliation.csv",
+      "after": "results/audits/corporate_action_reconciliation.csv",
+      "original_sha256": "6947fcd2a896f6552099eaf8f6a7a7b5dd2457b437e5af528632551fe3b88e49",
+      "current_sha256": "6947fcd2a896f6552099eaf8f6a7a7b5dd2457b437e5af528632551fe3b88e49",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/etf_risk_sizing.csv",
+      "after": "results/audits/etf_risk_sizing.csv",
+      "original_sha256": "7524624cd32c1a8856b056b54559118436afb4eee8b16cfbc3949959e77488ad",
+      "current_sha256": "7524624cd32c1a8856b056b54559118436afb4eee8b16cfbc3949959e77488ad",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/etf_signals.csv",
+      "after": "results/audits/etf_signals.csv",
+      "original_sha256": "dd59ed2ccdc5d1aa449b68f8d0ad69ef2589cfbe37856a0b0c9616049dcca0c2",
+      "current_sha256": "dd59ed2ccdc5d1aa449b68f8d0ad69ef2589cfbe37856a0b0c9616049dcca0c2",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/extreme_returns.csv",
+      "after": "results/audits/extreme_returns.csv",
+      "original_sha256": "d158eb1d504a3dfbc7284dca546aa2a338fcc7fb34ebe3b7b1776b75668c6fe0",
+      "current_sha256": "d158eb1d504a3dfbc7284dca546aa2a338fcc7fb34ebe3b7b1776b75668c6fe0",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/factor_decisions.csv",
+      "after": "results/audits/factor_decisions.csv",
+      "original_sha256": "025edf2cc83e633467eee2feda010a1d6820d16bea7bd3557248839bc0d8f8a3",
+      "current_sha256": "025edf2cc83e633467eee2feda010a1d6820d16bea7bd3557248839bc0d8f8a3",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/final_handoff_checks.json",
+      "after": "results/audits/final_handoff_checks.json",
+      "original_sha256": "2e176e2a17d10ba8f1df1a86285740167f4d3a951852551414903160bc6e1664",
+      "current_sha256": "2e176e2a17d10ba8f1df1a86285740167f4d3a951852551414903160bc6e1664",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/final_run.log",
+      "after": "results/audits/final_run.log",
+      "original_sha256": "3a01d5592f29f32bcb28728faf0435064c918c6849f2d9cba11e18acd24945ff",
+      "current_sha256": "3a01d5592f29f32bcb28728faf0435064c918c6849f2d9cba11e18acd24945ff",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/independent_accounting_checks.csv",
+      "after": "results/audits/independent_accounting_checks.csv",
+      "original_sha256": "5319863217a218123fa2fd513f7cbcda7acff4952a022acf1dd7d1abe847e10e",
+      "current_sha256": "5319863217a218123fa2fd513f7cbcda7acff4952a022acf1dd7d1abe847e10e",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/independent_provider_checks.csv",
+      "after": "results/audits/independent_provider_checks.csv",
+      "original_sha256": "fbd5d0dce801419c64adc2a55f120d7d6fd688e2305f70d80a7c4add17acef0e",
+      "current_sha256": "fbd5d0dce801419c64adc2a55f120d7d6fd688e2305f70d80a7c4add17acef0e",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/pytest.log",
+      "after": "results/audits/pytest.log",
+      "original_sha256": "0b4cc3cea940374d63f06285df3c4dd7a77864e1e5af280e0be0f982ffb9f9aa",
+      "current_sha256": "0b4cc3cea940374d63f06285df3c4dd7a77864e1e5af280e0be0f982ffb9f9aa",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/reproduction_hashes.json",
+      "after": "results/audits/reproduction_hashes.json",
+      "original_sha256": "eee8010eab85fdb7006e9fabbb113fbd6f55c8b5c172a09d16a4f0a5a227652c",
+      "current_sha256": "eee8010eab85fdb7006e9fabbb113fbd6f55c8b5c172a09d16a4f0a5a227652c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/run_metadata.json",
+      "after": "results/audits/run_metadata.json",
+      "original_sha256": "5f2153843aab50163c64c393908e47fdfce1c0f2c853ecae97077e2341de7452",
+      "current_sha256": "5f2153843aab50163c64c393908e47fdfce1c0f2c853ecae97077e2341de7452",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/audits/vix_alignment.csv",
+      "after": "results/audits/vix_alignment.csv",
+      "original_sha256": "a484f34dea03632c5f761ad8d0db8956c55b4a4f197605d640035f9f2455130f",
+      "current_sha256": "a484f34dea03632c5f761ad8d0db8956c55b4a4f197605d640035f9f2455130f",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/figures/A_exposure_regime.png",
+      "after": "results/figures/A_exposure_regime.png",
+      "original_sha256": "f5139ff9aa3e9c5b91f67a2241361a34e8828fea91e872e706268708251c5aa3",
+      "current_sha256": "f5139ff9aa3e9c5b91f67a2241361a34e8828fea91e872e706268708251c5aa3",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/figures/A_nav_drawdown.png",
+      "after": "results/figures/A_nav_drawdown.png",
+      "original_sha256": "53e8cf2b4a8ff792e2acd463b3d95313af2b8e89eb1180b7d79e5c30d691c03b",
+      "current_sha256": "53e8cf2b4a8ff792e2acd463b3d95313af2b8e89eb1180b7d79e5c30d691c03b",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/figures/B_allocations.png",
+      "after": "results/figures/B_allocations.png",
+      "original_sha256": "8352391bd9bcc0bf808518a02f2c7b609b5297a2e60fa9f8978876f62f3a7119",
+      "current_sha256": "8352391bd9bcc0bf808518a02f2c7b609b5297a2e60fa9f8978876f62f3a7119",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/figures/B_components.png",
+      "after": "results/figures/B_components.png",
+      "original_sha256": "8ab88bbb5d410396ff5b49ecf1d20aaed33e117faca842d269cfeaa55a9fe42c",
+      "current_sha256": "8ab88bbb5d410396ff5b49ecf1d20aaed33e117faca842d269cfeaa55a9fe42c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/figures/B_nav_drawdown.png",
+      "after": "results/figures/B_nav_drawdown.png",
+      "original_sha256": "ab4c237170bcf8265ec31e1646e20d5844e25bc2a6f590e23623e822aa11c847",
+      "current_sha256": "ab4c237170bcf8265ec31e1646e20d5844e25bc2a6f590e23623e822aa11c847",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/figures/B_robustness.png",
+      "after": "results/figures/B_robustness.png",
+      "original_sha256": "17379a2b1f489492d904588629f2a4527452420543ef32f0b998c3c53447b9be",
+      "current_sha256": "17379a2b1f489492d904588629f2a4527452420543ef32f0b998c3c53447b9be",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/60_40_daily.csv",
+      "after": "results/tables/60_40_daily.csv",
+      "original_sha256": "bbe56f349328461fb6c81a5f2e3e923577d90b88d68df64b80cab14c1ea6487b",
+      "current_sha256": "bbe56f349328461fb6c81a5f2e3e923577d90b88d68df64b80cab14c1ea6487b",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/60_40_gross_daily.csv",
+      "after": "results/tables/60_40_gross_daily.csv",
+      "original_sha256": "834c581a42b8b45d3dab315430afa5ef008cc51124995204c1d08978c7111dfb",
+      "current_sha256": "834c581a42b8b45d3dab315430afa5ef008cc51124995204c1d08978c7111dfb",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/60_40_gross_monthly.csv",
+      "after": "results/tables/60_40_gross_monthly.csv",
+      "original_sha256": "c9cb6b75b0c5e114f18803bf3949423e6dd6aa40247e0b21b38d09936adc8ac6",
+      "current_sha256": "c9cb6b75b0c5e114f18803bf3949423e6dd6aa40247e0b21b38d09936adc8ac6",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/60_40_monthly.csv",
+      "after": "results/tables/60_40_monthly.csv",
+      "original_sha256": "d00a029b65be9f0ee1efe4a42a9529a7ac84adbe6b5576b5d55c4b762a9bd9db",
+      "current_sha256": "d00a029b65be9f0ee1efe4a42a9529a7ac84adbe6b5576b5d55c4b762a9bd9db",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A0_daily.csv",
+      "after": "results/tables/A0_daily.csv",
+      "original_sha256": "3883b93337ac3edecdffcd2db25c2345068e823e8a7614a7d386f9ba149806cd",
+      "current_sha256": "3883b93337ac3edecdffcd2db25c2345068e823e8a7614a7d386f9ba149806cd",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A0_incomplete_cost_0bps_drag_0.01_daily.csv",
+      "after": "results/tables/A0_incomplete_cost_0bps_drag_0.01_daily.csv",
+      "original_sha256": "8c50f2862d804c1e97a29d9aa3657456bb9e856f3cbd0bce408e3531017e5fbe",
+      "current_sha256": "8c50f2862d804c1e97a29d9aa3657456bb9e856f3cbd0bce408e3531017e5fbe",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A0_incomplete_cost_0bps_drag_0.02_daily.csv",
+      "after": "results/tables/A0_incomplete_cost_0bps_drag_0.02_daily.csv",
+      "original_sha256": "a8a1486942a72cfde8c39c02cd755e2fb30a9970cd20afe635e7b50ab440bd97",
+      "current_sha256": "a8a1486942a72cfde8c39c02cd755e2fb30a9970cd20afe635e7b50ab440bd97",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A0_incomplete_cost_10bps_drag_0_daily.csv",
+      "after": "results/tables/A0_incomplete_cost_10bps_drag_0_daily.csv",
+      "original_sha256": "81d242edfe45a76d493728f00903ac40c39c26b6c9860e1b56bfea54f9a3cfcc",
+      "current_sha256": "81d242edfe45a76d493728f00903ac40c39c26b6c9860e1b56bfea54f9a3cfcc",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A0_incomplete_cost_25bps_drag_0_daily.csv",
+      "after": "results/tables/A0_incomplete_cost_25bps_drag_0_daily.csv",
+      "original_sha256": "ba64f9a5789cb8f3b43ced2804af81fff3ea2e3bfe37e47770718564a18f1281",
+      "current_sha256": "ba64f9a5789cb8f3b43ced2804af81fff3ea2e3bfe37e47770718564a18f1281",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A0_long_history_daily.csv",
+      "after": "results/tables/A0_long_history_daily.csv",
+      "original_sha256": "f514d6c35c138fd1b5485bdcbf68ed2bd9d4b8dafdbfd91bc1b337b3a95b7ef9",
+      "current_sha256": "f514d6c35c138fd1b5485bdcbf68ed2bd9d4b8dafdbfd91bc1b337b3a95b7ef9",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A0_monthly.csv",
+      "after": "results/tables/A0_monthly.csv",
+      "original_sha256": "6d7cd7df86070ff874466da97e103ee79d2c08bfd9986c7e5c1dcd31e5a3661a",
+      "current_sha256": "6d7cd7df86070ff874466da97e103ee79d2c08bfd9986c7e5c1dcd31e5a3661a",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A1_daily.csv",
+      "after": "results/tables/A1_daily.csv",
+      "original_sha256": "bd800b9f31d99cb2c234060f3b28821156ab0e73213e4d9f8006efc4934a2344",
+      "current_sha256": "bd800b9f31d99cb2c234060f3b28821156ab0e73213e4d9f8006efc4934a2344",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A1_incomplete_cost_0bps_drag_0.01_daily.csv",
+      "after": "results/tables/A1_incomplete_cost_0bps_drag_0.01_daily.csv",
+      "original_sha256": "b2034747fdcc5fe2c423bbcb892032dc3115c07ed486db6333361e1a820c644c",
+      "current_sha256": "b2034747fdcc5fe2c423bbcb892032dc3115c07ed486db6333361e1a820c644c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A1_incomplete_cost_0bps_drag_0.02_daily.csv",
+      "after": "results/tables/A1_incomplete_cost_0bps_drag_0.02_daily.csv",
+      "original_sha256": "aae6d89f898705b74859a7919632ffd046622bc07f1f088fbd31158311aba4f6",
+      "current_sha256": "aae6d89f898705b74859a7919632ffd046622bc07f1f088fbd31158311aba4f6",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A1_incomplete_cost_10bps_drag_0_daily.csv",
+      "after": "results/tables/A1_incomplete_cost_10bps_drag_0_daily.csv",
+      "original_sha256": "29af7bd9085f5d7de4c0862b7b22747867b312e341767e4b68cc2335d867238e",
+      "current_sha256": "29af7bd9085f5d7de4c0862b7b22747867b312e341767e4b68cc2335d867238e",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A1_incomplete_cost_25bps_drag_0_daily.csv",
+      "after": "results/tables/A1_incomplete_cost_25bps_drag_0_daily.csv",
+      "original_sha256": "696257dfa98bbdd1cf104bc8e278523349cfe9de8fa8f623b55daafa22d73953",
+      "current_sha256": "696257dfa98bbdd1cf104bc8e278523349cfe9de8fa8f623b55daafa22d73953",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A1_long_history_daily.csv",
+      "after": "results/tables/A1_long_history_daily.csv",
+      "original_sha256": "3bfc8f2fedd7175628e73fd5be1f18afbf615ab0e9541063107f5d4ba4bf7f31",
+      "current_sha256": "3bfc8f2fedd7175628e73fd5be1f18afbf615ab0e9541063107f5d4ba4bf7f31",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A1_monthly.csv",
+      "after": "results/tables/A1_monthly.csv",
+      "original_sha256": "d9c375eaf9eab1136288650bbf91483857316c3917d53238b40aaa35819a9a13",
+      "current_sha256": "d9c375eaf9eab1136288650bbf91483857316c3917d53238b40aaa35819a9a13",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A2_daily.csv",
+      "after": "results/tables/A2_daily.csv",
+      "original_sha256": "df37930673edc03152eb587c1b0dafe55abc07830ee675c23c2c87a6521da355",
+      "current_sha256": "df37930673edc03152eb587c1b0dafe55abc07830ee675c23c2c87a6521da355",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A2_incomplete_cost_0bps_drag_0.01_daily.csv",
+      "after": "results/tables/A2_incomplete_cost_0bps_drag_0.01_daily.csv",
+      "original_sha256": "68201c41cb9fa099d117d04ca02b932640519ea18fdf51d610ddd7e9b7c41993",
+      "current_sha256": "68201c41cb9fa099d117d04ca02b932640519ea18fdf51d610ddd7e9b7c41993",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A2_incomplete_cost_0bps_drag_0.02_daily.csv",
+      "after": "results/tables/A2_incomplete_cost_0bps_drag_0.02_daily.csv",
+      "original_sha256": "c10f9558cd61b520d049c5f36e51d09cc4d3cd0d361bcbec210d736eb2055b20",
+      "current_sha256": "c10f9558cd61b520d049c5f36e51d09cc4d3cd0d361bcbec210d736eb2055b20",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A2_incomplete_cost_10bps_drag_0_daily.csv",
+      "after": "results/tables/A2_incomplete_cost_10bps_drag_0_daily.csv",
+      "original_sha256": "42d921df2ca55dc308499450671c62a18e25cda671b76f58a650acb5992947f1",
+      "current_sha256": "42d921df2ca55dc308499450671c62a18e25cda671b76f58a650acb5992947f1",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A2_incomplete_cost_25bps_drag_0_daily.csv",
+      "after": "results/tables/A2_incomplete_cost_25bps_drag_0_daily.csv",
+      "original_sha256": "fa7a1178680cdb585c676c96e9b48b1cb751a741498484d7437512f6bd3c437b",
+      "current_sha256": "fa7a1178680cdb585c676c96e9b48b1cb751a741498484d7437512f6bd3c437b",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A2_monthly.csv",
+      "after": "results/tables/A2_monthly.csv",
+      "original_sha256": "db983e07e5319920f9816cc3bdd3264aa34714abed0f335226b51012903fa182",
+      "current_sha256": "db983e07e5319920f9816cc3bdd3264aa34714abed0f335226b51012903fa182",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A3_daily.csv",
+      "after": "results/tables/A3_daily.csv",
+      "original_sha256": "ae2636611ef522ce5af07b83a6b318de5e8f934997e22bcd6a3e8b1c20c55901",
+      "current_sha256": "ae2636611ef522ce5af07b83a6b318de5e8f934997e22bcd6a3e8b1c20c55901",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A3_incomplete_cost_0bps_drag_0.01_daily.csv",
+      "after": "results/tables/A3_incomplete_cost_0bps_drag_0.01_daily.csv",
+      "original_sha256": "6e8ac397d8e43489256780ded57b6158f12dfaf0fecc2ea9ac81f80d1995d26c",
+      "current_sha256": "6e8ac397d8e43489256780ded57b6158f12dfaf0fecc2ea9ac81f80d1995d26c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A3_incomplete_cost_0bps_drag_0.02_daily.csv",
+      "after": "results/tables/A3_incomplete_cost_0bps_drag_0.02_daily.csv",
+      "original_sha256": "f7adf3d89e00e8e91c13f802b6caeddcf0d85ef648752376b479c7c24174b6d1",
+      "current_sha256": "f7adf3d89e00e8e91c13f802b6caeddcf0d85ef648752376b479c7c24174b6d1",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A3_incomplete_cost_10bps_drag_0_daily.csv",
+      "after": "results/tables/A3_incomplete_cost_10bps_drag_0_daily.csv",
+      "original_sha256": "d9ca5c0033e17c3d6212d6583967ff2803b48c446139be0978aa94296914cbe1",
+      "current_sha256": "d9ca5c0033e17c3d6212d6583967ff2803b48c446139be0978aa94296914cbe1",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A3_incomplete_cost_25bps_drag_0_daily.csv",
+      "after": "results/tables/A3_incomplete_cost_25bps_drag_0_daily.csv",
+      "original_sha256": "11048182aec8d2e3184e3cc8f9c2067fce4f3c5a9898f235f530199ddf7fdbe1",
+      "current_sha256": "11048182aec8d2e3184e3cc8f9c2067fce4f3c5a9898f235f530199ddf7fdbe1",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/A3_monthly.csv",
+      "after": "results/tables/A3_monthly.csv",
+      "original_sha256": "5bdb9b9a24538cc996968e75555362333cc28411b986e1dfa1ec50687016e04f",
+      "current_sha256": "5bdb9b9a24538cc996968e75555362333cc28411b986e1dfa1ec50687016e04f",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B0_daily.csv",
+      "after": "results/tables/B0_daily.csv",
+      "original_sha256": "c249b9b74bd76c8ed1f0e6d5aece8fd307488045013619375aa1c25716608e34",
+      "current_sha256": "c249b9b74bd76c8ed1f0e6d5aece8fd307488045013619375aa1c25716608e34",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B0_gross_daily.csv",
+      "after": "results/tables/B0_gross_daily.csv",
+      "original_sha256": "2b5d25158f40e3ebf7778405b8c437c4e7263bafae3082fb2e19938755968404",
+      "current_sha256": "2b5d25158f40e3ebf7778405b8c437c4e7263bafae3082fb2e19938755968404",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B0_gross_monthly.csv",
+      "after": "results/tables/B0_gross_monthly.csv",
+      "original_sha256": "461f4dfa0c67b23979e105cf1f9471c9c1b42083e9cb9a3ff97d8420bc9fed75",
+      "current_sha256": "461f4dfa0c67b23979e105cf1f9471c9c1b42083e9cb9a3ff97d8420bc9fed75",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B0_monthly.csv",
+      "after": "results/tables/B0_monthly.csv",
+      "original_sha256": "52f12787602ca6f34d2f821684bfce09f3bbca325015945650224a8146a6d188",
+      "current_sha256": "52f12787602ca6f34d2f821684bfce09f3bbca325015945650224a8146a6d188",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B1_daily.csv",
+      "after": "results/tables/B1_daily.csv",
+      "original_sha256": "005b86bbcefb54d5e84392afa66f333833345c3b66fed95ee7d82bc654b0ed66",
+      "current_sha256": "005b86bbcefb54d5e84392afa66f333833345c3b66fed95ee7d82bc654b0ed66",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B1_gross_daily.csv",
+      "after": "results/tables/B1_gross_daily.csv",
+      "original_sha256": "265cd4745d4d487ec3a59f18cfed3aea05feaf02f394118099fb7da85c7e1393",
+      "current_sha256": "265cd4745d4d487ec3a59f18cfed3aea05feaf02f394118099fb7da85c7e1393",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B1_gross_monthly.csv",
+      "after": "results/tables/B1_gross_monthly.csv",
+      "original_sha256": "b7de42f04998b6d007aeee781bb776a2d7a6eed2ae9d8b65c66e8b8f1522594d",
+      "current_sha256": "b7de42f04998b6d007aeee781bb776a2d7a6eed2ae9d8b65c66e8b8f1522594d",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B1_monthly.csv",
+      "after": "results/tables/B1_monthly.csv",
+      "original_sha256": "3e9cad301b187c659e8be267ab9fdd3b5633559fabc9c4cfc294428f1b9552ea",
+      "current_sha256": "3e9cad301b187c659e8be267ab9fdd3b5633559fabc9c4cfc294428f1b9552ea",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B2_daily.csv",
+      "after": "results/tables/B2_daily.csv",
+      "original_sha256": "d90e228d2bd4f04ebfedc2ed001b2d1a1b9b0d7b91fc47b3a48d15936ecf72b7",
+      "current_sha256": "d90e228d2bd4f04ebfedc2ed001b2d1a1b9b0d7b91fc47b3a48d15936ecf72b7",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B2_gross_daily.csv",
+      "after": "results/tables/B2_gross_daily.csv",
+      "original_sha256": "7b4803762e9d336a92a10b1140e13b5e26daeab8f10f631949299f3541187ba5",
+      "current_sha256": "7b4803762e9d336a92a10b1140e13b5e26daeab8f10f631949299f3541187ba5",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B2_gross_monthly.csv",
+      "after": "results/tables/B2_gross_monthly.csv",
+      "original_sha256": "ded5be803b28870728bc7450e72d0363b0c2e64d1a1e39bb9f131d4d20577eb6",
+      "current_sha256": "ded5be803b28870728bc7450e72d0363b0c2e64d1a1e39bb9f131d4d20577eb6",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B2_monthly.csv",
+      "after": "results/tables/B2_monthly.csv",
+      "original_sha256": "6b90c25ae6fb619f1248513ce28922ee03eb5895b25ce9596d98e2125f32dd18",
+      "current_sha256": "6b90c25ae6fb619f1248513ce28922ee03eb5895b25ce9596d98e2125f32dd18",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B3_daily.csv",
+      "after": "results/tables/B3_daily.csv",
+      "original_sha256": "60fee65beb6dc1d63f8e137cbe7eeab158dcfae4f5d7b22d4e43388327ae004e",
+      "current_sha256": "60fee65beb6dc1d63f8e137cbe7eeab158dcfae4f5d7b22d4e43388327ae004e",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B3_gross_daily.csv",
+      "after": "results/tables/B3_gross_daily.csv",
+      "original_sha256": "897c95b0198a3d45e1f2c38516481601f2cbc8eca230d67854111b62bf128251",
+      "current_sha256": "897c95b0198a3d45e1f2c38516481601f2cbc8eca230d67854111b62bf128251",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B3_gross_monthly.csv",
+      "after": "results/tables/B3_gross_monthly.csv",
+      "original_sha256": "72ab125cb07a1738b3e0c6e486b44dfed5843bccae00da90ca3300635f4c4fc0",
+      "current_sha256": "72ab125cb07a1738b3e0c6e486b44dfed5843bccae00da90ca3300635f4c4fc0",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/B3_monthly.csv",
+      "after": "results/tables/B3_monthly.csv",
+      "original_sha256": "4373450ef83303b1edf06716cc175e5ce8d1c177a1ab7cb15416b35407a118e9",
+      "current_sha256": "4373450ef83303b1edf06716cc175e5ce8d1c177a1ab7cb15416b35407a118e9",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/CASH_daily.csv",
+      "after": "results/tables/CASH_daily.csv",
+      "original_sha256": "b8ba1b41e46ebb95dc2d918fffea0d233a82505e31af5e474f499ab067b7ebac",
+      "current_sha256": "b8ba1b41e46ebb95dc2d918fffea0d233a82505e31af5e474f499ab067b7ebac",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/CASH_gross_daily.csv",
+      "after": "results/tables/CASH_gross_daily.csv",
+      "original_sha256": "b8ba1b41e46ebb95dc2d918fffea0d233a82505e31af5e474f499ab067b7ebac",
+      "current_sha256": "b8ba1b41e46ebb95dc2d918fffea0d233a82505e31af5e474f499ab067b7ebac",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/CASH_gross_monthly.csv",
+      "after": "results/tables/CASH_gross_monthly.csv",
+      "original_sha256": "9a7c317cd7f4c36e168bfb381b3301a7f7705f6ab2a0c631108147ce7cf99158",
+      "current_sha256": "9a7c317cd7f4c36e168bfb381b3301a7f7705f6ab2a0c631108147ce7cf99158",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/CASH_monthly.csv",
+      "after": "results/tables/CASH_monthly.csv",
+      "original_sha256": "9a7c317cd7f4c36e168bfb381b3301a7f7705f6ab2a0c631108147ce7cf99158",
+      "current_sha256": "9a7c317cd7f4c36e168bfb381b3301a7f7705f6ab2a0c631108147ce7cf99158",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/SPY_daily.csv",
+      "after": "results/tables/SPY_daily.csv",
+      "original_sha256": "0b3fb03502e0ebb95511937cd201ba4852e95f08079f2dbb5ec07866640c9b7e",
+      "current_sha256": "0b3fb03502e0ebb95511937cd201ba4852e95f08079f2dbb5ec07866640c9b7e",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/SPY_gross_daily.csv",
+      "after": "results/tables/SPY_gross_daily.csv",
+      "original_sha256": "e8d1db94769886ced754ba84f42191cb6eb24f9e8badf24632f485f36e89d57d",
+      "current_sha256": "e8d1db94769886ced754ba84f42191cb6eb24f9e8badf24632f485f36e89d57d",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/SPY_gross_monthly.csv",
+      "after": "results/tables/SPY_gross_monthly.csv",
+      "original_sha256": "1a1a70d81227eae597766bbd8c276f76cfa201e9ef93b851b429f42c202bd5f1",
+      "current_sha256": "1a1a70d81227eae597766bbd8c276f76cfa201e9ef93b851b429f42c202bd5f1",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/SPY_monthly.csv",
+      "after": "results/tables/SPY_monthly.csv",
+      "original_sha256": "cb679df2ccb5521c5817b7557407f05a6aac5d945f29ce377dda38ce96c98aec",
+      "current_sha256": "cb679df2ccb5521c5817b7557407f05a6aac5d945f29ce377dda38ce96c98aec",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/bootstrap.csv",
+      "after": "results/tables/bootstrap.csv",
+      "original_sha256": "7afafaee15d037aa5ed4d276736faea47caf0ff494e64be9e37fd116abc86ea4",
+      "current_sha256": "7afafaee15d037aa5ed4d276736faea47caf0ff494e64be9e37fd116abc86ea4",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/capacity_active_trades_summary.csv",
+      "after": "results/tables/capacity_active_trades_summary.csv",
+      "original_sha256": "81cedfbf97ddf6ccc7ad1d667773ad09830191f19fbf2b3333cae88c3f4ee5ac",
+      "current_sha256": "81cedfbf97ddf6ccc7ad1d667773ad09830191f19fbf2b3333cae88c3f4ee5ac",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/capacity_summary.csv",
+      "after": "results/tables/capacity_summary.csv",
+      "original_sha256": "cad48095beca4927fae704d6d2ee4b95fe0d4b2e77a2eae6989252c27e2ba264",
+      "current_sha256": "cad48095beca4927fae704d6d2ee4b95fe0d4b2e77a2eae6989252c27e2ba264",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/capacity_trades.csv",
+      "after": "results/tables/capacity_trades.csv",
+      "original_sha256": "e1eed8c5856015e8d739bcef8921ec08565e3073b97af823d0647f32fbbe7c40",
+      "current_sha256": "e1eed8c5856015e8d739bcef8921ec08565e3073b97af823d0647f32fbbe7c40",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/data_coverage.csv",
+      "after": "results/tables/data_coverage.csv",
+      "original_sha256": "56ed62f73ac9c40fcdd853338db7b2c9355e029ed0563ae58152274bbe21b9e8",
+      "current_sha256": "56ed62f73ac9c40fcdd853338db7b2c9355e029ed0563ae58152274bbe21b9e8",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/factor_sizing_diagnostics.csv",
+      "after": "results/tables/factor_sizing_diagnostics.csv",
+      "original_sha256": "0cea20c1566f03b5572d58c05c4571d083ca8b83f3695944bdde79ca8ab379b5",
+      "current_sha256": "0cea20c1566f03b5572d58c05c4571d083ca8b83f3695944bdde79ca8ab379b5",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/factor_state_diagnostics.csv",
+      "after": "results/tables/factor_state_diagnostics.csv",
+      "original_sha256": "cad46b5c878a135c626bfde4b1858ac327ba69e2dce5b8593a91dc39f01b8e7e",
+      "current_sha256": "cad46b5c878a135c626bfde4b1858ac327ba69e2dce5b8593a91dc39f01b8e7e",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/official_monthly_mom_context.csv",
+      "after": "results/tables/official_monthly_mom_context.csv",
+      "original_sha256": "3035d4bb657b89e9b8d1ef47cc09ae0b27c9fee784fdb1c0a9fc499c965beb7d",
+      "current_sha256": "3035d4bb657b89e9b8d1ef47cc09ae0b27c9fee784fdb1c0a9fc499c965beb7d",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/performance.csv",
+      "after": "results/tables/performance.csv",
+      "original_sha256": "25f2a9ceeb4d55ce99ccc8b8e8573556ddd5bc0ba19a59526dfdada590f82685",
+      "current_sha256": "25f2a9ceeb4d55ce99ccc8b8e8573556ddd5bc0ba19a59526dfdada590f82685",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/regressions_HAC3.csv",
+      "after": "results/tables/regressions_HAC3.csv",
+      "original_sha256": "ea069c95a6120c89941e0c95cd2661134dde0c57f8859ac96e017f7131fbd569",
+      "current_sha256": "ea069c95a6120c89941e0c95cd2661134dde0c57f8859ac96e017f7131fbd569",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivities.csv",
+      "after": "results/tables/sensitivities.csv",
+      "original_sha256": "25e979e336f445d404117236e32a72c455f4c307d64c3f5dc52b6a706e0be173",
+      "current_sha256": "25e979e336f445d404117236e32a72c455f4c307d64c3f5dc52b6a706e0be173",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_bear_lookback_months_12_daily.csv",
+      "after": "results/tables/sensitivity_A_bear_lookback_months_12_daily.csv",
+      "original_sha256": "cba3862d3f74bb949369cadac2ebae55817fdd3d3f237adc459e6bae1b4d2a16",
+      "current_sha256": "cba3862d3f74bb949369cadac2ebae55817fdd3d3f237adc459e6bae1b4d2a16",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_bear_lookback_months_36_daily.csv",
+      "after": "results/tables/sensitivity_A_bear_lookback_months_36_daily.csv",
+      "original_sha256": "5657ce1d9cb7c6c14378f98086a674704c3c7195f95320d35d02d99a97121dc1",
+      "current_sha256": "5657ce1d9cb7c6c14378f98086a674704c3c7195f95320d35d02d99a97121dc1",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_primary_daily.csv",
+      "after": "results/tables/sensitivity_A_primary_daily.csv",
+      "original_sha256": "ae2636611ef522ce5af07b83a6b318de5e8f934997e22bcd6a3e8b1c20c55901",
+      "current_sha256": "ae2636611ef522ce5af07b83a6b318de5e8f934997e22bcd6a3e8b1c20c55901",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_scale_cap_1.0_daily.csv",
+      "after": "results/tables/sensitivity_A_scale_cap_1.0_daily.csv",
+      "original_sha256": "f2e076cba5bdc069373f1035bf04c53216fc8bfef0d869b70628a9d98307f189",
+      "current_sha256": "f2e076cba5bdc069373f1035bf04c53216fc8bfef0d869b70628a9d98307f189",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_target_annual_volatility_0.08_daily.csv",
+      "after": "results/tables/sensitivity_A_target_annual_volatility_0.08_daily.csv",
+      "original_sha256": "1eb478931b96c3b07f5c69897c4599652ff77358a84acee81a816107fa1a3980",
+      "current_sha256": "1eb478931b96c3b07f5c69897c4599652ff77358a84acee81a816107fa1a3980",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_target_annual_volatility_0.12_daily.csv",
+      "after": "results/tables/sensitivity_A_target_annual_volatility_0.12_daily.csv",
+      "original_sha256": "204c28a32f56723371738ed88f899e07bb6325d904a7a0d05d4c083a06c9114c",
+      "current_sha256": "204c28a32f56723371738ed88f899e07bb6325d904a7a0d05d4c083a06c9114c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_vix_threshold_points_20_daily.csv",
+      "after": "results/tables/sensitivity_A_vix_threshold_points_20_daily.csv",
+      "original_sha256": "1a4576cf039801267e63cdbfba41f634e06df5770289d62fd140cbd02cd9d569",
+      "current_sha256": "1a4576cf039801267e63cdbfba41f634e06df5770289d62fd140cbd02cd9d569",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_vix_threshold_points_30_daily.csv",
+      "after": "results/tables/sensitivity_A_vix_threshold_points_30_daily.csv",
+      "original_sha256": "fc07403af8b4ce10e871813ec3e1cfa92035f7ab47d52a0ce15d8a0ee292dbfd",
+      "current_sha256": "fc07403af8b4ce10e871813ec3e1cfa92035f7ab47d52a0ce15d8a0ee292dbfd",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_volatility_days_252_daily.csv",
+      "after": "results/tables/sensitivity_A_volatility_days_252_daily.csv",
+      "original_sha256": "e34625d5c7078bdcafd1bc870929b4709760ffc3b6b6f45ad62997461fc344e0",
+      "current_sha256": "e34625d5c7078bdcafd1bc870929b4709760ffc3b6b6f45ad62997461fc344e0",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_A_volatility_days_63_daily.csv",
+      "after": "results/tables/sensitivity_A_volatility_days_63_daily.csv",
+      "original_sha256": "96bb7071e3ba6bcda34d82ed37a8a56e2c4e551d8311d45261f951fdd38b4bec",
+      "current_sha256": "96bb7071e3ba6bcda34d82ed37a8a56e2c4e551d8311d45261f951fdd38b4bec",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_cost_bps_per_traded_dollar_0_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_cost_bps_per_traded_dollar_0_daily.csv",
+      "original_sha256": "2f4eac542d7d7874c4d5d867da812f4cf52f59428a316367fa20562c8798c6ae",
+      "current_sha256": "2f4eac542d7d7874c4d5d867da812f4cf52f59428a316367fa20562c8798c6ae",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_cost_bps_per_traded_dollar_25_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_cost_bps_per_traded_dollar_25_daily.csv",
+      "original_sha256": "09f0996d173e3be8dcbd3987fcbf2011336009420de6252e34119d130ebaae9b",
+      "current_sha256": "09f0996d173e3be8dcbd3987fcbf2011336009420de6252e34119d130ebaae9b",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_cost_bps_per_traded_dollar_50_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_cost_bps_per_traded_dollar_50_daily.csv",
+      "original_sha256": "9509b37015532d545c9c0c60ecb1dc3775a628b23f67fa9ca6693d6e69295843",
+      "current_sha256": "9509b37015532d545c9c0c60ecb1dc3775a628b23f67fa9ca6693d6e69295843",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_cost_bps_per_traded_dollar_5_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_cost_bps_per_traded_dollar_5_daily.csv",
+      "original_sha256": "eb79e21a606aefe66e8f0d43b51bf335e7a8deb1036746e8f98386e9d45b571d",
+      "current_sha256": "eb79e21a606aefe66e8f0d43b51bf335e7a8deb1036746e8f98386e9d45b571d",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_execution_delay_one_session_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_execution_delay_one_session_daily.csv",
+      "original_sha256": "a8055668cd5d721b3c7f1ce913c3dca90c850c1e7e639a96a22b90d1b35dd6f2",
+      "current_sha256": "a8055668cd5d721b3c7f1ce913c3dca90c850c1e7e639a96a22b90d1b35dd6f2",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_lookback_months_6_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_lookback_months_6_daily.csv",
+      "original_sha256": "85c4f7245a1af87759065e57323ba0c16f3bc4f9bb240d303b2bc7fb2ecebed5",
+      "current_sha256": "85c4f7245a1af87759065e57323ba0c16f3bc4f9bb240d303b2bc7fb2ecebed5",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_lookback_months_9_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_lookback_months_9_daily.csv",
+      "original_sha256": "9f115490e28500257c0e091c09e9ab736b662ae7e629ad79d8fef9caad12c5b3",
+      "current_sha256": "9f115490e28500257c0e091c09e9ab736b662ae7e629ad79d8fef9caad12c5b3",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_primary_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_primary_daily.csv",
+      "original_sha256": "6b5b85ee6d00a996adb2bf8f738a3654f4e141afbe4822349a78b3762706f173",
+      "current_sha256": "6b5b85ee6d00a996adb2bf8f738a3654f4e141afbe4822349a78b3762706f173",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_remove_DBC_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_remove_DBC_daily.csv",
+      "original_sha256": "936dd7288e22f962d2e067051e6e9ae668d3a61e4ce34e4f93127c9168923925",
+      "current_sha256": "936dd7288e22f962d2e067051e6e9ae668d3a61e4ce34e4f93127c9168923925",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_remove_EEM_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_remove_EEM_daily.csv",
+      "original_sha256": "09c63e3db5d0b5e344937b1a7437b2185079715dc966fbb0e7ec1aaf35a821a2",
+      "current_sha256": "09c63e3db5d0b5e344937b1a7437b2185079715dc966fbb0e7ec1aaf35a821a2",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_remove_EFA_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_remove_EFA_daily.csv",
+      "original_sha256": "9c46fd20361a630a13570556f60f7776624f75632c14864d6218fbbf81aac9d5",
+      "current_sha256": "9c46fd20361a630a13570556f60f7776624f75632c14864d6218fbbf81aac9d5",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_remove_GLD_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_remove_GLD_daily.csv",
+      "original_sha256": "04e27fde8870a9dd8f2206f69df5866499666021b9d080b1b4468f685b24531a",
+      "current_sha256": "04e27fde8870a9dd8f2206f69df5866499666021b9d080b1b4468f685b24531a",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_remove_IEF_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_remove_IEF_daily.csv",
+      "original_sha256": "d8e3ba2e3a488d10a852cdf73c6dab8f16bda0e8bc1d132a98ff4cbdb2909ced",
+      "current_sha256": "d8e3ba2e3a488d10a852cdf73c6dab8f16bda0e8bc1d132a98ff4cbdb2909ced",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_remove_SPY_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_remove_SPY_daily.csv",
+      "original_sha256": "337eb1c2402e4c99d852e12de9a20b57f68c7728f866bb8fce2195b6086faebf",
+      "current_sha256": "337eb1c2402e4c99d852e12de9a20b57f68c7728f866bb8fce2195b6086faebf",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_remove_TLT_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_remove_TLT_daily.csv",
+      "original_sha256": "1f8d40cfd353749506cce58d5e3dc9fc1cd01bc780b3e8eb370a4a912ad12ad9",
+      "current_sha256": "1f8d40cfd353749506cce58d5e3dc9fc1cd01bc780b3e8eb370a4a912ad12ad9",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_remove_VNQ_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_remove_VNQ_daily.csv",
+      "original_sha256": "800204a4f104c98290ee1a62e73fcd43cba453481140ea0e364d351b1bcba007",
+      "current_sha256": "800204a4f104c98290ee1a62e73fcd43cba453481140ea0e364d351b1bcba007",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_skip_latest_month_True_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_skip_latest_month_True_daily.csv",
+      "original_sha256": "8668471db042675f1b12e14a5672e87e8222e113480a8d703b887a1bcce12ede",
+      "current_sha256": "8668471db042675f1b12e14a5672e87e8222e113480a8d703b887a1bcce12ede",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_top_k_2_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_top_k_2_daily.csv",
+      "original_sha256": "8be1f56a41e3e8530f061b5db9cbf26c072d5a44bb590e14b1cdeedfff68f4c7",
+      "current_sha256": "8be1f56a41e3e8530f061b5db9cbf26c072d5a44bb590e14b1cdeedfff68f4c7",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B2_top_k_4_daily.csv",
+      "after": "results/tables/sensitivity_B_B2_top_k_4_daily.csv",
+      "original_sha256": "4d88a0280bfae822911e7c3afd05f4425b65bd38aaa9cd97bf81a0421afc8105",
+      "current_sha256": "4d88a0280bfae822911e7c3afd05f4425b65bd38aaa9cd97bf81a0421afc8105",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_cost_bps_per_traded_dollar_0_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_cost_bps_per_traded_dollar_0_daily.csv",
+      "original_sha256": "9b35663824019bf6fde7ced2ce79af1045f87a056315b7278c09a946d9ed5cdd",
+      "current_sha256": "9b35663824019bf6fde7ced2ce79af1045f87a056315b7278c09a946d9ed5cdd",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_cost_bps_per_traded_dollar_25_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_cost_bps_per_traded_dollar_25_daily.csv",
+      "original_sha256": "789e362b23ce37c285defe2d63f5452cd3c165b20d2c5c2a05eab2dba78743d3",
+      "current_sha256": "789e362b23ce37c285defe2d63f5452cd3c165b20d2c5c2a05eab2dba78743d3",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_cost_bps_per_traded_dollar_50_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_cost_bps_per_traded_dollar_50_daily.csv",
+      "original_sha256": "fd801201bd9c0dc1209d799725bcdd3d6d296448fa6fb5efcc0a4b25fc27823a",
+      "current_sha256": "fd801201bd9c0dc1209d799725bcdd3d6d296448fa6fb5efcc0a4b25fc27823a",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_cost_bps_per_traded_dollar_5_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_cost_bps_per_traded_dollar_5_daily.csv",
+      "original_sha256": "7b8cb8f78e71c7ae087a0248492523dbb0cd5d1f0ac76387db2c379d90fd71ba",
+      "current_sha256": "7b8cb8f78e71c7ae087a0248492523dbb0cd5d1f0ac76387db2c379d90fd71ba",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_execution_delay_one_session_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_execution_delay_one_session_daily.csv",
+      "original_sha256": "c4addbce82d4efd104371abd3d2227d9eae986eadbde6da3226e0ed85a616f59",
+      "current_sha256": "c4addbce82d4efd104371abd3d2227d9eae986eadbde6da3226e0ed85a616f59",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_lookback_months_6_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_lookback_months_6_daily.csv",
+      "original_sha256": "c31a8c8e666cf9b15b8e62a3295d4a0d6d6fdabbe6df46c06d8130f330246e16",
+      "current_sha256": "c31a8c8e666cf9b15b8e62a3295d4a0d6d6fdabbe6df46c06d8130f330246e16",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_lookback_months_9_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_lookback_months_9_daily.csv",
+      "original_sha256": "feabf8514aa3d7c34a52d7333c70a2f6c5642ac8fb1b0d80e3a64101959bbbf9",
+      "current_sha256": "feabf8514aa3d7c34a52d7333c70a2f6c5642ac8fb1b0d80e3a64101959bbbf9",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_primary_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_primary_daily.csv",
+      "original_sha256": "79a0151d9d222874dc92d8e894c635ef0525c892d70942a71af6c543f1882bbe",
+      "current_sha256": "79a0151d9d222874dc92d8e894c635ef0525c892d70942a71af6c543f1882bbe",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_remove_DBC_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_remove_DBC_daily.csv",
+      "original_sha256": "3f41cf2a4a13ef9d98cc7b2a509cc89384b369e9f44a619e860cf858984b7eb4",
+      "current_sha256": "3f41cf2a4a13ef9d98cc7b2a509cc89384b369e9f44a619e860cf858984b7eb4",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_remove_EEM_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_remove_EEM_daily.csv",
+      "original_sha256": "20e7d79954d25a71fc718ab76736dd0b932d9b7b1b998360353b4d2b685f5184",
+      "current_sha256": "20e7d79954d25a71fc718ab76736dd0b932d9b7b1b998360353b4d2b685f5184",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_remove_EFA_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_remove_EFA_daily.csv",
+      "original_sha256": "83e7ea2e47f4ac2cc78d7213e537d8ad36bacf413a15cc77084b6b356149457d",
+      "current_sha256": "83e7ea2e47f4ac2cc78d7213e537d8ad36bacf413a15cc77084b6b356149457d",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_remove_GLD_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_remove_GLD_daily.csv",
+      "original_sha256": "fc080ba4f68f83d88616345412ed8734222fd05c1e1f969a671ecc0c42f678bf",
+      "current_sha256": "fc080ba4f68f83d88616345412ed8734222fd05c1e1f969a671ecc0c42f678bf",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_remove_IEF_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_remove_IEF_daily.csv",
+      "original_sha256": "3e4aa8b462e728eda9b90a86526c484f7e6fcab43f4d22af2663de952c05d536",
+      "current_sha256": "3e4aa8b462e728eda9b90a86526c484f7e6fcab43f4d22af2663de952c05d536",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_remove_SPY_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_remove_SPY_daily.csv",
+      "original_sha256": "c87305618aed3ccd4e34164c7ed15e89426440a57cd3c5d3a3669a6883fe8c1e",
+      "current_sha256": "c87305618aed3ccd4e34164c7ed15e89426440a57cd3c5d3a3669a6883fe8c1e",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_remove_TLT_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_remove_TLT_daily.csv",
+      "original_sha256": "b8f186c7377c59e7ff2e61ed38da56a9336bdf530c5f8508721aa363444e9a79",
+      "current_sha256": "b8f186c7377c59e7ff2e61ed38da56a9336bdf530c5f8508721aa363444e9a79",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_remove_VNQ_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_remove_VNQ_daily.csv",
+      "original_sha256": "ca8a74b109c6bd8101b4aaaf6363360aee06c195d61e0b8684b58a5f3d8a3a97",
+      "current_sha256": "ca8a74b109c6bd8101b4aaaf6363360aee06c195d61e0b8684b58a5f3d8a3a97",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_skip_latest_month_True_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_skip_latest_month_True_daily.csv",
+      "original_sha256": "6b6e147eea8c757f9354789d6bc00da7d97887ea1e703bf0629884e24e1b043c",
+      "current_sha256": "6b6e147eea8c757f9354789d6bc00da7d97887ea1e703bf0629884e24e1b043c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_top_k_2_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_top_k_2_daily.csv",
+      "original_sha256": "3a6dfcc14dfb0a08aafa3282eca1fcbc4ae0856dcebc31c4b53010c20dfa99ba",
+      "current_sha256": "3a6dfcc14dfb0a08aafa3282eca1fcbc4ae0856dcebc31c4b53010c20dfa99ba",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/sensitivity_B_B3_top_k_4_daily.csv",
+      "after": "results/tables/sensitivity_B_B3_top_k_4_daily.csv",
+      "original_sha256": "debb97b68216ab636cc38e9ce456387f84f28a6e3b4d3bf4d58db94c79233f2d",
+      "current_sha256": "debb97b68216ab636cc38e9ce456387f84f28a6e3b4d3bf4d58db94c79233f2d",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/stress_periods.csv",
+      "after": "results/tables/stress_periods.csv",
+      "original_sha256": "efe1b1ff373e426e1ee1dc374bf4f0e1e881e562ea62749e9f0a212a51577899",
+      "current_sha256": "efe1b1ff373e426e1ee1dc374bf4f0e1e881e562ea62749e9f0a212a51577899",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/outputs/tables/variant_ledger.csv",
+      "after": "results/tables/variant_ledger.csv",
+      "original_sha256": "f7a2bb698d1d66ffeda5e536b414a9e5b75513673abb400c59db2f289f2634d0",
+      "current_sha256": "f7a2bb698d1d66ffeda5e536b414a9e5b75513673abb400c59db2f289f2634d0",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/pyproject.toml",
+      "after": "pyproject.toml",
+      "original_sha256": "dffdaae1463df1af474d1523c96ca37af567b927f8389174d1825b08f3aef414",
+      "current_sha256": "dffdaae1463df1af474d1523c96ca37af567b927f8389174d1825b08f3aef414",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/requirements.lock.txt",
+      "after": "requirements.lock.txt",
+      "original_sha256": "17ff87ff20d6a6692131b85c09a86fe08599f831cad11b0aa021002fdf86bdc9",
+      "current_sha256": "53a55c18cd71fdf2331fb89f81dd4a9f8a8565f2be09dd8bc95dc3e9eb7ef615",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/research/acceptance_checklist.md",
+      "after": "docs/research/acceptance_checklist.md",
+      "original_sha256": "ec914ab1e0a0c016282a58da06cd0d987fa2d4bf14367f6bd5082499b407bb1b",
+      "current_sha256": "ec914ab1e0a0c016282a58da06cd0d987fa2d4bf14367f6bd5082499b407bb1b",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/research/corporate_actions.md",
+      "after": "docs/research/corporate_actions.md",
+      "original_sha256": "08fb9a1e036e806b8c7b0f377393d19676ec6815f5b8af7b6722c4229df914ae",
+      "current_sha256": "08fb9a1e036e806b8c7b0f377393d19676ec6815f5b8af7b6722c4229df914ae",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/research/data_quality.md",
+      "after": "docs/research/data_quality.md",
+      "original_sha256": "693fd319e5d5deffe6950339cb263be5e4252c8d7b89affcf583709d517af90c",
+      "current_sha256": "693fd319e5d5deffe6950339cb263be5e4252c8d7b89affcf583709d517af90c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/research/freeze.json",
+      "after": "docs/research/freeze.json",
+      "original_sha256": "246df60a6ad8c414f68ed38bf5869d961b1600dd949a3c6b02aae0aef92c05c5",
+      "current_sha256": "246df60a6ad8c414f68ed38bf5869d961b1600dd949a3c6b02aae0aef92c05c5",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/research/progress.md",
+      "after": "docs/research/progress.md",
+      "original_sha256": "5fcf9ea2a6dd3582a07cd53a5e626e2e18d50d1b6e07ce4fac2e9196a71879e4",
+      "current_sha256": "5fcf9ea2a6dd3582a07cd53a5e626e2e18d50d1b6e07ce4fac2e9196a71879e4",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/research/recommendation.md",
+      "after": "docs/research/recommendation.md",
+      "original_sha256": "0c5baf463249f377d1364da54586666d308c15c43968c3be06dd935392965eda",
+      "current_sha256": "0c5baf463249f377d1364da54586666d308c15c43968c3be06dd935392965eda",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/research/requirements_matrix.md",
+      "after": "docs/research/requirements_matrix.md",
+      "original_sha256": "99aa29f5cc650b60c85ed70345fc98e98484885c1de61637f8725dd9135c3d85",
+      "current_sha256": "99aa29f5cc650b60c85ed70345fc98e98484885c1de61637f8725dd9135c3d85",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/research/research_plan.md",
+      "after": "docs/research/research_plan.md",
+      "original_sha256": "0d6381e1804976483fb18e3246c295346bd8cff4aa46f3fac2f2d84765169d65",
+      "current_sha256": "0d6381e1804976483fb18e3246c295346bd8cff4aa46f3fac2f2d84765169d65",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/research/source_map.md",
+      "after": "docs/research/source_map.md",
+      "original_sha256": "10628dd3f5a12d294009ef14ab3e3bc5d25546971d621d022a9e0728be0f256f",
+      "current_sha256": "10628dd3f5a12d294009ef14ab3e3bc5d25546971d621d022a9e0728be0f256f",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/scripts/audit_results.py",
+      "after": "scripts/audit_results.py",
+      "original_sha256": "8800acce8b6809752b3af1259ee1fb74990f7a03d0ddd4e6569754f4040d16aa",
+      "current_sha256": "3dd4b36213886ff969c01ed9f58e8c2a211038b2b72f421abd0132e0c95cfad3",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/scripts/build_notebooks.py",
+      "after": "scripts/build_notebooks.py",
+      "original_sha256": "28ff9a3b69e0f7c0589335d7c28269259d63659f293e34e79e6e8ef3ec1fa045",
+      "current_sha256": "ed60fdd2ba74a8de8e690885035ceb57b5d6885c61a07603141150706330cd58",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/scripts/clean_reproduce.py",
+      "after": "scripts/clean_reproduce.py",
+      "original_sha256": "cce60f1754cd06ccf81c7a9b0c3a952a5532bdf4884d8b13fc92e11d8e6cbb65",
+      "current_sha256": "202cda1436e47a6506986ea71ea588ccd412fdbddb81d1d50093d325c278bf89",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/scripts/execute_notebooks.py",
+      "after": "scripts/execute_notebooks.py",
+      "original_sha256": "851bb4b5064be4a2e887e5fb0f89f7836e366881e86d8275f910cf3cf4311571",
+      "current_sha256": "937c4c63f021a4ee9f1fc89fe251b73bdfd01eca1572f9773ec97af34c5b904b",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/scripts/final_handoff.py",
+      "after": "scripts/final_handoff.py",
+      "original_sha256": "1ad4fcdbe11b2888a2a92397d4dab552d99aaee55d68d463df30243dd57fa663",
+      "current_sha256": "0cae42dc4b81c76f5b6cc58cf51707aa0c0b0fcd6beef4ce54db45e748a1880a",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/scripts/render_artifacts.py",
+      "after": "scripts/render_artifacts.py",
+      "original_sha256": "bc741ebcb786e293a28457165864e470f0bb2064e25547a232e361c47ff86d6a",
+      "current_sha256": "6c84715449ffd35af3726b7da645169a5d38704bcdff60b073c3e650db822eba",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/__init__.py",
+      "after": "src/momentum_hw2/__init__.py",
+      "original_sha256": "4383e80f769eaa99809e68d2e1cd94fde51fea7b402e10cd581465a804e257b7",
+      "current_sha256": "4383e80f769eaa99809e68d2e1cd94fde51fea7b402e10cd581465a804e257b7",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/backtest_etf.py",
+      "after": "src/momentum_hw2/backtest_etf.py",
+      "original_sha256": "5a23a6948d2b9ce577cc1d8a881ed7d0f672a0b5006384d81e1ddd2b037c5ab5",
+      "current_sha256": "5a23a6948d2b9ce577cc1d8a881ed7d0f672a0b5006384d81e1ddd2b037c5ab5",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/backtest_factor.py",
+      "after": "src/momentum_hw2/backtest_factor.py",
+      "original_sha256": "e860fdef0f51cf132423d065e090344cb5743554bec88d9d4d6e05293e482751",
+      "current_sha256": "e860fdef0f51cf132423d065e090344cb5743554bec88d9d4d6e05293e482751",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/cli.py",
+      "after": "src/momentum_hw2/cli.py",
+      "original_sha256": "43a049acd2ff04686b87499a193face0b62068ca0c8f81c15f6aabe504894ee9",
+      "current_sha256": "43a049acd2ff04686b87499a193face0b62068ca0c8f81c15f6aabe504894ee9",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/data_sources.py",
+      "after": "src/momentum_hw2/data_sources.py",
+      "original_sha256": "313b6e148406dfc71dd6fc7404bdb0f5b6c710434a102d746ee9e0900894f008",
+      "current_sha256": "313b6e148406dfc71dd6fc7404bdb0f5b6c710434a102d746ee9e0900894f008",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/data_validation.py",
+      "after": "src/momentum_hw2/data_validation.py",
+      "original_sha256": "01f60d517ba1a47cbb1fd592510a8fe2b58859710f44bd0e00c9994bff533585",
+      "current_sha256": "317bbdbf61482c5971bf68c20d9f5cf689eccd8743e72d505d3b74283f08db34",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/metrics.py",
+      "after": "src/momentum_hw2/metrics.py",
+      "original_sha256": "55b4f473e864976b1514a4d7feb4e79d737af8ccc9a69b9aae2e0fed62f65c8c",
+      "current_sha256": "55b4f473e864976b1514a4d7feb4e79d737af8ccc9a69b9aae2e0fed62f65c8c",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/pipeline.py",
+      "after": "src/momentum_hw2/pipeline.py",
+      "original_sha256": "10288d8448616ccd13abb2523124f0002709460bb7b99f274696d890b5740861",
+      "current_sha256": "a652443b20d91b91af81c91917a78f152d66074e72abd33f3c3382b3c37d18de",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/reporting.py",
+      "after": "src/momentum_hw2/reporting.py",
+      "original_sha256": "bf21654605d604f504b1b30dfde099ce3d98438af42a057792abdc3a4788a938",
+      "current_sha256": "33b5d9553a9622b4564dd73c8119e9262fc0224c5ca4609a981dc5341da6c902",
+      "content_changed": true
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/robustness.py",
+      "after": "src/momentum_hw2/robustness.py",
+      "original_sha256": "7ee245cf22c99bb6b394c7ec05ebc7d76a068c1c9b716df85b56092324cde9fd",
+      "current_sha256": "7ee245cf22c99bb6b394c7ec05ebc7d76a068c1c9b716df85b56092324cde9fd",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/src/momentum_hw2/signals.py",
+      "after": "src/momentum_hw2/signals.py",
+      "original_sha256": "114b7defc69a3c1fdd65cae58d1340f999c1ddf504e6aa99818819d3e85beb41",
+      "current_sha256": "114b7defc69a3c1fdd65cae58d1340f999c1ddf504e6aa99818819d3e85beb41",
+      "content_changed": false
+    },
+    {
+      "before": "hw2_momentum/tests/test_core.py",
+      "after": "tests/test_core.py",
+      "original_sha256": "6a23e8a62b891dc827d38de4110e352ed02f5cf1c3c2bf5ca92bd1a6dfad651e",
+      "current_sha256": "6a23e8a62b891dc827d38de4110e352ed02f5cf1c3c2bf5ca92bd1a6dfad651e",
+      "content_changed": false
+    }
+  ],
+  "all_original_files_accounted_for": true,
+  "protected_artifacts_unchanged": 182,
+  "edited_source_or_document_files": [
+    "report/presentation/Investor_Presentation.tex",
+    "report/presentation/README.md",
+    "report/presentation/scripts/build_assets.py",
+    "report/presentation/scripts/render_pages.sh",
+    "README.md",
+    "docs/RESEARCH_GUIDE.md",
+    "report/original_presentation/HW2_Investor_Presentation_Manuscript.md",
+    "notebooks/01_factor_overlay.ipynb",
+    "notebooks/02_etf_dual_momentum.ipynb",
+    "requirements.lock.txt",
+    "scripts/audit_results.py",
+    "scripts/build_notebooks.py",
+    "scripts/clean_reproduce.py",
+    "scripts/execute_notebooks.py",
+    "scripts/final_handoff.py",
+    "scripts/render_artifacts.py",
+    "src/momentum_hw2/data_validation.py",
+    "src/momentum_hw2/pipeline.py",
+    "src/momentum_hw2/reporting.py"
+  ]
+}

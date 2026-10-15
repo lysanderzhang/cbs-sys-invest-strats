@@ -1,0 +1,673 @@
+[
+  {
+    "label": "BaseSharpe",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.62942"
+  },
+  {
+    "label": "BaseArith",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "arithmetic",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "5.93551"
+  },
+  {
+    "label": "BaseGeom",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "geometric",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "5.64307"
+  },
+  {
+    "label": "BaseVol",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "volatility",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "9.43011"
+  },
+  {
+    "label": "BaseDD",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "max_drawdown",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "29.57103"
+  },
+  {
+    "label": "BaseSkew",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "skewness",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.46649"
+  },
+  {
+    "label": "BaseKurt",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "excess_kurtosis",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "11.54375"
+  },
+  {
+    "label": "BaseES",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "es05",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.50005"
+  },
+  {
+    "label": "BaseWorst",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "worst_day",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-5.18244"
+  },
+  {
+    "label": "CondSharpe",
+    "path": "results/tables/conditioned_performance.csv",
+    "selector": {
+      "Unnamed: 0": "AY3M"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.19913"
+  },
+  {
+    "label": "CondES",
+    "path": "results/tables/conditioned_performance.csv",
+    "selector": {
+      "Unnamed: 0": "AY3M"
+    },
+    "column": "es05",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.02206"
+  },
+  {
+    "label": "CondDD",
+    "path": "results/tables/conditioned_performance.csv",
+    "selector": {
+      "Unnamed: 0": "AY3M"
+    },
+    "column": "max_drawdown",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "8.40631"
+  },
+  {
+    "label": "CondActive",
+    "path": "results/tables/conditioned_performance.csv",
+    "selector": {
+      "Unnamed: 0": "AY3M"
+    },
+    "column": "active_fraction",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "74.51412"
+  },
+  {
+    "label": "CondBaseSharpe",
+    "path": "results/tables/conditioned_performance.csv",
+    "selector": {
+      "Unnamed: 0": "baseline"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.57981"
+  },
+  {
+    "label": "CondBaseSkew",
+    "path": "results/tables/conditioned_performance.csv",
+    "selector": {
+      "Unnamed: 0": "baseline"
+    },
+    "column": "skewness",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.46169"
+  },
+  {
+    "label": "CondSkew",
+    "path": "results/tables/conditioned_performance.csv",
+    "selector": {
+      "Unnamed: 0": "AY3M"
+    },
+    "column": "skewness",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.52428"
+  },
+  {
+    "label": "ConstDD",
+    "path": "results/audit/exposure_controls.csv",
+    "selector": {
+      "indicator": "AY3M"
+    },
+    "column": "constant_drawdown",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "22.64560"
+  },
+  {
+    "label": "VolMatchDD",
+    "path": "results/audit/exposure_controls.csv",
+    "selector": {
+      "indicator": "AY3M"
+    },
+    "column": "volmatched_drawdown",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "20.40108"
+  },
+  {
+    "label": "ActiveES",
+    "path": "results/audit/exposure_controls.csv",
+    "selector": {
+      "indicator": "AY3M"
+    },
+    "column": "active_es05",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.13870"
+  },
+  {
+    "label": "OffProfits",
+    "path": "results/audit/exposure_controls.csv",
+    "selector": {
+      "indicator": "AY3M"
+    },
+    "column": "skipped_profit_days",
+    "scale": 1,
+    "offset": 0,
+    "digits": 0,
+    "formatted": "349"
+  },
+  {
+    "label": "OffCompound",
+    "path": "results/audit/exposure_controls.csv",
+    "selector": {
+      "indicator": "AY3M"
+    },
+    "column": "off_compound",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-22.58560"
+  },
+  {
+    "label": "LagBase",
+    "path": "results/audit/additional_decision_lag.csv",
+    "selector": {
+      "Unnamed: 0": "baseline_lagged"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.58096"
+  },
+  {
+    "label": "LagAY",
+    "path": "results/audit/additional_decision_lag.csv",
+    "selector": {
+      "Unnamed: 0": "AY3M_lagged"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.13340"
+  },
+  {
+    "label": "LagSix",
+    "path": "results/audit/additional_decision_lag.csv",
+    "selector": {
+      "Unnamed: 0": "AY6M_lagged"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.16447"
+  },
+  {
+    "label": "LagPrimaryAY",
+    "path": "results/audit/additional_decision_lag.csv",
+    "selector": {
+      "Unnamed: 0": "AY3M_primary"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.19878"
+  },
+  {
+    "label": "CICondLow",
+    "path": "results/audit/filter_sharpe_intervals.csv",
+    "selector": {
+      "comparison": "AY3M"
+    },
+    "column": "ci_low",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.18205"
+  },
+  {
+    "label": "CICondHigh",
+    "path": "results/audit/filter_sharpe_intervals.csv",
+    "selector": {
+      "comparison": "AY3M"
+    },
+    "column": "ci_high",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.07016"
+  },
+  {
+    "label": "HistSharpe",
+    "path": "results/tables/historical_comparison.csv",
+    "selector": {
+      "Unnamed: 0": "historical"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.95487"
+  },
+  {
+    "label": "HistDD",
+    "path": "results/tables/historical_comparison.csv",
+    "selector": {
+      "Unnamed: 0": "historical"
+    },
+    "column": "max_drawdown",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "14.73348"
+  },
+  {
+    "label": "HistES",
+    "path": "results/tables/historical_comparison.csv",
+    "selector": {
+      "Unnamed: 0": "historical"
+    },
+    "column": "es05",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.10999"
+  },
+  {
+    "label": "HistSkew",
+    "path": "results/tables/historical_comparison.csv",
+    "selector": {
+      "Unnamed: 0": "historical"
+    },
+    "column": "skewness",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.40746"
+  },
+  {
+    "label": "EBaseSharpe",
+    "path": "results/tables/historical_comparison.csv",
+    "selector": {
+      "Unnamed: 0": "baseline"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.55638"
+  },
+  {
+    "label": "EImpliedSharpe",
+    "path": "results/tables/historical_comparison.csv",
+    "selector": {
+      "Unnamed: 0": "FX_AY3M"
+    },
+    "column": "sharpe",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.16706"
+  },
+  {
+    "label": "EImpliedES",
+    "path": "results/tables/historical_comparison.csv",
+    "selector": {
+      "Unnamed: 0": "FX_AY3M"
+    },
+    "column": "es05",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.02498"
+  },
+  {
+    "label": "EImpliedSkew",
+    "path": "results/tables/historical_comparison.csv",
+    "selector": {
+      "Unnamed: 0": "FX_AY3M"
+    },
+    "column": "skewness",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.52597"
+  },
+  {
+    "label": "CIDiffLow",
+    "path": "results/audit/historical_sharpe_intervals.csv",
+    "selector": {
+      "comparison": "AY3M minus historical"
+    },
+    "column": "ci_low",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.07908"
+  },
+  {
+    "label": "CIDiffHigh",
+    "path": "results/audit/historical_sharpe_intervals.csv",
+    "selector": {
+      "comparison": "AY3M minus historical"
+    },
+    "column": "ci_high",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.58620"
+  },
+  {
+    "label": "SizeEffect",
+    "path": "results/tables/design_dimensions.csv",
+    "selector": {
+      "dimension": "k"
+    },
+    "column": "mean_absolute_sharpe_difference",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.08028"
+  },
+  {
+    "label": "MethodEffect",
+    "path": "results/tables/design_dimensions.csv",
+    "selector": {
+      "dimension": "method"
+    },
+    "column": "mean_absolute_sharpe_difference",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.03505"
+  },
+  {
+    "label": "TenorEffect",
+    "path": "results/tables/design_dimensions.csv",
+    "selector": {
+      "dimension": "tenor"
+    },
+    "column": "mean_absolute_sharpe_difference",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.01269"
+  },
+  {
+    "label": "SpreadGeom",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "1M_2_spread"
+    },
+    "column": "geometric",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "6.11324"
+  },
+  {
+    "label": "SpreadVol",
+    "path": "results/tables/baseline_performance.csv",
+    "selector": {
+      "Unnamed: 0": "1M_2_spread"
+    },
+    "column": "volatility",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "12.75363"
+  },
+  {
+    "label": "SpotMean",
+    "path": "results/tables/baseline_decomposition.csv",
+    "selector": {
+      "Unnamed: 0": "spot"
+    },
+    "column": "annualized_mean",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "1.89340"
+  },
+  {
+    "label": "CarryMean",
+    "path": "results/tables/baseline_decomposition.csv",
+    "selector": {
+      "Unnamed: 0": "carry"
+    },
+    "column": "annualized_mean",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "4.04203"
+  },
+  {
+    "label": "InteractionMean",
+    "path": "results/tables/baseline_decomposition.csv",
+    "selector": {
+      "Unnamed: 0": "interaction"
+    },
+    "column": "annualized_mean",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.00008"
+  },
+  {
+    "label": "VixCorr",
+    "path": "results/tables/volatility_correlations.csv",
+    "selector": {
+      "period": "all",
+      "indicator": "VIX"
+    },
+    "column": "pearson",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.48127"
+  },
+  {
+    "label": "AYCorr",
+    "path": "results/tables/volatility_correlations.csv",
+    "selector": {
+      "period": "all",
+      "indicator": "AY3M"
+    },
+    "column": "pearson",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.30297"
+  },
+  {
+    "label": "VixCrisis",
+    "path": "results/tables/volatility_correlations.csv",
+    "selector": {
+      "period": "2008",
+      "indicator": "VIX"
+    },
+    "column": "pearson",
+    "scale": 1,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.69063"
+  },
+  {
+    "label": "LowES",
+    "path": "results/tables/volatility_regimes.csv",
+    "selector": {
+      "timing": "predictive",
+      "indicator": "AY3M",
+      "regime": "low"
+    },
+    "column": "es05",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.99306"
+  },
+  {
+    "label": "HighES",
+    "path": "results/tables/volatility_regimes.csv",
+    "selector": {
+      "timing": "predictive",
+      "indicator": "AY3M",
+      "regime": "high"
+    },
+    "column": "es05",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "2.20394"
+  },
+  {
+    "label": "LowMean",
+    "path": "results/tables/volatility_regimes.csv",
+    "selector": {
+      "timing": "predictive",
+      "indicator": "AY3M",
+      "regime": "low"
+    },
+    "column": "mean_daily",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "0.03369"
+  },
+  {
+    "label": "HighMean",
+    "path": "results/tables/volatility_regimes.csv",
+    "selector": {
+      "timing": "predictive",
+      "indicator": "AY3M",
+      "regime": "high"
+    },
+    "column": "mean_daily",
+    "scale": 100,
+    "offset": 0,
+    "digits": 5,
+    "formatted": "-0.01190"
+  },
+  {
+    "label": "CrisisBase",
+    "path": "results/tables/baseline_2008.csv",
+    "selector": {
+      "Unnamed: 0": "3M_3_equal"
+    },
+    "column": "terminal_wealth",
+    "scale": 100,
+    "offset": -1,
+    "digits": 5,
+    "formatted": "-20.10077"
+  },
+  {
+    "label": "CrisisAY",
+    "path": "results/tables/conditioned_2008.csv",
+    "selector": {
+      "Unnamed: 0": "AY3M"
+    },
+    "column": "terminal_wealth",
+    "scale": 100,
+    "offset": -1,
+    "digits": 5,
+    "formatted": "-6.87929"
+  },
+  {
+    "label": "CrisisHistorical",
+    "path": "results/tables/historical_2008.csv",
+    "selector": {
+      "Unnamed: 0": "historical"
+    },
+    "column": "terminal_wealth",
+    "scale": 100,
+    "offset": -1,
+    "digits": 5,
+    "formatted": "-6.05593"
+  }
+]

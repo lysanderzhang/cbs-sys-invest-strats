@@ -1,0 +1,7 @@
+Matplotlib is building the font cache; this may take a moment.
+          cumulative_return annualized_return annualized_volatility sharpe_zero_rf maximum_drawdown number_of_round_trips
+A                   0.03594           0.05439               0.06649        0.82963         -0.05059                    95
+B                   0.04474           0.06786               0.07241        0.94237         -0.02836                   135
+C                   0.11139           0.17166               0.15500        1.09689         -0.04817                   135
+SPY_gross           0.21963           0.34691               0.21445        1.49467         -0.12053                   NaN
+SPY_net             0.21961           0.34688               0.21445        1.49457         -0.12053                   NaN

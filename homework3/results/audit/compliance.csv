@@ -1,0 +1,17 @@
+question,requirement,status,evidence
+(a),12 tenor/size/allocation combinations; nine non-USD currencies,PASS,Report Section 2; representative_holdings.csv; baseline_returns.csv
+(a),Explicit dated currencies/weights for every construction,PASS,"12-row holdings table; daily_weights.csv, all 321,840 positions"
+(a),"Daily ranks, normalized long/short weights and next-period application",PASS,Independent full-path weights/rank checks and timing tests
+(b),"Arithmetic/geometric returns, volatility, Sharpe, skew/kurtosis, VaR/ES, drawdown and wealth",PASS,"Section 3; baseline_performance.csv, wealth/drawdown/distribution figures"
+(b),"Paired tenor, number-per-side and allocation comparisons; consistent winner",PASS,Paired design effects; 3M_3_equal selected by Sharpe
+(b),2008 stress comparison,PASS,All 12 in baseline_2008.csv; crisis discussion and supporting figure
+(c),"All six indicators, contemporaneous changes and predictive level regimes",PASS,"Section 4; correlations, regime moments/counts/probabilities"
+(c),"Economic relevance, candidate choice and direct Jurek answer",PASS WITH LIMITS,"AY3M/AY1wk essentially tied; qualitative stress support, not crash-premium replication"
+(d),Six common-rule conditioned strategies with prior-only thresholds,PASS,"Section 5; all six full/common returns, exposures and thresholds independently checked"
+(d),"Common sample, active exposure, consistent selection and trade-offs",PASS,2727 shared dates; AY3M point-estimate winner; exposure controls and missed gains
+(d),Look-ahead and robustness of volatility timing,PASS WITH LIMITS,No computational look-ahead; unknown fixings; extra selection/exposure lag changes winner to AY6M
+(e),"Historical volatility construction, units and same conditioning rule",PASS,"Section 6; AUDJPY=raw AUD*raw JPY; 21 arithmetic returns, ddof=1, sqrt(252)"
+(e),Realized/implied/baseline comparison on common dates and interpretation,PASS WITH LIMITS,2707 dates; complete moments/tails; AY3M-vs-historical Sharpe interval includes zero
+General,"Arithmetic daily returns, interest accrual and zero transaction costs",PASS,Exact USD deposit/borrowing formula and exact spot/carry/interaction decomposition
+General,"First-page answers, five-decimal precision, formulas and references",PASS,20-page report; first page (a)-(e); Jurek (2014) and Barclays Capital (2011)
+General,Reproducibility and data preservation,PASS,Shared course interpreter; dependency specification; original input hashes verified

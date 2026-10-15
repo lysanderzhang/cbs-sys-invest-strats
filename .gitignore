@@ -18,7 +18,6 @@ node_modules/
 build/
 *.zip
 *.aux
-homework2/Investor_Presentation_Source/*.log
 *.nav
 *.snm
 *.toc
@@ -28,5 +27,35 @@ homework2/Investor_Presentation_Source/*.log
 *.synctex.gz
 
 # Vendor input snapshots remain local; retain acquisition manifests
-homework2/hw2_momentum/data/raw/
-homework2/hw2_momentum/data/processed/
+homework2/data/raw/
+homework2/data/processed/
+
+# Homework 1 staging files and rendering scratch
+homework1/results/**/.matplotlib/
+homework1/results/validation/previews/
+homework1/build/submission_data.json
+homework1/results/**/*.inspect.ndjson
+homework1/results/validation/scenarios/
+homework1/results/validation/workbook_data.json
+
+# Homework source data and report compilation scratch
+homework1/data/raw/
+homework2/report/presentation/*.log
+homework2/report/presentation/*.pdf
+!homework2/report/presentation/figures/*.pdf
+homework1/submission/previews/
+
+# Local render previews, caches and TeX compiler products
+tmp/
+.cache/
+*.blg
+*.bbl
+homework*/report/project/*.log
+
+# Canonical compiled deliverables live in submission/; these are local build copies
+homework2/report/project/main.pdf
+homework3/report/main.pdf
+
+# Convenience submission sources; canonical sources remain tracked under report/
+homework3/submission/*.tex
+homework3/submission/*.bib

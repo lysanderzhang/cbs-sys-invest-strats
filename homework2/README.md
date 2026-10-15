@@ -1,65 +1,142 @@
-# Homework 2 — Momentum investing
+# Homework 2: momentum investing
 
 Hanyu Zhang · Columbia FINCB9339 · Fall 2026
 
-Two reproducible research prototypes: (A) crash-aware exposure overlays on Kenneth French's aggregate equity momentum factor and (B) cross-asset ETF relative/absolute momentum with optional volatility control. The ETF universe is SPY, EFA, EEM, IEF, TLT, GLD, DBC and VNQ. WRDS/CRSP was not used.
+Two research prototypes: (A) crash-aware exposure overlays on the Kenneth French
+aggregate momentum factor and (B) cross-asset ETF relative/absolute momentum with
+volatility control. This folder contains the complete project report, investor
+presentation, source code, preserved results and reproduction instructions.
 
-## Final reading order
+## Start here
 
-1. [Investor presentation PDF](Investor_Presentation.pdf): the updated October 5 LaTeX presentation.
-2. [Editable LaTeX presentation source](Investor_Presentation_Source/Investor_Presentation.tex), [speaker notes](Investor_Presentation_Source/Presenter_Notes.md), and [presentation build instructions](Investor_Presentation_Source/README.md).
-3. [Technical report PDF](hw2_momentum/deliverables/HW2_Momentum_Research_Report.pdf) or [editable report](hw2_momentum/deliverables/HW2_Momentum_Research_Report.md).
-4. [Research project README](hw2_momentum/README.md), [executed factor notebook](hw2_momentum/notebooks/01_factor_overlay.ipynb), and [executed ETF notebook](hw2_momentum/notebooks/02_etf_dual_momentum.ipynb).
-5. [Acceptance checklist](hw2_momentum/research/acceptance_checklist.md), [exact performance table](hw2_momentum/outputs/tables/performance.csv), [robustness ledger](hw2_momentum/outputs/tables/variant_ledger.csv), and [data provenance](hw2_momentum/data/manifests/inputs.json).
+1. [Complete project report](submission/HW2_Hanyu_Zhang_FINCB9339.pdf) and
+   [editable LaTeX source](report/project/main.tex)
+2. [Preferred investor presentation](submission/Investor_Presentation.pdf)
+3. [Editable presentation](report/presentation/Investor_Presentation.tex),
+   [speaker notes](report/presentation/Presenter_Notes.md), and
+   [presentation build instructions](report/presentation/README.md)
+4. [Original technical report PDF](submission/HW2_Momentum_Research_Report.pdf) and
+   [editable research report](report/HW2_Momentum_Research_Report.md)
+5. [Detailed research guide](docs/RESEARCH_GUIDE.md),
+   [factor notebook](notebooks/01_factor_overlay.ipynb), and
+   [ETF notebook](notebooks/02_etf_dual_momentum.ipynb)
+6. [Acceptance checklist](docs/research/acceptance_checklist.md),
+   [performance table](results/tables/performance.csv), and
+   [input provenance](data/manifests/inputs.json)
 
-The original October 4 slide manuscript/PDF remain inside `hw2_momentum/deliverables/` as research-stage artifacts. The updated presentation and editable LaTeX source above are the preferred deck. Statements about a missing PPTX in the original package describe that original delivery; editable LaTeX is now available.
+The original October 4 presentation is retained in `submission/archive/`, with
+its manuscript/JSON under `report/original_presentation/`. The updated October 5
+LaTeX presentation above remains the preferred deck. The original technical report
+is retained as a distinct research record; the new project report is the main narrative write-up.
 
-## Repository layout
+## Structure
 
 ```text
 homework2/
-├── README.md
-├── hw2.md                            Assignment requirements
-├── HW2_Momentum_Agent_Spec.md        Original execution specification
-├── Investor_Presentation.pdf        Updated presentation
-├── Investor_Presentation_Source/    Editable LaTeX, charts, generated tables, notes
-└── hw2_momentum/                    Python research project
-    ├── config/                     Frozen primary settings
-    ├── src/                        Shared backtest modules
-    ├── tests/                      Targeted validation tests
-    ├── scripts/                    Reproduction / audit / notebook tools
-    ├── notebooks/                  Two executed explanatory notebooks
-    ├── data/manifests/              Acquisition metadata and input checksums
-    ├── outputs/                    Canonical tables, audits and actual-result charts
-    ├── research/                   Sources, freeze, limitations and acceptance
-    └── deliverables/               Technical report and original investor artifacts
+  config/                Frozen primary settings
+  data/manifests/        Acquisition metadata and original input checksums
+  src/momentum_hw2/      Factor/ETF models, data handling and reporting
+  tests/                 Targeted correctness tests
+  scripts/               Audits, notebooks, cached reproduction and packaging
+  notebooks/             Existing executed explanatory notebooks
+  results/tables/        Preserved returns, statistics and robustness comparisons
+  results/audits/        Preserved decisions, holdings, costs and checks
+  results/figures/       Actual-result charts
+  report/                Editable technical report and presentation source
+  docs/research/         Frozen plan, sources, limitations and acceptance
+  docs/provenance/       Historical package checksum record
+  references/            Assignment requirements
+  submission/            Final PDFs; archive/ holds the original presentation
+  pyproject.toml         Dependency metadata and pytest source paths
+  requirements.lock.txt  Historical dependency snapshot, not a synchronization target
 ```
 
-## Research result and limits
+`results/structure_manifest.json` records all original/new paths and file hashes.
+Historical manifests, freeze records and logs remain unchanged, including paths
+from their original layout. The handoff checker resolves the frozen research-plan
+path to `docs/research/` without modifying the freeze or plan.
 
-Recommend B3 as a research-stage risk-limited ETF pitch, not as a proven superior-return product. On the primary sample its modeled net CAGR is 6.89%, monthly cash-adjusted Sharpe 0.614 and maximum daily drawdown −17.91%; average cash is 22.82%. B1 has higher CAGR (8.66%); monthly 60/40 has higher Sharpe (0.719). Uncertainty intervals do not establish superiority, and liquidity/cost assumptions do not establish live capacity.
+## Shared environment and validation
 
-The cutoff was September 30, 2026, but French Mom/RF inputs stop August 31. Primary invested-return samples: factor February 1, 1990–August 31, 2026; ETFs September 4, 2007–August 31, 2026. Historical holdout results are publicly known historical evidence, not unseen future performance. Full explanations, adverse variants and actual verification records are retained.
+Use only `$HOME/.venvs/sys-inv/bin/python`. Do not create a homework-local `.venv`
+or `venv`, run `uv sync`, or replace shared packages to match the historical lock
+file. Install only missing packages with
+`uv pip install --python "$HOME/.venvs/sys-inv/bin/python" <packages>`.
+See the course [environment policy](../AGENTS.md).
 
-## Reproduction and input availability
-
-From the repository root:
+From this homework root:
 
 ```sh
-cd homework2/hw2_momentum
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements.lock.txt
-export PYTHONPATH="$PWD/src"
+"$HOME/.venvs/sys-inv/bin/python" -c 'import sys; print(sys.executable)'
+export PYTHONPATH="$PWD/src${PYTHONPATH:+:$PYTHONPATH}"
 export MPLCONFIGDIR="$PWD/build/matplotlib"
-.venv/bin/python -m pytest -q
-.venv/bin/python -m momentum_hw2.cli fetch --config config/base.yaml
-.venv/bin/python -m momentum_hw2.cli validate-data --offline
-.venv/bin/python -m momentum_hw2.cli run --offline
-.venv/bin/python -m momentum_hw2.cli report --offline
+"$HOME/.venvs/sys-inv/bin/python" -m pytest -q
+"$HOME/.venvs/sys-inv/bin/python" -m momentum_hw2.cli --help
 ```
 
-**Original raw and processed vendor input caches are retained locally and intentionally excluded from Git.** This repository includes acquisition manifests, recorded hashes, source code, executed notebooks, and derived research outputs. A new clone must acquire inputs or receive an authorized copy of the original caches before running a backtest. Fresh provider downloads are a new vintage and may revise data or extend the endpoint; they are not guaranteed to reproduce the original hashes or headline results. Preserve the committed manifests/outputs before fetching a new vintage, preferably in a separate checkout. The original cached clean-run record reports 137 identical numerical outputs, 11 passing tests and 25 independent accounting checks.
+**The original raw and processed vendor caches are absent from this checkout.**
+They were intentionally excluded from Git. Existing manifests and results are
+preserved; no replacement data were downloaded during restructuring. The unit
+tests use synthetic fixtures and can run without these caches. Full offline
+backtests and notebook execution require authorized original files in `data/raw/`
+and `data/processed/` matching the recorded input hashes.
 
-To rebuild the updated presentation, follow `Investor_Presentation_Source/README.md`. Its default relative CSV path is preserved by this layout. Excluded items include virtual environments, dependency caches, rendering scratch, duplicated ZIPs and TeX build intermediates. No data charges, trades, publishing beyond this requested Git repository update, or homework submissions are part of the project.
+Once those caches are restored, these commands run from the same root:
 
-The original `PACKAGE_SHA256.json`, freeze files and run logs are historical records of the October 4 research delivery, not checksums of this reorganized Git checkout. Repository README edits and the later presentation do not alter frozen strategy inputs.
+```sh
+"$HOME/.venvs/sys-inv/bin/python" -m momentum_hw2.cli validate-data --offline
+"$HOME/.venvs/sys-inv/bin/python" -m momentum_hw2.cli run --offline
+"$HOME/.venvs/sys-inv/bin/python" -m momentum_hw2.cli report --offline
+```
+
+A new provider download is a new data vintage and may revise the original
+results. Preserve manifests/results before any future authorized acquisition.
+The original research records report 137 identical numerical outputs, 11 passing
+tests and 25 independent accounting checks; those records are historical evidence,
+not a claim that a cache-dependent run was repeated during restructuring.
+
+Notebook source paths and kernel metadata now use the new layout and shared
+course interpreter. Original execution outputs are preserved; the notebooks were
+not re-executed without their missing input caches. Notebook builders/runners
+create only project-local Jupyter runtime files, never a Python environment.
+
+## Findings and limits
+
+B3 remains the research-stage risk-limited ETF pitch: modeled net CAGR 6.89%,
+monthly cash-adjusted Sharpe 0.614, maximum daily drawdown −17.91%, and average
+cash 22.82%. B1 has higher CAGR (8.66%); monthly 60/40 has higher Sharpe (0.719).
+Uncertainty intervals do not establish superiority, and assumed costs and
+vendor-volume proxies do not establish live capacity.
+
+The cutoff was September 30, 2026; observed French RF/Mom inputs end August 31.
+Primary invested-return samples are February 1, 1990–August 31, 2026 for factors
+and September 4, 2007–August 31, 2026 for ETFs. Known historical holdout results
+are not unseen future evidence. Costs, capacity, data adjustments and limitations
+remain documented in the detailed research guide and report. No trades or
+assignment submissions were performed.
+
+## Complete narrative project report
+
+`submission/HW2_Hanyu_Zhang_FINCB9339.pdf` is the comprehensive 11-page
+companion report, organized as an academic write-up: first-page summary, economic
+context, data, all A/B strategies, mathematical rules and timing, portfolio
+accounting, performance/distributions, robustness, capacity, investor questions,
+limitations and reproduction. The investor deck remains the assignment's pitch.
+The original technical PDF and Markdown report remain unchanged.
+
+Build the new report from this project root without downloading data:
+
+```sh
+"$HOME/.venvs/sys-inv/bin/python" scripts/build_project_report.py
+cd report/project
+tectonic --keep-logs main.tex
+cp main.pdf ../../submission/HW2_Hanyu_Zhang_FINCB9339.pdf
+```
+
+A standard LaTeX installation can use `pdflatex main.tex` twice instead of
+Tectonic. The builder uses NumPy/pandas and reconciles 65 primary statistics
+against the preserved daily/monthly CSVs across 11 variants, including capital
+NAV and ETF average exposure checks. The verification record is
+`results/audits/project_report_verification.json`; all 11 synthetic unit tests
+also passed during report preparation. This is saved-output reconciliation,
+not a cache-dependent backtest rerun. The shared interpreter policy above applies.

@@ -1,69 +1,118 @@
 # Homework 1: SPY intraday strategy replication
 
-This is an independently written, paper-only Python implementation of the requested Models A, B, and C. No author-provided code was searched, opened, copied, or used. No parameter optimization or external market-data download was performed. This delivery is the first implementation for the student's subsequent validation and critique, not an independently certified replication.
+An independent, paper-only implementation of Models A, B and C, with the submitted
+report, original submitted workbook, research outputs and reproduction instructions.
 
-Read `PRE_IMPLEMENTATION.md` for the assignment requirements, paper equations, workbook audit, complete strategy choices, and ambiguities. Read `RESULTS_AND_VALIDATION.md` for results, metric definitions, and specific manual checks. `CHANGELOG.md` and `PROMPTS.md` preserve the development record.
+## Start here
 
-## Repository location
+- [Submitted report](submission/HW1_Hanyu_Zhang_FINCB9339.pdf)
+- [Original submitted workbook](submission/original_submitted/FINCB9339_HW1_Submission.xlsx)
+- [Original LaTeX source](report/submitted/FINCB9339_HW1_data_prep_prompt.tex)
+- [Research-generated workbook](submission/FINCB9339_HW1_Submission.xlsx)
+- [Results and validation](report/RESULTS_AND_VALIDATION.md)
+- [Separate reconstruction report](results/validation/VALIDATION_REPORT.md) and
+  [formula validation workbook](results/validation/validation_tables.xlsx)
+- [Methodology and source audit](docs/PRE_IMPLEMENTATION.md)
+- [Development history](docs/CHANGELOG.md) and [prompt record](docs/PROMPTS.md)
 
-This project now lives in `homework1/`. From the repository root, run `cd homework1` before the commands below. The original code, outputs and development records were preserved during the repository reorganization.
+## Structure
 
-## Run
-
-With Python 3.12 and the packages in `requirements.txt` installed:
-
-```sh
-python strategy.py '/absolute/path/hw1.spy.20250313-20251201.intra-30m.xlsx' --output outputs/baseline
+```text
+homework1/
+  data/raw/             Unchanged local copy of the supplied SPY workbook
+  data/manifest.json    Original location and input SHA-256
+  src/strategy.py       Models, accounting, statistics and command-line runner
+  tests/                Deterministic correctness checks
+  scripts/submission/   Submission workbook staging and builder
+  scripts/validation/   Separate arithmetic replay and workbook verification
+  results/baseline/     Preserved daily series, trades, positions and figures
+  results/validation/   Preserved independent checks and sensitivity results
+  report/               Research write-up
+  docs/                 Methodology and development history
+  submission/           Submitted report, original workbook and research workbook
+  requirements.txt      Research dependencies
+  pyproject.toml        Dependency metadata and pytest paths
 ```
 
-In the current Codex workspace, bundled Python plus locally installed plotting/statistics dependencies are already configured:
+`results/structure_manifest.json` records every original file's new location and
+hash. Historical manifests and logs retain the paths and hashes from their original
+runs; they are evidence, not current path configuration. The raw workbook and final
+workbooks are unchanged. The source workbook copy is intentionally ignored by Git;
+a fresh clone needs that authorized input at the documented local path.
+
+## Shared Python environment
+
+Use only `$HOME/.venvs/sys-inv/bin/python`, the existing FINCB9339 environment.
+Do not create a project `.venv` or `venv`, run `uv sync`, or downgrade the course
+environment to a homework dependency file. Install only missing dependencies with
+`uv pip install --python "$HOME/.venvs/sys-inv/bin/python" <packages>`.
+The course-wide policy is in [AGENTS.md](../AGENTS.md).
+
+From this homework root:
 
 ```sh
-zsh run_local.sh '/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/homework/hw1/hw1.spy.20250313-20251201.intra-30m.xlsx'
-PYTHONPATH=.python-deps /Users/lysanzh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 test_strategy.py
+"$HOME/.venvs/sys-inv/bin/python" -c 'import sys; print(sys.executable)'
+"$HOME/.venvs/sys-inv/bin/python" -m pytest -q
+# Reproduce into a separate run directory, keeping the historical baseline intact:
+"$HOME/.venvs/sys-inv/bin/python" src/strategy.py data/raw/hw1.spy.20250313-20251201.intra-30m.xlsx --output results/reproduction
 ```
 
-The test fixture path is at the top of `test_strategy.py`; change it when relocating the workbook. Source files are read-only and remain in their original directory. The original source workbook and PDFs are not committed here. The submission workbook integrates copies of the three source data sheets for auditability.
+Without `--output`, the runner writes `results/baseline/`. Use separate directories
+for sensitivity runs. Available switches are `--vwap-method midpoint`,
+`--execution-delay 1`, `--entry-vwap-filter` and `--timestamp-mode as_labeled`.
+The as-labeled mode requires vendor evidence that observations are available at
+those timestamps; otherwise it can introduce look-ahead. A 30-minute delay is a
+coarse diagnostic rather than a realistic subsecond execution model.
 
-## Excel submission workbook
+## Workbook and separate validation builds
 
-`outputs/submission/FINCB9339_HW1_Submission.xlsx` is the single-file spreadsheet deliverable. It contains the original SPY source sheets, all scored daily results, completed trades, execution legs, signal inputs, April 2 calculation checks, implementation sensitivities, concentration analysis, and a method note. Trade P&L and selected manual checks recalculate with Excel formulas; the full historical strategy state machine and sensitivity cases are fixed, labeled Python outputs. See `submission/prepare_data.py` and `submission/build_submission.mjs` for the reproducible packaging steps. The `submission/node_modules` symlink and staged JSON are local build dependencies and are not committed.
+Read [validation instructions](scripts/validation/README.md) before rebuilding
+its outputs. From this homework root, stage the submission workbook inputs with:
 
-Later sensitivity switches are available but have NOT been run as a parameter search: `--vwap-method midpoint`, `--execution-delay 1`, `--entry-vwap-filter`, and `--timestamp-mode as_labeled`. Always give sensitivity runs a different `--output` directory. The as-labeled mode is valid only if vendor metadata establishes that observations are actually available at their labels; otherwise it can introduce look-ahead. A 30-minute delayed fill is a deliberately coarse alternative, not a realistic subsecond execution model.
+```sh
+"$HOME/.venvs/sys-inv/bin/python" scripts/submission/prepare_data.py
+node scripts/submission/build_submission.mjs
+```
 
-## Function map
+Workbook builders require the existing Artifact Tool Node package/runtime. No
+workbook authoring or recalculation is required to use the delivered Excel files.
+Staged JSON, rendering scratch and Node dependencies are excluded from Git.
 
-| Purpose | Function |
-|---|---|
-| Read workbook and audit raw/cleaned differences | `load_workbook`, `audit_data` |
-| Prepare sessions, timestamp availability and closing prints | `prepare_data` |
-| Open proxy, prior close and daily return construction | `construct_daily` |
-| Validate/difference volume convention | `incremental_volume` |
-| Prior-session time-of-day Noise Area | `calculate_noise_area` |
-| Isolated VWAP approximation | `approximate_vwap` |
-| Position state transitions | `generate_signal` |
-| Event-by-event execution and realized accounting | `execute_trades`, `event_record` |
-| Per-leg commissions/slippage | `transaction_costs` |
-| Daily share counts and volatility scaling | `dynamic_position_size` |
-| Independent daily aggregation of execution ledger | `daily_pnl_equity` |
-| Constant-share SPY comparator | `buy_and_hold` |
-| Return statistics and regression uncertainty | `performance_statistics` |
+The final workbook contains copies of all three input sheets, daily results,
+completed trades, execution legs, signals, April 2 checks, sensitivities and
+concentration analysis. Selected calculations use Excel formulas; the full
+historical state machine remains labeled Python output. It is not a live backtester.
 
-## Output map
+## Methods and output interpretation
 
-All baseline output is under `outputs/baseline/`:
+No author-provided implementation was consulted and no optimization or new market
+data acquisition was performed in the original research. Read the methodology
+for the inferred bar availability, open proxy, approximate VWAP, half-day treatment,
+transaction costs and sizing assumptions. The implementation is not vendor-data
+certification or blind third-party validation.
 
-- `performance.csv`: requested statistics, five or more decimal places, with OLS and HAC regression inference.
-- `features.csv`: each retained observation, source/availability timestamps, price provenance, volume weights, open proxy, previous close, Noise estimates/counts, boundaries and approximate VWAP/stops, including warm-up rows.
-- `daily_inputs.csv`: daily price inputs, lagged volatility, scheduled close, warm-up eligibility.
-- `A/B/C_executions.csv`: every charged entry/exit leg. `net_pnl` is event cash P&L (entry cost at entry, gross realization minus exit costs at exit). Sum this column, not just exit rows.
-- `A/B/C_trades.csv`: completed round trips with BOTH entry and exit costs; `net_pnl` is the full round-trip result. Do not add this to execution P&L, which would double count.
-- `A/B/C_daily.csv`: beginning equity, daily realized gross P&L, separate commissions/slippage, daily net P&L, ending equity, daily return and sizing.
-- `A/B/C_positions.csv`: post-decision inventory, marked equity and marked leverage. These capture unrealized movement without changing the realized ledger.
-- `SPY_gross_daily.csv`, `SPY_net_daily.csv`: common-period price-series buy-and-hold comparators, without and with one entry/exit cost.
-- `data_audit.json`, `data_audit_by_day.csv`, `cleaning_changes.csv`, `excluded_rows.csv`: audit evidence. Excluded interval rows include separate closing prints whose price is still used for liquidation; they are not all discarded prices.
-- `run_manifest.json`: parameters, source and code hashes, library versions, sample dates and provenance declarations.
-- `equity_drawdown.png`, `spot_check_days.png`: charts. Lines connect available observations for display; they do not claim knowledge of the path between observations.
-- `validation.txt`: final test run.
+The baseline directory retains `performance.csv`, `features.csv`, `daily_inputs.csv`,
+`A/B/C_daily.csv`, `A/B/C_trades.csv`, `A/B/C_executions.csv`, `A/B/C_positions.csv`,
+SPY comparators, source-cleaning audits, two charts and `run_manifest.json`.
+`net_pnl` in the execution ledger is event cash P&L including the applicable leg's
+costs; summing it reconciles daily P&L. Trade-ledger P&L already includes both legs'
+costs; adding it to execution P&L would double count. Positions retain marked
+inventory information separately from the realized ledger.
 
-The estimator/strategy functions use only pandas/numpy. Matplotlib creates static plots; statsmodels provides the regression diagnostics. The baseline runtime used pandas 3.0.6, numpy 2.5.3, matplotlib 3.11.2, statsmodels 0.15.0 and scipy 1.18.1. All implementation and validation was performed in this task; there was no second-agent independent review.
+The strategy functions use NumPy/pandas, matplotlib generates figures, and
+statsmodels supplies regression diagnostics. Current restructuring checks and
+result-preservation evidence are recorded in `results/structure_validation.json`.
+
+## Restored submitted artifacts
+
+The actual 20-page submitted report and associated LaTeX source were located in
+the original external `homework/hw1/` folder on October 14, 2026, and copied
+unchanged. They were absent from the repository used for the earlier restructuring.
+`results/submitted_artifact_restoration.json` records source paths and matching SHA-256 hashes.
+
+The original submitted workbook (837,251 bytes) differs from the preserved
+research-generated workbook (689,456 bytes). Both remain available: the original
+is under `submission/original_submitted/`; the research-generated workbook keeps
+its existing path and validation record. No equivalence between these versions
+is asserted. The original TeX is retained as source provenance; its external
+figure dependencies have not been reconstructed or its submitted PDF rebuilt.
