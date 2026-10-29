@@ -1,0 +1,13 @@
+{
+  "level_observations": 2981,
+  "return_observations": 2980,
+  "start": "1999-01-01",
+  "end": "2010-06-04",
+  "first_return": "1999-01-04",
+  "missing_observations": 0,
+  "duplicate_dates": 0,
+  "variance_divisor": "N (empirical-distribution moments)",
+  "inverse_identity_max_error": 3.2395960913866872e-16,
+  "jensen_sum_daily_means": 0.0001225416594801074,
+  "mean_r_squared_over_gross": 0.00012254165948010601
+}

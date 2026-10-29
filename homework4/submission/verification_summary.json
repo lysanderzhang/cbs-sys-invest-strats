@@ -1,0 +1,14 @@
+{
+  "report_pages": 8,
+  "empirical_return_dates": 2980,
+  "independent_scalar_comparisons": 9642,
+  "unit_tests_passed": 24,
+  "source_inputs_unchanged": true,
+  "all_subquestions_answered": true,
+  "final_pdf_sha256": "ebb692702f4b7c113b70f899005c5377b02a8b42bee98e38c09c5197f5f62642",
+  "limitations": [
+    "Inverse moments not identified by first two moments; Taylor approximations are local.",
+    "Rule of 72 uses decimal/percentage units consistently and fractional doubling periods.",
+    "Option illustration is model-based, not historical investment performance."
+  ]
+}

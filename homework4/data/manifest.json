@@ -1,0 +1,17 @@
+[
+  {
+    "original": "/Users/lysanzh/Downloads/hw4.pdf",
+    "copy": "references/hw4.pdf",
+    "sha256": "5ae0d06edb3c4a131d4c2103ae45bdc563fc102a3f2578322c352607b31e8098"
+  },
+  {
+    "original": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/cbs-sys-invest-strats/homework3/data/raw/hw3.data.carry.FX.dly.xlsx",
+    "copy": "data/raw/hw3.data.carry.FX.dly.xlsx",
+    "sha256": "a31b7a6163e65ef12747a72be2138453d768d90b6ebc670b1d3ac470d32e32b3"
+  },
+  {
+    "original": "/Users/lysanzh/Library/CloudStorage/OneDrive-Personal/MacBook/curriculum/1 courses/sem-3 2026 fall/FINC9339 systematic investment strategies/cbs-sys-invest-strats/homework3/references/Crash-neutralcurrencycarrytrades.pdf",
+    "copy": "references/Crash-neutralcurrencycarrytrades.pdf",
+    "sha256": "440797ae29e0b60fcb0e4056fa081511f44a30db38a0890e51ed68d02378d4fc"
+  }
+]

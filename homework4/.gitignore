@@ -1,0 +1,13 @@
+tmp/
+.cache/
+__pycache__/
+.pytest_cache/
+*.aux
+*.log
+*.out
+*.blg
+*.bbl
+report/main.pdf
+submission/*.tex
+submission/*.bib
+submission/*.zip

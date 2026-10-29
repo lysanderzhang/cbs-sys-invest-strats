@@ -1,0 +1,9 @@
+[project]
+name = "fincb9339-homework4"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = ["numpy", "pandas", "scipy", "matplotlib", "openpyxl", "pypdf", "pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,209 @@
+[
+  {
+    "label": "NZMean",
+    "path": "results/tables/inverse_moments.csv",
+    "column": "source_mean",
+    "selector": {
+      "source": "NZDJPY"
+    },
+    "scale": 100,
+    "digits": 8,
+    "formatted": "0.00694248"
+  },
+  {
+    "label": "JYMean",
+    "path": "results/tables/inverse_moments.csv",
+    "column": "source_mean",
+    "selector": {
+      "source": "JPYNZD"
+    },
+    "scale": 100,
+    "digits": 8,
+    "formatted": "0.00531169"
+  },
+  {
+    "label": "NZErr",
+    "path": "results/tables/inverse_moments.csv",
+    "column": "mean_error_bp",
+    "selector": {
+      "source": "NZDJPY"
+    },
+    "scale": 1,
+    "digits": 5,
+    "formatted": "-0.00762"
+  },
+  {
+    "label": "JYErr",
+    "path": "results/tables/inverse_moments.csv",
+    "column": "mean_error_bp",
+    "selector": {
+      "source": "JPYNZD"
+    },
+    "scale": 1,
+    "digits": 5,
+    "formatted": "0.00876"
+  },
+  {
+    "label": "NZVarErr",
+    "path": "results/tables/inverse_moments.csv",
+    "column": "variance_relative_error_pct",
+    "selector": {
+      "source": "NZDJPY"
+    },
+    "scale": 1,
+    "digits": 5,
+    "formatted": "-1.35172"
+  },
+  {
+    "label": "JYVarErr",
+    "path": "results/tables/inverse_moments.csv",
+    "column": "variance_relative_error_pct",
+    "selector": {
+      "source": "JPYNZD"
+    },
+    "scale": 1,
+    "digits": 5,
+    "formatted": "1.32057"
+  },
+  {
+    "label": "OptRate",
+    "path": "results/tables/rule72_optimum.json",
+    "column": "rate_percent",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "7.84687"
+  },
+  {
+    "label": "OptPeriods",
+    "path": "results/tables/rule72_optimum.json",
+    "column": "doubling_periods",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "9.17563"
+  },
+  {
+    "label": "Q",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "delta_hedged.q",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "1.59205"
+  },
+  {
+    "label": "Delta",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "delta_hedged.delta",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "-0.36193"
+  },
+  {
+    "label": "Foreign",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "delta_hedged.foreign_units",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "1.57621"
+  },
+  {
+    "label": "Floor",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "delta_hedged.lower_bound",
+    "selector": null,
+    "scale": 100,
+    "digits": 5,
+    "formatted": "-6.68361"
+  },
+  {
+    "label": "Slope",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "delta_hedged.slope_ratio",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "1.57621"
+  },
+  {
+    "label": "Put",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "delta_hedged.put",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "1.94046"
+  },
+  {
+    "label": "Call",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "delta_hedged.call",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "4.18764"
+  },
+  {
+    "label": "UnhedgedDelta",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "without_delta_hedge.initial_total_delta",
+    "selector": null,
+    "scale": 1,
+    "digits": 5,
+    "formatted": "0.63443"
+  },
+  {
+    "label": "NoHedgeFloor",
+    "path": "results/tables/illustrative_option_example.json",
+    "column": "without_delta_hedge.lower_bound",
+    "selector": null,
+    "scale": 100,
+    "digits": 5,
+    "formatted": "-4.24031"
+  },
+  {
+    "label": "Jensen",
+    "path": "results/verification/data_quality.json",
+    "column": "jensen_sum_daily_means",
+    "selector": null,
+    "scale": 10000,
+    "digits": 5,
+    "formatted": "1.22542"
+  },
+  {
+    "label": "EightTrue",
+    "path": "results/tables/doubling_selected_rates.csv",
+    "column": "exact",
+    "selector": {
+      "rate_decimal": 0.08
+    },
+    "scale": 1,
+    "digits": 5,
+    "formatted": "9.00647"
+  },
+  {
+    "label": "EightCorrectedError",
+    "path": "results/tables/doubling_selected_rates.csv",
+    "column": "corrected_log2_relative_error_pct",
+    "selector": {
+      "rate_decimal": 0.08
+    },
+    "scale": 1,
+    "digits": 5,
+    "formatted": "0.04935"
+  },
+  {
+    "label": "EightRuleError",
+    "path": "results/tables/doubling_selected_rates.csv",
+    "column": "rule72_relative_error_pct",
+    "selector": {
+      "rate_decimal": 0.08
+    },
+    "scale": 1,
+    "digits": 5,
+    "formatted": "-0.07182"
+  }
+]

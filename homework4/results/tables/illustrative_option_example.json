@@ -1,0 +1,43 @@
+{
+  "parameters": {
+    "spot": 100.0,
+    "strike": 97.0,
+    "foreign_rate": 0.04,
+    "funding_rate": 0.01,
+    "maturity": 0.25,
+    "volatility": 0.15
+  },
+  "delta_hedged": {
+    "put": 1.9404604530507754,
+    "call": 4.187640955413968,
+    "delta": -0.36192756798028386,
+    "g": 1.010050167084168,
+    "a": 1.0025031276057952,
+    "hedge_delta": -0.36192756798028386,
+    "q": 1.5920467311820259,
+    "foreign_units": 1.5762056015276715,
+    "extra_foreign_units": 0.5762056015276714,
+    "borrowed_units": 160.70986387403462,
+    "slope": 0.015920467311820258,
+    "slope_ratio": 1.5762056015276713,
+    "lower_bound": -0.06683608246164784,
+    "initial_total_delta": 1.0
+  },
+  "without_delta_hedge": {
+    "put": 1.9404604530507754,
+    "call": 4.187640955413968,
+    "delta": -0.36192756798028386,
+    "g": 1.010050167084168,
+    "a": 1.0025031276057952,
+    "hedge_delta": 0.0,
+    "q": 1.010050167084168,
+    "foreign_units": 1.0,
+    "extra_foreign_units": -0.0,
+    "borrowed_units": 101.95996240482415,
+    "slope": 0.010100501670841679,
+    "slope_ratio": 1.0,
+    "lower_bound": -0.04240314994241219,
+    "initial_total_delta": 0.6344349994891477
+  },
+  "eq2_eq4_max_error": 4.440892098500626e-16
+}
