@@ -1,6 +1,6 @@
 # HW3 figures: integrated submission report
 
-Submit `submission/final_report.pdf`: the main text and appendix now form one
+Submit `submission/HW3_Hanyu_Zhang_FINCB9339.pdf`: the main text and appendix now form one
 complete write-up, with every graph appearing once. Main text: compact baseline
 paths, 2008 stress, historical-comparison distributions and wealth.
 

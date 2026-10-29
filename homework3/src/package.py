@@ -15,7 +15,7 @@ def main():
     assert qa['pdf_sha256']==sha(pdf),'Inspect and record visual review of the current PDF before packaging'
     assert qa['pages_inspected']==list(range(1,pages+1)) and qa['visual_review']=='passed'
     sub=ROOT/'submission';sub.mkdir(exist_ok=True)
-    shutil.copy2(pdf,sub/'final_report.pdf');shutil.copy2(ROOT/'report/AUDIT.md',sub/'AUDIT.md')
+    shutil.copy2(pdf,sub/'HW3_Hanyu_Zhang_FINCB9339.pdf');shutil.copy2(ROOT/'report/AUDIT.md',sub/'AUDIT.md')
     shutil.copy2(ROOT/'results/audit/verification_summary.json',sub/'verification_summary.json')
     shutil.copy2(ROOT/'results/audit/compliance.csv',sub/'compliance.csv')
     # Local convenience copies use the same relative asset paths as report/main.tex.
@@ -40,7 +40,7 @@ def main():
     v=json.loads((ROOT/'results/audit/verification_summary.json').read_text())
     (sub/'CONTENTS.md').write_text(f'''# HW3 final reviewed submission
 
-- `final_report.pdf`: {pages}-page complete report with an integrated nine-figure appendix; all answers (a)-(e) on the first page and all 13 graphs included once. Submit this single PDF as the write-up.
+- `HW3_Hanyu_Zhang_FINCB9339.pdf`: {pages}-page complete report with an integrated nine-figure appendix; all answers (a)-(e) on the first page and all 13 graphs included once. Submit this single PDF as the write-up.
 - `final_report.tex` and `references.bib`: local, Git-ignored submission source copies; canonical sources are under `report/`. `FIGURE_GUIDE.md` identifies appendix figures.
 - `AUDIT.md`: prioritized corrections, full requirement checklist, verification and unresolved limitations.
 - `verification_summary.json` and `compliance.csv`: compact verification record and requirement checklist.
@@ -51,7 +51,7 @@ Verification: {v['tests_passed']} passing tests; {v['independent_checks']} indep
 
 To reproduce, extract the ZIP, enter `homework3/`, and follow README.md using the existing shared course environment. No project-local environment, dependency synchronization or external submission is performed. Caches, compiler executables, earlier drafts and temporary previews are excluded.
 
-Report SHA-256: `{sha(sub/'final_report.pdf')}`
+Report SHA-256: `{sha(sub/'HW3_Hanyu_Zhang_FINCB9339.pdf')}`
 
 Archive SHA-256: `{sha(archive)}`
 ''')

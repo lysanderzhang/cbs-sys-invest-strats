@@ -1,6 +1,6 @@
 # HW3 final reviewed submission
 
-- `final_report.pdf`: 20-page complete report with an integrated nine-figure appendix; all answers (a)-(e) on the first page and all 13 graphs included once. Submit this single PDF as the write-up.
+- `HW3_Hanyu_Zhang_FINCB9339.pdf`: 20-page complete report with an integrated nine-figure appendix; all answers (a)-(e) on the first page and all 13 graphs included once. Submit this single PDF as the write-up.
 - `final_report.tex` and `references.bib`: local, Git-ignored submission source copies; canonical sources are under `report/`. `FIGURE_GUIDE.md` identifies appendix figures.
 - `AUDIT.md`: prioritized corrections, full requirement checklist, verification and unresolved limitations.
 - `verification_summary.json` and `compliance.csv`: compact verification record and requirement checklist.
@@ -13,4 +13,4 @@ To reproduce, extract the ZIP, enter `homework3/`, and follow README.md using th
 
 Report SHA-256: `98b137cc0813d6ce7c1e9164a276aae2826d13bbfc161f5193da79632539ffae`
 
-Archive SHA-256: `878b86ff84ed93b8dc63af19dd585e0155b29a9880207eb6e8ed714f754fdef3`
+Archive SHA-256: `8eefb7994bb15f7985e37333975cd80c78839fbb443579abb808714616e2bbd1`

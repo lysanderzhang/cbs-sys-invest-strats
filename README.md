@@ -8,7 +8,7 @@ This repository collects the course homework in numbered `homeworkN/` folders. E
 |---|---|---|
 | [Homework 1](homework1/) | SPY intraday strategy replication, Models A/B/C | [README](homework1/README.md) · [Submitted report](homework1/submission/HW1_Hanyu_Zhang_FINCB9339.pdf) · [Results and validation](homework1/report/RESULTS_AND_VALIDATION.md) · [Submitted workbook](homework1/submission/original_submitted/FINCB9339_HW1_Submission.xlsx) |
 | [Homework 2](homework2/) | Crash-aware equity momentum and cross-asset ETF dual momentum | [README](homework2/README.md) · [Investor presentation](homework2/submission/Investor_Presentation.pdf) · [Complete project report](homework2/submission/HW2_Hanyu_Zhang_FINCB9339.pdf) |
-| [Homework 3](homework3/) | Daily G10 FX carry and volatility conditioning | [README](homework3/README.md) · [Complete report with figure appendix](homework3/submission/final_report.pdf) |
+| [Homework 3](homework3/) | Daily G10 FX carry and volatility conditioning | [README](homework3/README.md) · [Complete report with figure appendix](homework3/submission/HW3_Hanyu_Zhang_FINCB9339.pdf) |
 | [Homework 4](homework4/) | Inverse FX returns, doubling-time approximations and crash-neutral carry | [README](homework4/README.md) · [Complete report](homework4/submission/HW4_Hanyu_Zhang_FINCB9339.pdf) |
 
 ## Working with the projects
