@@ -1,0 +1,17 @@
+module,mode,switches_per_year
+Equities,dual,2.0460829493087558
+Credit,dual,1.6589861751152073
+REITs,dual,2.1013824884792625
+Stress,dual,2.5437788018433181
+Equities,relative,1.3824884792626728
+Credit,relative,0.94009216589861755
+REITs,relative,1.271889400921659
+Stress,relative,1.6589861751152073
+Equities,absolute,1.8801843317972351
+Credit,absolute,2.3778801843317972
+REITs,absolute,2.6543778801843319
+Stress,absolute,3.0414746543778803
+Equities,static,0
+Credit,static,0
+REITs,static,0
+Stress,static,0

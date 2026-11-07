@@ -1,0 +1,9 @@
+tmp/
+__pycache__/
+.pytest_cache/
+*.aux
+*.log
+*.out
+report/main.pdf
+submission/*.tex
+submission/*.zip

@@ -1,0 +1,9 @@
+{
+  "first_return": "2008-06-30",
+  "last_return": "2026-06-30",
+  "months": 217,
+  "average_risky_allocation_pct": 79.14746543778801,
+  "inputs_unchanged": true,
+  "full_2000_2009_available": false,
+  "end_of_month_execution": "Frictionless boundary convention; an extra month of lag is reported separately."
+}

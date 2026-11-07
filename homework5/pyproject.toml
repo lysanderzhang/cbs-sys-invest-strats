@@ -1,0 +1,8 @@
+[project]
+name = "fincb9339-homework5"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = ["numpy", "pandas", "scipy", "matplotlib", "requests", "pypdf", "pytest"]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,127 @@
+{
+  "narrative": {
+    "6.08340": {
+      "value": 6.083398963955289,
+      "source": "results/tables/performance.csv",
+      "strategy": "Dual",
+      "period": "Full",
+      "field": "cagr_pct"
+    },
+    "0.58737": {
+      "value": 0.5873671856580281,
+      "source": "results/tables/performance.csv",
+      "strategy": "Dual",
+      "period": "Full",
+      "field": "sharpe"
+    },
+    "-14.05541": {
+      "value": -14.055413296691766,
+      "source": "results/tables/performance.csv",
+      "strategy": "Dual",
+      "period": "Full",
+      "field": "max_drawdown_pct"
+    },
+    "0.48750": {
+      "value": 0.487497161727759,
+      "source": "results/tables/performance.csv",
+      "strategy": "Static",
+      "period": "Full",
+      "field": "sharpe"
+    },
+    "6.52178": {
+      "value": 6.521775493889659,
+      "source": "results/tables/performance.csv",
+      "strategy": "Static",
+      "period": "Full",
+      "field": "cagr_pct"
+    },
+    "0.51158": {
+      "value": 0.5115817548541453,
+      "source": "results/tables/performance.csv",
+      "strategy": "Dual",
+      "period": "Extension 2012+",
+      "field": "sharpe"
+    },
+    "0.54822": {
+      "value": 0.5482235059035153,
+      "source": "results/tables/performance.csv",
+      "strategy": "Static",
+      "period": "Extension 2012+",
+      "field": "sharpe"
+    },
+    "6.33698": {
+      "value": 6.336975223128194,
+      "source": "results/tables/performance.csv",
+      "strategy": "Buffer",
+      "period": "Full",
+      "field": "cagr_pct"
+    },
+    "0.61771": {
+      "value": 0.6177101639624282,
+      "source": "results/tables/performance.csv",
+      "strategy": "Buffer",
+      "period": "Full",
+      "field": "sharpe"
+    },
+    "430.67160": {
+      "value": 430.67160178902515,
+      "source": "results/tables/cost_sensitivity.csv",
+      "strategy": "Dual",
+      "cost_bps_per_dollar": 10,
+      "field": "annual_traded_pct"
+    },
+    "353.81480": {
+      "value": 353.81479934665845,
+      "source": "results/tables/cost_sensitivity.csv",
+      "strategy": "Buffer",
+      "cost_bps_per_dollar": 10,
+      "field": "annual_traded_pct"
+    },
+    "5.62734": {
+      "value": 5.627338091353495,
+      "source": "results/tables/cost_sensitivity.csv",
+      "strategy": "Dual",
+      "cost_bps_per_dollar": 10,
+      "field": "cagr_pct"
+    },
+    "5.96127": {
+      "value": 5.96127462712932,
+      "source": "results/tables/cost_sensitivity.csv",
+      "strategy": "Buffer",
+      "cost_bps_per_dollar": 10,
+      "field": "cagr_pct"
+    },
+    "17.84580": {
+      "value": 17.84580225933189,
+      "source": "results/tables/cost_sensitivity.csv",
+      "formula": "100*(1-Buffer/Dual annual_traded_pct), cost=0"
+    },
+    "0.29672": {
+      "value": 0.2967172446576515,
+      "source": "results/tables/performance.csv",
+      "strategy": "Cash",
+      "field": "negative max_drawdown_pct",
+      "period": "Full"
+    }
+  },
+  "table_sections": [
+    "PERFORMANCE",
+    "TAILS",
+    "MODULES",
+    "MODULEAB",
+    "PAPER",
+    "SUBPERIOD",
+    "STRESS",
+    "LAG",
+    "COSTS",
+    "BOOT",
+    "CORR",
+    "USE",
+    "HOLDINGS",
+    "COVERAGE",
+    "RISK",
+    "GROWTH",
+    "CONTROLDD"
+  ],
+  "main_tex_sha256": "785597a51faa146fa088fb19c0dd5529967b0413a8bdd2185287a685f6aba57c"
+}

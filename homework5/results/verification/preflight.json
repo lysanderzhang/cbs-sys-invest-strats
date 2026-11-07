@@ -1,0 +1,18 @@
+{
+  "pages": 12,
+  "figures": 5,
+  "tests_passed": 20,
+  "independent_comparisons": 2178,
+  "maximum_return_difference": 0.0,
+  "narrative_quantities_bound": 15,
+  "numerical_output_files": 27,
+  "pdf_sha256": "f137be42cf9cca7af232f737bbefecfa964508212c235b2da2594790e87ee517",
+  "limitations": [
+    "ETF history prevents a full 2000-2009 comparison",
+    "SHV is a low-duration Treasury proxy, not a zero-risk account",
+    "One adjusted-price vendor; historical revisions possible",
+    "Frictionless month-end boundary; extra-month lag is not measured next-open slippage",
+    "Extension and switching buffer are historical analyses, not prospective records",
+    "Costs are scenarios; no taxes, capacity or measured spreads"
+  ]
+}

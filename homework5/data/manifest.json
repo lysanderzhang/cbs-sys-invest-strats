@@ -1,0 +1,69 @@
+{
+  "retrieved_utc": "2026-11-07T23:18:33.487810+00:00",
+  "start_requested": "2006-01-01",
+  "end_inclusive": "2026-06-30",
+  "files": {
+    "data/raw/VTI.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/VTI?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "4d51e0bfc8f521c2fd59f5503c1ef139f03f6d0b98099b298e20bdd894b3878a",
+      "rows": 5154,
+      "currency": "USD"
+    },
+    "data/raw/EFA.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/EFA?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "53e72fd1cf440f66dc3b9f5ca0dead66a2394665159144b8c330d99b74b693d0",
+      "rows": 5154,
+      "currency": "USD"
+    },
+    "data/raw/HYG.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/HYG?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "570ba76b04016d8261cc49842ec74e32eadd1f556dbc288d04894aa4dcc53093",
+      "rows": 4836,
+      "currency": "USD"
+    },
+    "data/raw/LQD.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/LQD?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "17daa97ae15b86336c3bea60dd33f8301c98b7024b2ea4c35bf691fbabd6bb0e",
+      "rows": 5154,
+      "currency": "USD"
+    },
+    "data/raw/VNQ.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/VNQ?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "97393bc04139e5eee2632333b19635e532b1332d30d9d0ef0fd83de1344f5edc",
+      "rows": 5154,
+      "currency": "USD"
+    },
+    "data/raw/REM.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/REM?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "d2967197ebfc66fba4822fc12b3f405db169dbe02d4342654d5bd8e745f6e0d7",
+      "rows": 4819,
+      "currency": "USD"
+    },
+    "data/raw/GLD.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "5d824ae932105a77bf53e42ba421fa89241fb4bf91ff342dd8fcd584096b7169",
+      "rows": 5154,
+      "currency": "USD"
+    },
+    "data/raw/TLT.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TLT?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "6810b2fbb75ece628c5f2f986cd7ef219402889f9bb6433670b44fba0af94265",
+      "rows": 5154,
+      "currency": "USD"
+    },
+    "data/raw/SHV.json": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHV?period1=1136073600&period2=1782864000&interval=1d&events=div%2Csplits",
+      "sha256": "b3d04f6edde6ff9ef1e0749b956f5d742eb996fa5e3e0b4b2244f1fcc5d5fdae",
+      "rows": 4897,
+      "currency": "USD"
+    },
+    "references/Antonacci_2013.pdf": {
+      "sha256": "ab440bbb7246d92bc0a03a7f044ceae3a18b105e3c0261ad7fff6d5ab9582ce1",
+      "source": "User-supplied reference"
+    },
+    "references/hw5.pdf": {
+      "sha256": "35e0091b4a9dfa0ebb5446921ffa32152dc64113b6989c1ff9118b08b1f27ecc",
+      "source": "User-supplied reference"
+    }
+  }
+}

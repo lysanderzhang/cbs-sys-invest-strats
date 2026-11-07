@@ -1,0 +1,96 @@
+{
+  "scalar_comparisons": 2178,
+  "maximum_return_difference": 0.0,
+  "representative_reconstructions": [
+    {
+      "month": "2008-06",
+      "decision_month": "2008-05",
+      "lookback_base": "2007-05",
+      "return": 0.012697576361075269,
+      "weights": {
+        "VTI": 0.0,
+        "EFA": 0.0,
+        "HYG": 0.0,
+        "LQD": 0.0,
+        "VNQ": 0.0,
+        "REM": 0.0,
+        "GLD": 0.25,
+        "TLT": 0.0,
+        "SHV": 0.75
+      }
+    },
+    {
+      "month": "2008-11",
+      "decision_month": "2008-10",
+      "lookback_base": "2007-10",
+      "return": 0.03850786033909953,
+      "weights": {
+        "VTI": 0.0,
+        "EFA": 0.0,
+        "HYG": 0.0,
+        "LQD": 0.0,
+        "VNQ": 0.0,
+        "REM": 0.0,
+        "GLD": 0.0,
+        "TLT": 0.25,
+        "SHV": 0.75
+      }
+    },
+    {
+      "month": "2026-06",
+      "decision_month": "2026-05",
+      "lookback_base": "2025-05",
+      "return": -0.02484104034060136,
+      "weights": {
+        "VTI": 0.25,
+        "EFA": 0.0,
+        "HYG": 0.25,
+        "LQD": 0.0,
+        "VNQ": 0.0,
+        "REM": 0.25,
+        "GLD": 0.25,
+        "TLT": 0.0,
+        "SHV": 0.0
+      }
+    }
+  ],
+  "independent_metrics": {
+    "cagr_pct": 6.083398963955289,
+    "arithmetic_pct": 6.271258157063509,
+    "volatility_pct": 8.387130638272177,
+    "sharpe": 0.587367185658028,
+    "max_drawdown_pct": -14.055413296691766,
+    "terminal_wealth": 2.909316424491385,
+    "var5_pct": -3.3268665448957653,
+    "es5_pct": -5.103880312443689
+  },
+  "output_sha256": {
+    "results/tables/asset_performance.csv": "360626018183802de5861089f9c3e9696f5203bd4808d42481844c272c939591",
+    "results/tables/bootstrap.csv": "e7bd0011cb4261e50c29ab647890665ee027c0a6284170f2adb7eaff6e4ba984",
+    "results/tables/cost_sensitivity.csv": "af71c495f78f39ce46e28e274fdc82675ee386ed34500f2e88b21ee6b6032398",
+    "results/tables/data_quality.csv": "a8b96981f60445044c103b3ca20e5c1ad5659bbf08a3fa641edb6c359fd5e8b2",
+    "results/tables/lag_common_sample.csv": "9b8abd192fedc223cd3b8cb14ac4615ae006b020c660677608096893f24923f0",
+    "results/tables/module_comparison.csv": "bbc8edd2c31f7ee88ead057a92923db70fd079e6200d3a78c2024160000b7c83",
+    "results/tables/module_correlation.csv": "a1b847cb5b16688242f0d88db6276d4a33c2d3d88a9c1a0988de412065023f1d",
+    "results/tables/module_switches.csv": "076e9ed10204d3e821afcbd872e1e58a0791c61210f8f557f6c3907a1fe913f1",
+    "results/tables/paper_table10.csv": "2b834088a718208b7fa8c2758856fc4086996e24ac89d98d969fe0ee908e6501",
+    "results/tables/performance.csv": "5f6f4cab89d89c95e9422a17eae5fd734239723a696022649a9f06682d5b8bc1",
+    "results/tables/relative_module_correlation.csv": "4ce47487a74fd9334545c8b19116afef7854ef46365a4dd17e624208ca5cf67b",
+    "results/tables/representative_holdings.csv": "cca4a0ad02a5d4ca296f91f7b8fb0c9b337a83cea2d572868271823655a99e8a",
+    "results/tables/utilization.csv": "5706bad842cbdc9e6c4f197cd3fb076d4676546180e087ecb5b5086ad6dc4f80",
+    "results/timeseries/asset_returns.csv": "cd11b1c072c50c15397f48f6d3e4d69b476d3ad04bd7c56429f4dfe69b69cb85",
+    "results/timeseries/module_holdings.csv": "c814a83aff9075c4743b9d7330f348cce3f3a2dc34095c0aee690b81e36180a4",
+    "results/timeseries/module_returns.csv": "c21022779117ba720aa47d4ccdaa7c6b7c3745c51357ad112db8a36ec7f970ca",
+    "results/timeseries/momentum_12m.csv": "7bc0fc19fee4ec80549df00bb42e1fce97e10abcc5dbf2d895c1cf4f44857729",
+    "results/timeseries/portfolio_returns.csv": "cb1559f6d19cff70a5b2ae6818563c89694171f87397c482949cd6789776dec0",
+    "results/timeseries/turnover.csv": "2c4d74ba49087e29d03ca26bcd87c522361df8f9ea8e729b2ef56922be6b4f7d",
+    "results/timeseries/wealth.csv": "934bb80fe1fb577f3c43e2121f76d0d5a6e713b7c74b25ce2fa2e4ed3d3541a7",
+    "results/timeseries/weights_absolute.csv": "b2d622544d93d5a58523ffbd14dff15e99b673fb02286680e43ad9b2acd11319",
+    "results/timeseries/weights_buffer.csv": "f63f1cda1d3c33c73fd7becb3acf95bb27b583da05f3bbecee7ec567e024d585",
+    "results/timeseries/weights_dual.csv": "0e1dd86e2895aec519d8dc07ecfc2921de263fd7459a616053db34647c189011",
+    "results/timeseries/weights_relative.csv": "d63f5563139eb6e855fdaf28634df61f7bb857f0ea1a017998fa70f0b6f2bcf5",
+    "results/timeseries/weights_static.csv": "dab0bd28852cc97ec25f304f17fc44171e07d75ad0c1c80a9e26ea54c2c1b443",
+    "data/processed/daily_adjusted_close.csv": "18788b04acbd86748aaefa358e8207ff03fba160faeedb477429e868cb5fece3",
+    "data/processed/monthly_adjusted_close.csv": "9464fe18ab07c70b1c01e6386b00a364f555cf60d7d5e1e1d5a871faae3b40ca"
+  }
+}
