@@ -11,6 +11,7 @@ This repository collects the course homework in numbered `homeworkN/` folders. E
 | [Homework 3](homework3/) | Daily G10 FX carry and volatility conditioning | [README](homework3/README.md) · [Complete report with figure appendix](homework3/submission/HW3_Hanyu_Zhang_FINCB9339.pdf) |
 | [Homework 4](homework4/) | Inverse FX returns, doubling-time approximations and crash-neutral carry | [README](homework4/README.md) · [Complete report](homework4/submission/HW4_Hanyu_Zhang_FINCB9339.pdf) |
 | [Homework 5](homework5/) | Four-module dual momentum through June 2026 | [README](homework5/README.md) · [Complete report with figure appendix](homework5/submission/HW5_Hanyu_Zhang_FINCB9339.pdf) |
+| [Homework 6](homework6/) | Sharpe ratio enhancement bounds and growth-optimal (Kelly) allocation | [README](homework6/README.md) · [Complete report](homework6/submission/HW6_Hanyu_Zhang_FINCB9339.pdf) |
 
 ## Working with the projects
 

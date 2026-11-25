@@ -1,0 +1,91 @@
+[
+  {
+    "label": "ZeroCross",
+    "path": "results/tables/bound_landmarks.json",
+    "column": "zero_crossing_ratio",
+    "selector": null,
+    "scale": 1.0,
+    "digits": 5,
+    "formatted": "0.41421"
+  },
+  {
+    "label": "HetMaxDiff",
+    "path": "results/tables/heterogeneous_summary.json",
+    "column": "max_abs_difference",
+    "selector": null,
+    "scale": 1.0,
+    "digits": 1,
+    "formatted": "4.4e-16"
+  },
+  {
+    "label": "Mu",
+    "path": "results/tables/growth_comparison.csv",
+    "column": "mu",
+    "selector": {
+      "rate": 0.0
+    },
+    "scale": 1.0,
+    "digits": 3,
+    "formatted": "0.008"
+  },
+  {
+    "label": "Sigma",
+    "path": "results/tables/growth_comparison.csv",
+    "column": "sigma",
+    "selector": {
+      "rate": 0.0
+    },
+    "scale": 1.0,
+    "digits": 3,
+    "formatted": "0.110"
+  },
+  {
+    "label": "Periods",
+    "path": "results/tables/growth_comparison.csv",
+    "column": "periods",
+    "selector": {
+      "rate": 0.0
+    },
+    "scale": 1.0,
+    "digits": 0,
+    "formatted": "120"
+  },
+  {
+    "label": "Paths",
+    "path": "results/tables/growth_comparison.csv",
+    "column": "paths",
+    "selector": {
+      "rate": 0.0
+    },
+    "scale": 1.0,
+    "digits": 0,
+    "formatted": "20{,}000"
+  },
+  {
+    "label": "TanSR",
+    "path": "results/tables/multi_asset_example.json",
+    "column": "tangency_sharpe",
+    "selector": null,
+    "scale": 1.0,
+    "digits": 5,
+    "formatted": "0.09525"
+  },
+  {
+    "label": "KellyTotal",
+    "path": "results/tables/multi_asset_example.json",
+    "column": "kelly_total_risky",
+    "selector": null,
+    "scale": 1.0,
+    "digits": 5,
+    "formatted": "3.28282"
+  },
+  {
+    "label": "GVector",
+    "path": "results/tables/multi_asset_example.json",
+    "column": "g_star_vector",
+    "selector": null,
+    "scale": 1.0,
+    "digits": 5,
+    "formatted": "0.00654"
+  }
+]

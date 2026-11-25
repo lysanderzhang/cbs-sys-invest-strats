@@ -1,0 +1,7 @@
+{
+  "bound_at_zero_sr_new": -0.5,
+  "zero_crossing_ratio": 0.41421356237309515,
+  "unit_bound_ratio": 1.0,
+  "minimum_bound_over_real_s": -1.0,
+  "minimum_at_s": -1.0
+}

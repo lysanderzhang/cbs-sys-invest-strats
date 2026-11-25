@@ -1,0 +1,13 @@
+{
+  "report_pages": 7,
+  "independent_scalar_comparisons": 3138,
+  "unit_tests_passed": 12,
+  "handout_unchanged": true,
+  "all_subquestions_answered": true,
+  "final_pdf_sha256": "24c84ee134c051f1a0deb6d4e18d32fdbcbcf3535bb4513e92b7538ba14ff05e",
+  "limitations": [
+    "Problem 1 uses the equal-marginal-volatility allocation of assumption (e); optimized weights would need the full covariance matrix.",
+    "Problem 2 numbers are an illustrative lognormal example, not an empirical estimate.",
+    "The Daniel-Moskowitz appendix is not among the supplied files; 2(b) uses the second-order mean-variance approximation."
+  ]
+}
