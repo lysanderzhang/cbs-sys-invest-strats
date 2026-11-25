@@ -112,10 +112,10 @@ def main():
     x = solve3(cov, [m - r for m in mu]); tot = math.fsum(x); a = [v / tot for v in x]
     ex = math.fsum(ai * (m - r) for ai, m in zip(a, mu)); sd = math.sqrt(math.fsum(a[i] * a[j] * cov[i][j] for i in range(3) for j in range(3)))
     for i in range(3):
-        close(f'kelly {i}', x[i], ma['kelly_dollar_weights'][i], 1e-12); close(f'tangency {i}', a[i], ma['tangency_weights'][i], 1e-12)
+        close(f'kelly {i}', (1 + r) * x[i], ma['kelly_dollar_weights'][i], 1e-12); close(f'tangency {i}', a[i], ma['tangency_weights'][i], 1e-12)
     close('tangency SR', ex / sd, ma['tangency_sharpe'], 1e-13)
-    close('g* vector', r + 0.5 * math.fsum((m - r) * xi for m, xi in zip(mu, x)), ma['g_star_vector'], 1e-15)
-    close('g* = r + SR^2/2', ma['g_star_vector'], r + 0.5 * (ex / sd) ** 2, 1e-15)
+    close('g* vector', math.log1p(r) + 0.5 * math.fsum((m - r) * xi for m, xi in zip(mu, x)), ma['g_star_vector'], 1e-15)
+    close('g* = log(1+r) + SR^2/2', ma['g_star_vector'], math.log1p(r) + 0.5 * (ex / sd) ** 2, 1e-15)
     names = ['results/tables/bound_n1_grid.csv', 'results/timeseries/bound_n1_curves.csv', 'results/tables/bound_vs_n.csv',
              'results/tables/bound_landmarks.json', 'results/tables/heterogeneous_examples.csv',
              'results/tables/heterogeneous_inputs.json', 'results/tables/growth_comparison.csv',

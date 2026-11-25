@@ -17,8 +17,8 @@
 \newcommand{\rPeriods}{120}
 \newcommand{\rPaths}{20{,}000}
 \newcommand{\rTanSR}{0.09525}
-\newcommand{\rKellyTotal}{3.28282}
-\newcommand{\rGVector}{0.00654}
+\newcommand{\rKellyTotal}{3.28939}
+\newcommand{\rGVector}{0.00653}
 \begin{document}
 \begin{center}{\Large\bfseries FINCB9339 Systematic Investment Strategies\\[3pt]
 Homework 6: Sharpe Ratio Enhancement and Growth-Optimal Allocation}\\[8pt]
@@ -26,7 +26,7 @@ Hanyu Zhang (hz3069)\end{center}
 \section*{Summary of answers}
 Notation: $s=\SRn/\SRo$, $\SRo>0$; components scaled to unit volatility.
 
-\textbf{1.1} Hold notional $N_j=k/\hat\sigma_j$ in each component $j=0,\dots,n$ (old portfolio $=$ one component); each then has volatility $k$. Rebalance as $\hat\sigma_j$ changes.
+\textbf{1.1} Equal stand-alone volatility: hold notional $N_j=k/\hat\sigma_j$ in each component $j=0,\dots,n$ (old portfolio $=$ one component); each then has volatility $k$. Rebalance as $\hat\sigma_j$ changes.
 
 \textbf{1.2} $SR_{p}=\dfrac{\SRo+n\SRn}{\sqrt{1+n+2n\RhoOn+n(n-1)\RhoNew}}>\SRo
 \iff \boxed{\RhoOn<s+\tfrac n2 s^2-\tfrac12\big(1+(n-1)\RhoNew\big)}$.
@@ -60,6 +60,8 @@ Estimate $\hat\sigma_j$ (e.g.\ rolling/EWMA realized volatility) and hold
 N_j=\frac{k}{\hat\sigma_j},\qquad Y_j=N_jR_j,\qquad \operatorname{Var}(Y_j)=k^2,\qquad E[Y_j]=k\,SR_j .
 \]
 With $k=1$ every component has unit volatility. $k$ sets total risk and does not affect the Sharpe ratio. Rebalance periodically; leverage or cash absorbs the difference.
+
+Interpretation: (e) is read as one unit of \emph{stand-alone} volatility per scaled component, before aggregation (the handout's parenthetical). This differs from equal Euler contributions $w_i(\Sigma w)_i/\sigma_p$ to portfolio volatility, which require covariance-aware weights; under (b)--(c) the new strategies would share one weight but the old portfolio's would differ. All results below use the stand-alone convention.
 
 \subsection*{Bound on the old/new correlation: answer 1.2}
 Combined portfolio $Z=\sum_{j=0}^nY_j$:
@@ -224,7 +226,7 @@ The exact optimum is slightly above $w^*$: the positive skew of the lognormal (t
 
 \subsection*{Use of independence: answer 2(f)}
 \begin{itemize}\setlength{\itemsep}{1pt}
-\item In (a): replacing $\frac1T\sum_t\log(1+wR_t)$ by $E[\log(1+wR)]$. Identical distribution gives the mean; independence gives $\operatorname{Var}[g]=\operatorname{Var}[\log(1+wR)]/T\to0$ (LLN), so maximizing the expectation maximizes realized growth. Under dependence, autocovariance terms enter and convergence can fail.
+\item In (a): replacing $\frac1T\sum_t\log(1+wR_t)$ by $E[\log(1+wR)]$. Identical distribution gives the mean; independence gives $\operatorname{Var}[g]=\operatorname{Var}[\log(1+wR)]/T\to0$ (LLN), so maximizing the expectation maximizes realized growth. Under dependence, autocovariance terms enter the variance; convergence may still hold under stationarity and ergodicity (independence is sufficient, not necessary).
 \item Constant $w$: with i.i.d.\ returns nothing learned changes the next-period distribution. With predictable $\mu_t,\sigma_t$ the optimum is $w_t^*=\mu_t/\sigma_t^2$, the Daniel--Moskowitz dynamic strategy.
 \item (b)--(e) use one-period moments only.
 \end{itemize}
@@ -234,11 +236,11 @@ Risky mix $a$ ($\mathbf1'a=1$): $\mu_p(a)=a'\mu$, $\sigma_p^2(a)=a'\Sigma a$; to
 \[
 \max_wg(w;a)=\log(1+r)+\tfrac12SR_p(a)^2,\qquad SR_p(a)=\frac{\mu_p(a)-r}{\sigma_p(a)} .
 \]
-$\Rightarrow\max_a\max_wg\iff\max_aSR_p(a)$: choose the tangency portfolio, then $w^*=(\mu_p-r)(1+r)/\sigma_p^2$. $r$ enters only additively and through excess returns, so the argument holds for any $r$ (including $0$).
+$\Rightarrow\max_a\max_wg\iff\max_aSR_p(a)^2$. Restricting to risky portfolios with $\mu_p(a)>r$ (so $w^*>0$), this is $\max_aSR_p(a)$: choose the tangency portfolio, then $w^*=(\mu_p-r)(1+r)/\sigma_p^2$. (With unrestricted negative $w$, the criterion is the largest $|SR_p|$.) $r$ enters only additively and through excess returns, so the argument holds for any $r$ (including $0$).
 
-Vector form, $x=wa$: $g\approx r+x'(\mu-r\mathbf1)-\frac12x'\Sigma x$,
+Vector form, $x=wa$, keeping the $(1+r)$ factors of (e): $g\approx\log(1+r)+\dfrac{x'(\mu-r\mathbf1)}{1+r}-\dfrac{x'\Sigma x}{2(1+r)^2}$,
 \[
-x^*=\Sigma^{-1}(\mu-r\mathbf1)\propto a_{\tan},\qquad g^*=r+\tfrac12(\mu-r\mathbf1)'\Sigma^{-1}(\mu-r\mathbf1)=r+\tfrac12SR_{\tan}^2 .
+x^*=(1+r)\Sigma^{-1}(\mu-r\mathbf1)\propto a_{\tan},\qquad g^*=\log(1+r)+\tfrac12(\mu-r\mathbf1)'\Sigma^{-1}(\mu-r\mathbf1)=\log(1+r)+\tfrac12SR_{\tan}^2 .
 \]
 Three-asset example ($\mu=(0.008,0.005,0.004)$, $\sigma=(0.11,0.05,0.03)$, $r=0.002$): $SR_{\tan}=\rTanSR$, $x^*=\rKellyTotal\times a_{\tan}$, $g^*=\rGVector$.
 \end{document}

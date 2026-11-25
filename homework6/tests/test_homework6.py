@@ -72,7 +72,7 @@ def test_vector_kelly_is_levered_tangency():
     mu = np.array([0.008, 0.005, 0.004]); vol = np.array([0.11, 0.05, 0.03])
     corr = np.array([[1, 0.3, -0.1], [0.3, 1, 0.2], [-0.1, 0.2, 1]]); cov = np.outer(vol, vol) * corr
     x, g = vector_kelly(mu, cov, 0.002); a, sr = tangency(mu, cov, 0.002)
-    assert np.allclose(x / x.sum(), a) and g == pytest.approx(0.002 + 0.5 * sr ** 2)
+    assert np.allclose(x / x.sum(), a) and g == pytest.approx(math.log1p(0.002) + 0.5 * sr ** 2)
     rng = np.random.default_rng(5)
     for _ in range(2000):
         b = rng.dirichlet(np.ones(3)); assert (b @ (mu - 0.002)) / np.sqrt(b @ cov @ b) <= sr + 1e-12

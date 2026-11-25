@@ -65,10 +65,11 @@ def simulate_growth(asset, w, r, periods, paths, seed):
 
 
 def vector_kelly(mu, cov, r=0.0):
-    """Approximate g = r + x'(mu - r1) - x'Cov x/2: optimum x* = Cov^{-1}(mu - r1), g* = r + SR_tan^2/2."""
+    """g ~ log(1+r) + x'(mu - r1)/(1+r) - x'Cov x/(2(1+r)^2):
+    x* = (1+r) Cov^{-1}(mu - r1), g* = log(1+r) + SR_tan^2/2."""
     ex = np.asarray(mu, float) - r
-    x = np.linalg.solve(cov, ex)
-    return x, float(r + 0.5 * ex @ x)
+    y = np.linalg.solve(cov, ex)
+    return (1 + r) * y, float(np.log1p(r) + 0.5 * ex @ y)
 
 
 def tangency(mu, cov, r=0.0):

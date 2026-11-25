@@ -77,7 +77,7 @@
     "selector": null,
     "scale": 1.0,
     "digits": 5,
-    "formatted": "3.28282"
+    "formatted": "3.28939"
   },
   {
     "label": "GVector",
@@ -86,6 +86,6 @@
     "selector": null,
     "scale": 1.0,
     "digits": 5,
-    "formatted": "0.00654"
+    "formatted": "0.00653"
   }
 ]

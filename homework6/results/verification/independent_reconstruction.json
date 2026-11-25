@@ -10,7 +10,7 @@
     "results/tables/heterogeneous_examples.csv": "06625a342bf8ab98fdf8bfb0f6f52348819ec6ecc35d60795691b4a8722460c8",
     "results/tables/heterogeneous_inputs.json": "58cba8c16428f65f0199fcf575a9d48cffdc51628cfbbeebd7a7c3af263f047e",
     "results/tables/growth_comparison.csv": "6c97d9d3fc191ceb2afaf9adfca7c77f42cf6028cac6596f971f1ddb7057183a",
-    "results/tables/multi_asset_example.json": "1066ba878087210c48a5faa6fce0c38615bd5a2ddceffe38166f1454e681a80d"
+    "results/tables/multi_asset_example.json": "3806f61d66277d23534aa51fee9e7ea88c20085538f21378fb025d7da00563a2"
   },
   "details": [
     {
@@ -15695,12 +15695,12 @@
     },
     {
       "check": "g* vector",
-      "error": 8.673617379884035e-19,
+      "error": 0.0,
       "tolerance": 1e-15
     },
     {
-      "check": "g* = r + SR^2/2",
-      "error": 8.673617379884035e-19,
+      "check": "g* = log(1+r) + SR^2/2",
+      "error": 0.0,
       "tolerance": 1e-15
     }
   ]

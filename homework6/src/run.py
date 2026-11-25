@@ -110,7 +110,7 @@ def problem2():
     x, gv = vector_kelly(mu, cov, RATE); a, sr = tangency(mu, cov, RATE)
     dump(dict(mu=mu.tolist(), vol=vol.tolist(), corr=corr.tolist(), rate=RATE, kelly_dollar_weights=x.tolist(),
               kelly_total_risky=float(x.sum()), tangency_weights=a.tolist(), tangency_sharpe=sr,
-              g_star_vector=gv, g_star_from_sharpe=RATE + 0.5 * sr ** 2,
+              g_star_vector=gv, g_star_from_sharpe=float(np.log1p(RATE) + 0.5 * sr ** 2),
               kelly_over_tangency=(x / a).tolist()), 'tables/multi_asset_example.json')
     fig, ax = plt.subplots(figsize=(6.4, 3.2))
     for r, c in [(0.0, GREY), (RATE, BLUE)]:
